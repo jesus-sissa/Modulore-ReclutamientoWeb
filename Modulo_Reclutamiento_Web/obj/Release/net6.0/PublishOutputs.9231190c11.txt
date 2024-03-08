@@ -1,0 +1,14 @@
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\Modulo_Reclutamiento_Web.exe
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\Modulo_Reclutamiento_Web.deps.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\Modulo_Reclutamiento_Web.runtimeconfig.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\Modulo_Reclutamiento_Web.pdb
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\System.Data.SqlClient.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm64\native\sni.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\runtimes\win-x64\native\sni.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\runtimes\win-x86\native\sni.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

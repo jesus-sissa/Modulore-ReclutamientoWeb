@@ -1,0 +1,6 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProspectusData
+<label asp-for="@Model.PersonalData.CityOfState" class="text-muted m-b-15 f-s-12"></label>
+<select id="city" class="form-control input-rounded" asp-for="@Model.PersonalData.CityOfState" asp-items="@(new SelectList(Model.PersonalData.CityOfStateOp, "Value","Text",Model.PersonalData.CityOfState))"></select>

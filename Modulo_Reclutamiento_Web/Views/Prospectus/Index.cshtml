@@ -1,0 +1,464 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var prospectusName = (User_Persistent_Data.ProspectusName != null) ? User_Persistent_Data.ProspectusName : "";
+}
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            @*<li class="breadcrumb-item"><a href="@Url.Action("Index","Prospectus",new{ prosp = ViewBag.prosp})"><i class="ti-arrow-left"></i> Regresar</a></li>*@
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Procesos</li>
+        </ol>
+    </div>
+</div>
+<div class="card">
+    <div class="card-title">
+        <h4>Proceso de Prospecto - </h4>
+        <h4>@prospectusName</h4>
+         <h6>Clave: @ViewBag.pto</h6>
+        @if (ViewBag.ValRepre && ViewBag.PropValidado)
+        {
+            <a id="" class="btn btn-sissa-green-light btn-rounded" style="float:right;color:white"><i class="ti-check"></i> Aprobado </a>
+        }
+        else if (!ViewBag.ValRepre && ViewBag.PropValidado)
+        {
+            <a id="DesValidarPto" class="btn btn-danger btn-rounded" style="float:right;color:white"><i class="ti-close"></i> Cancelar Aprobacion.. </a>
+        }
+        else
+        {
+            <a id="ValidarPto" class="btn btn-sissa-blue-light btn-rounded" style="float:right;color:white">Aprobar.. </a>
+
+        }
+
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Proceso</th>
+                        <th>Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Completar Información de Prospecto</td>
+                        <td>
+                            @*<a href="@Url.Action("Information","Prospectus",new{ pto =ViewBag.pto})" class="btn btn-sissa-green-light btn-rounded "><i class="ti-eye"></i> Ver </a>*@
+                            <a href="@Url.Action("AdditionalInformation","Prospectus",new{ pto =ViewBag.pto})" class="btn btn-sissa-blue-light btn-rounded pValid"><i class="ti-agenda"></i> Completar </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><i class="ti-clipboard"></i> Referencias Laborales <label style="font-size:12px" class="badge badge-success">@ViewBag.RefLaboral</label> </td>
+                        <td>
+                            <a href="@Url.Action("EmploymentData","Prospectus",new{ pto =ViewBag.pto})" class="btn btn-sissa-green-light btn-rounded pValid"><i class="ti-plus"></i> Agregar </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><i class="ti-clipboard"></i> Referencias Personales <label style="font-size:12px" class="badge badge-success">@ViewBag.RefPers</label></td>
+                        <td>
+                            <a href="@Url.Action("PersonalReferencesData","Prospectus",new{ pto =ViewBag.pto})" class="btn btn-sissa-green-light btn-rounded pValid"><i class="ti-plus"></i> Agregar </a>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th scope="row">4</th>
+                        @if (ViewBag.ExamResolv)
+                        {
+                            <td>Examen (Barsit) <label style="font-size:12px" class="badge bg-success">Resuelto</label></td>
+                            <td>
+
+                                <a id="reset_exam" name="reset_exam" class="btn btn-warning btn-rounded sweet-prompt pValid" style="color:#fff"><i class="ti-reload"></i> Reset</a>
+                                <a style="color:#fff" class="btn btn-sissa-blue-light btn-rounded disabled pValid"><i class="ti-book"></i> Iniciar </a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>Examen (Barsit)</td>
+                            <td>
+                                <a href="@Url.Action("Example","Exams",new{ pto =ViewBag.pto})" class="btn btn-sissa-blue-light btn-rounded pValid"><i class="ti-book"></i> Iniciar </a>
+                            </td>
+                        }
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+
+                        @if (ViewBag.ValRepre && ViewBag.PropValidado)
+                        {
+                            <td>
+                                Firma de Documentos
+                                <label style="font-size:12px" class="badge bg-success">Documentos Validados</label>
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Agreements","Prospectus",new{ pto =ViewBag.pto})" class="btn btn-sissa-green-light btn-rounded "><i class="ti-eye"></i> Ver </a>
+                            </td>
+                        }
+                        else if (!ViewBag.ValRepre && ViewBag.PropValidado)
+                        {
+                            <td>
+                                Firma de Documentos
+                                <label style="font-size:12px" class="badge bg-warning">Verificando...</label>
+                            </td>
+                            <td>
+                                <a id="reset_prospectus" name="reset_prospectus" class="btn btn-warning btn-rounded sweet-prompt ptoBlock" style="color:#fff"><i class="ti-reload"></i> Reset</a>
+                                <a href="@Url.Action("Agreements","Prospectus",new{ pto =ViewBag.pto})" class="btn btn-sissa-green-light btn-rounded "><i class="ti-eye"></i> Ver </a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                Firma de Documentos
+                            </td>
+                            <td>
+                                <a id="reset_prospectus" name="reset_prospectus" class="btn btn-warning btn-rounded sweet-prompt ptoBlock" style="color:#fff"><i class="ti-reload"></i> Reset</a>
+                                <a href="@Url.Action("Agreements","Prospectus",new{ pto =ViewBag.pto})" class="btn btn-sissa-blue-light btn-rounded"><i class="ti-pencil"></i> Iniciar </a>
+                            </td>
+                        }
+                    </tr>
+                     <tr>
+                        <th scope="row">6</th>
+                        <td>Cuestionario Medico</td>
+                        <td>
+                            <a href="@Url.Action("MedicalQuestionnaire","Prospectus",new{ pto = ViewBag.pto,filter =1} )" class="btn btn-sissa-blue-light btn-rounded pValid"><i class="ti-pencil"></i> Iniciar </a>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th scope="rpw">7</th>
+                        <td>Visita Domiciliaria</td>
+                        <td>
+                            @if (ViewBag.HV != 0)
+                            {
+                                <a href="@Url.Action("Research","HomeVisit",new{ pto = ViewBag.pto,idvisit =ViewBag.HV,filter=1,stat="P"} )" class="btn btn-sissa-blue-light btn-rounded pValid"><i class="ti-pencil"></i> Iniciar </a>
+                            }
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@*<partial name="../Prospectus/Modal/_ModalConfirmReset.cshtml" />*@
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //$("a[name='reset_prospectus']").click(function() {
+            //    $("#ModalConfirmacionReset").modal("show");
+            //    $("#propspectus_confirm").val($(this).attr("id"));
+
+            //});
+            if ('@ViewBag.PropValidado' === 'True') {
+                $(".ptoBlock").addClass("disabled")
+            } else {
+                $(".ptoBlock").removeClass("disabled")
+            }
+
+            if (getBool('@ViewBag.ValRepre') && getBool('@ViewBag.PropValidado')) {
+                $(".pValid").addClass("disabled")
+            }
+
+
+
+
+        });
+
+        $("#reset_prospectus").click(function() {
+            swal(
+                {
+                    title: "Reinicio de Firma de Documentos",
+                    text: "Para Reiniciar Proceso, Ingresar la Clave de Reclutador",
+                    type: "input",
+                    inputType: "password",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave Reclutador",
+                },
+                function(inputValue) {
+                    if (!inputValue) return false;
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresa Clave!");
+                        return false;
+                    }
+                    ReinicioProspecto(inputValue, '@ViewBag.pto')
+
+                }
+            );
+        });
+
+        $("#reset_exam").click(function() {
+
+            swal(
+                {
+                    title: "Reinicio de Examen Barsit",
+                    text: "Para Reiniciar Examen, Ingresar la Clave de Reclutador",
+                    type: "input",
+                    inputType: "password",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave Reclutador",
+                },
+                function(inputValue) {
+                    if (!inputValue) return false;
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresa Clave!");
+                        return false;
+                    }
+                    ReinicioExam(inputValue, '@ViewBag.pto')
+
+                }
+            );
+
+
+        });
+
+        function ReinicioProspecto(_password, _prosp) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Confirm_Reset","Recruiter")",
+                data: { password: _password, pto: _prosp },
+
+                success: function(data) {
+                    if (data) {
+                        //alert("Proceso Reiniciado")
+                        swal("Proceso Reinicado !!", "Ya puedes iniciar el proceso nuevamente");
+                    }
+                    else {
+                        //alert("Contraseña Incorrecta")
+                        swal("Clave Incorrecta !!", "Favor de Ingresar la Clave Correcta");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    return false;
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function ReinicioExam(_password, _prosp) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("RestarExam","Exams")",
+                data: { password: _password, pto: _prosp },
+
+                success: function(data) {
+                    if (data) {
+                        //alert("Proceso Reiniciado")
+                        swal("Examen Reinicado !!", "Ya puedes realizar el Examen Nuevamente");
+
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 3000);
+                    }
+                    else {
+                        //alert("Contraseña Incorrecta")
+                        swal("Clave Incorrecta !!", "Favor de Ingresar la Clave Correcta");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    return false;
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+
+        $("#ValidarPto").click(function() {
+
+            swal(
+                {
+                    title: "Aprobacion de Prospecto",
+                    text: "Para Aprobar Prospecto, Ingresar la Clave de Reclutador",
+                    type: "input",
+                    inputType: "password",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave Reclutador",
+                },
+                function(inputValue) {
+                    if (!inputValue) return false;
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresa Clave!");
+                        return false;
+                    }
+                    ValidarProspecto(inputValue, '@ViewBag.pto')
+
+                }
+            );
+
+
+        });
+
+        function ValidarProspecto(_password, _pto) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("ConfirmProspectus","Prospectus")",
+                data: { password: _password, pto: _pto },
+
+                success: function(data) {
+                    if (data) {
+                        //alert("Proceso Reiniciado")
+                        swal("Prospecto Validado !!", "");
+
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 3000);
+                    }
+                    else {
+                        //alert("Contraseña Incorrecta")
+                        swal("Clave Incorrecta !!", "Favor de Ingresar la Clave Correcta");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    return false;
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+
+        $("#DesValidarPto").click(function() {
+
+            swal(
+                {
+                    title: "Des-Aprobar Prospecto",
+                    text: "Para Des-Aprobar Prospecto, Ingresar la Clave de Reclutador",
+                    type: "input",
+                    inputType: "password",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave Reclutador",
+                },
+                function(inputValue) {
+                    if (!inputValue) return false;
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresa Clave!");
+                        return false;
+                    }
+                    DesValidarProspecto(inputValue, '@ViewBag.pto')
+
+                }
+            );
+
+        });
+
+        function DesValidarProspecto(_password, _pto) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DesConfirmProspectus","Prospectus")",
+                data: { password: _password, pto: _pto },
+
+                success: function(data) {
+                    if (data) {
+                        //alert("Proceso Reiniciado")
+                        swal("Prospecto Des-Validado !!", "");
+
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 3000);
+                    }
+                    else {
+                        //alert("Contraseña Incorrecta")
+                        swal("Clave Incorrecta !!", "Favor de Ingresar la Clave Correcta");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    return false;
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function getBool(_val) 
+        {
+            if (_val === "True") {
+                return true;
+            } else 
+            {
+                return false;
+            }
+        }
+
+    </script>
+}

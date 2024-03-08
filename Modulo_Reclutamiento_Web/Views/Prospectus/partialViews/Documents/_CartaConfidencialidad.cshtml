@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Leaflet_Information
+
+<div class="card">
+    <div class="card-body">
+
+        <div class=" row" id="doc4">
+
+            <div class="col-12">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" title="encabezado" />
+
+            </div>
+
+        </div>
+        <div class="col-12 text-center">
+            <h2><u>CARTA DE CONFIDENCIALIDAD</u></h2>
+        </div>
+        <div class="marcaAguaSissa row">
+
+            <div class="col-12 text-left">
+                <p> Para: <span id="nombre_Carta_Conv">@Model.Name</span> </p>
+                <p>De: Lic. Enrique Villanueva Hernandez </p>
+                <p>Fecha : @DateTime.Today.ToString("dd MMM yyyy")
+                <p>Asunto: Manejo de Información Confidencial</p>
+            </div>
+
+            <div class="row">
+                <p class="text-justify">
+                    Por medio de la presente le informo que de acuerdo a la posición que ocupa en nuestra empresa es necesario que entienda los parámetros de <strong>DISCRECIONALIDAD</strong>
+                    establecidos en la ley y sus implicaciones.
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    En los términos de la Fracc. XIII del artículo 134 de la Ley Federal del Trabajo <strong>EL EMPLEADO</strong> se obliga a guardar escrupulosamente los secretos técnicos de mercado y
+                    de fabricación, de los productos que en forma directa o indirecta manufacture o comercialice <strong> LA EMPRESA</strong>, así como cualquier otra cosa confidencial relacionada con la operación o
+                    administración de la misma tales como <strong>(SUELDOS, SALARIOS, PRESTACIONES, BONOS, ENTRE OTRAS)</strong> y a las que haya tenido acceso el empleado por razón de su trabajo.
+                    Como consecuencia de lo anterior de manera enunciativa y no limitativa, <strong>EL EMPLEADO</strong> se obliga a no divulgar o comunicar, ni en forma directa o indirecta, a persona alguna,
+                    cualquier información respecto a las actividades antes mencionadas. Las obligaciones a que se refiere la presente cláusula deberán ser estrictamente cumplidas por <strong>EL EMPLEADO</strong>,
+                    durante todo el tiempo en que subsista la relación laboral entre las partes y por un periodo de dos años subsecuentes a la fecha de terminación de la misma.
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    Las <strong>SANCIONES</strong> en las que incurre <strong>EL EMPLEADO</strong> en caso de incumplimiento de las obligaciones que a su cargo establece la cláusula anterior, <strong>LA EMPRESA</strong> podrá sin responsabilidad alguna,
+                    dar por terminada la relación de trabajo que los une. <strong>EL EMPLEADO</strong> será responsable civilmente en caso de incurrir en la violación por daños y perjuicios que a <strong>LA EMPRESA</strong> se causen
+                    independientemente de las penalidades en la ley de la propiedad Industrial y su Reglamento en el Código Penal del Estado de Nuevo León.
+                </p>
+            </div>
+
+        </div>
+        <div class=" row text-center">
+            @if (Model.Document_Status == "Y")
+            {
+                <div class="col-12">
+                    <img id="fingerLeft" src="@Model.FingerPrints.FingerPrintLeft" width="60px" class="visually-hidden imgLeft" height="80px" />
+                    <img id="firmaCartaCandidato" src="@Model.Signature" class="visually-hidden" width="175px" height="80px" />
+                     <img id="fingerRight" src="@Model.FingerPrints.FingerPrintRight" width="60px" class="visually-hidden imgRight" height="80px" />
+
+                </div>
+                <div class="col-12">
+                    <p class="text-center" id="nombre_Carta_Conf">@Model.Name</p>
+                </div>
+            }
+            else
+            {
+                <div class="col-12">
+                    <button id="btn_Carta_Confidencialidad" type="button" class="btn btn-primary btn-lg">Firmar</button>
+                </div>
+            }
+
+        </div>
+        <div class=" row">
+            <div class="col-12">
+                <img src="../images/pie_avisocandidato.png" width="100%" height="45px" title="pie" />
+
+            </div>
+        </div>
+
+
+        <!--fin cardbody-->
+    </div>
+
+</div>
+

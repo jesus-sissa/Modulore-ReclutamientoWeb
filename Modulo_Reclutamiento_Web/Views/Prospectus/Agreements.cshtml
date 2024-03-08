@@ -1,0 +1,135 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Mvc.Rendering;
+@{
+    var prospectusName = (User_Persistent_Data.ProspectusName != null) ? User_Persistent_Data.ProspectusName : "";
+}
+@model List<Documents>
+
+<div class="page-header">
+    <div class="page-title">
+       <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Prospectus",new{ pto = ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+             <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Procesos</li>
+            <li class="breadcrumb-item active">Documentos</li>
+        </ol>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="card">
+
+        <div class="card-title">
+            <h4>Documentos </h4>
+            <h6>Nombre:@prospectusName</h6>
+           
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Fecha</th>
+                            <th>Documento</th>
+                            <th>Firmado</th>
+                            <th>Acciones</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 1; i <= Model.Count; i++)
+                        {
+                            <tr>
+                                <th>@i</th>
+                                <th>@Model[i-1].Date</th>
+                                <th>@Model[i-1].Name</th>
+
+                                @*si el documento fue firmado*@
+                                @if (Model[i - 1].Sign == "SI")
+                                {
+                                    <th>
+                                        <span class="badge bg-sissa-green">@Model[i-1].Sign</span>
+                                    </th>
+
+                                    <th class="text-right">
+                                        <a style="color:#fff" class="btn btn-sissa-green-light" href="@Url.Action("Document","Prospectus",new{ pto=ViewBag.pto ,doc =@i,status ="Y"})">Ver <i class="ti-eye"></i></a>
+                                        @*<a style="color:#fff" class="btn btn-primary btn-rounded disabled">Firmar <i class="ti-brush"></i></a>*@
+                                    </th>
+                                }
+                                else
+                                {
+                                    <th>
+                                        <span class="badge badge-warning">@Model[i-1].Sign</span>
+                                    </th>
+                                    <th class="text-right">
+                                        @*<a style="color:#fff" class="btn btn-success btn-rounded disabled ">Ver <i class="ti-eye"></i></a>*@
+                                       @*comprueba si ya se firmo el documento de privacidad de datos*@
+                                        @if (ViewBag.IsSigned)
+                                        {
+                                            @*IndexDoc +1 es el numero de documento que se firmara *@
+                                            if ((ViewBag.IndexDoc + 1) == i)
+                                            {
+                                                <a style="color:#fff" class="btn btn-primary btn-rounded" href="@Url.Action("Document","Prospectus",new{ pto = ViewBag.pto,doc =@i,status ="N"})">Firmar <i class="ti-pencil-alt2"></i></a>
+                                            }
+                                            else
+                                            {
+                                                <a style="color:#fff" class="btn btn-primary btn-rounded disabled">Firmar <i class="ti-pencil-alt2"></i></a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @*si eres el documento 1 (Privacidad de datos) se activa para ser firmado, 
+                                                en caso de que no aparece desactivado
+                                            *@
+                                            if ((ViewBag.IndexDoc + 1) == i)
+                                            {
+                                                <a style="color:#fff" class="btn btn-primary btn-rounded" href="@Url.Action("Document","Prospectus",new{ pto = ViewBag.pto,doc =@i,status ="N"})">Firmar <i class="ti-pencil-alt2"></i></a>
+                                            }
+                                            else
+                                            {
+                                                <a style="color:#fff" class="btn btn-primary btn-rounded disabled">Firmar <i class="ti-pencil-alt2"></i></a>
+                                            }
+
+                                        }
+
+                                    </th>
+
+                                }
+
+
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            //if('ViewBag.IsSigned' === 'N') {
+            //    $("#modalAvisoPrivacidad").modal('show');
+            //}
+
+        });
+
+
+    </script>
+}

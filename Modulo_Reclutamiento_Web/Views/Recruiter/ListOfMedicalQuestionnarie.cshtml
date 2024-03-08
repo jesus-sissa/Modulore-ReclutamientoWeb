@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using Modulo_Reclutamiento_Web.Models.MedicalQuestionData;
+@model List<MedicalQuestion>;
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","HomeVisit")"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Cuestionario Medico</li>
+            <li class="breadcrumb-item active">Lista de Cuestionarios</li>
+        </ol>
+    </div>
+</div>
+@if (@Model != null)
+{
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-title">
+                    <h4>Cuestionarios Medicos</h4>
+                    <a id="NewCuestionarie" class="btn btn-sissa-green-light btn-rounded" style="color:white;float:right"><i class="ti-clipboard"></i> Nuevo </a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Nombre</th>
+                                    <th>Firmado</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th>@item.Date</th>
+                                        <th>@item.Name</th>
+                                        <th>
+                                            @if (item.IsSigned) { 
+                                                <span class="bg-success">SI</span>
+                                            }else
+                                            {
+                                                 <span class="bg-danger">NO</span>
+                                            }
+                                        </th>
+                                        <th class="text-right">
+                                            <a href="@Url.Action("MedicalQuestionnaire","Prospectus",new{ pto =((ViewBag.Filter==1) ?item.ProspectusId : item.EmployeerId),filter =ViewBag.Filter ,stat ="R"})" class="btn btn-sissa-blue-light btn-rounded" style="color:white"><i class="ti-clipboard"></i> Ir </a>
+                                        </th>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script type="text/javascript">
+
+        //ViewBag.pto = pto;
+        //   ViewBag.Filter = filter;
+
+        $("#NewCuestionarie").click(function() {
+            $(this).addClass("disabled")
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddCuestionarie","Recruiter")",
+                data: { Id: '@ViewBag.pto', filter: '@ViewBag.Filter' },
+
+                success: function(data) {
+                    console.log(data)
+                    if (data) {
+                        swal("Nuevo Cuestionario Medico Agregado!", "", "success");
+                    }
+                    else {
+                        sweetAlert("Oops...", "No se pudo Agregar Cuestionario Medico!!", "error");
+
+                    }
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 3000);
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+            $(this).removeClass("disabled")
+
+        });
+    </script>
+}

@@ -1,0 +1,165 @@
+﻿@using Modulo_Reclutamiento_Web.Models.HomeVisitData;
+@model IncomeNExpenses
+<div class="card">
+    <div class="card-title">
+        <div class="row">
+            <div class="col-12 p-30">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" title="encabezado" />
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <form id="formIncomeExpenses" method="post" asp-action="saveUpdIncomeNExpenses" asp-controller="HomeVisit">
+            <input type="hidden" asp-for="@Model.ResearchParam.prosp" />
+            <input type="hidden" asp-for="@Model.ResearchParam.idvisit" />
+            <input type="hidden" asp-for="@Model.ResearchParam.filter" />
+            <input type="hidden" asp-for="@Model.ResearchParam.stat" />
+            <input type="hidden" asp-for="@Model.Id " />
+            <div class="form-group">
+                <label asp-for="@Model.LongTermBorrowingPlan" class=""></label>
+                <select class="form-control input-rounded desActIE" asp-for="@Model.LongTermBorrowingPlan" asp-items="@(new SelectList(Model.LongTermBorrowingPlanOp, "Value","Text",Model.LongTermBorrowingPlan))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.LongTermBorrowingPlanExplication" class=""></label>
+                <input type="text" class="form-control desActIE" asp-for="@Model.LongTermBorrowingPlanExplication" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.HaveDebts" class=""></label>
+                <select class="form-control input-rounded desActIE" asp-for="@Model.HaveDebts" asp-items="@(new SelectList(Model.HaveDebtsOp, "Value","Text",Model.HaveDebts))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DebtsAmount" class=""></label>
+                <input type="text" class="form-control desActIE" disabled asp-for="@Model.DebtsAmount" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.IncomeAmount" class=""></label>
+                <input type="text" class="form-control validar desActIE" asp-for="@Model.IncomeAmount" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.IncomeDedicatedToSavings" class=""></label>
+                <input type="number" class="form-control validar desActIE" asp-for="@Model.IncomeDedicatedToSavings" value="0" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.NumberOfPeopleContributeToFamilyEconomy" class=""></label>
+                <input type="number" class="form-control validar desActIE" asp-for="@Model.NumberOfPeopleContributeToFamilyEconomy" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.NumberEconomicDependents" class=""></label>
+                <input type="number" class="form-control validar desActIE" asp-for="@Model.NumberEconomicDependents" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.MonthlyIncomeDistributions" class=""></label>
+                @*<input type="hidden" class="form-control" asp-for="DistributedMonthlyIncome" />*@
+            </div>
+
+            <div class="form-group">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center hidden">Id</th>
+                                <th class="text-center">Ingreso</th>
+                                <th class="text-center">Cantidad</th>
+                                <th class="text-center">Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbIncomeExpenses">
+                            @for (var i = 0; i < Model.MonthlyIncomeDistributions.Count; i++)
+                            {
+                                <tr>
+                                    <th class="text-center hidden">
+                                        <input type="hidden" asp-for="@Model.MonthlyIncomeDistributions[i].Id" />
+                                    </th>
+                                    <th class="text-center disabled">
+                                        <label>@Model.MonthlyIncomeDistributions[i].Income</label>
+                                        <input type="hidden" asp-for="@Model.MonthlyIncomeDistributions[i].Income" />
+                                    </th>
+                                    <th class="text-center">
+                                        <input type="text" class="disabled" asp-for="@Model.MonthlyIncomeDistributions[i].Quantity" />
+                                    </th>
+                                    <th class="text-center">
+                                        @if (ViewBag.stat =="R")
+                                        {
+                                            <a id="@i" class="btn btn-sissa-blue-light disabled" style="color:#fff">Modificar</a>
+                                        }
+                                        else
+                                        {
+                                            <a id="@i" class="btn btn-sissa-blue-light modIncomeDistribution" style="color:#fff">Modificar</a>
+                                        }
+                                    </th>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.FamilyMemberWorksInPoliceOrSecurityCorp" class=""></label>
+                <select class="form-control input-rounded desActIE" asp-for="@Model.FamilyMemberWorksInPoliceOrSecurityCorp" asp-items="@(new SelectList(Model.FamilyMemberWorksInPoliceOrSecurityCorpOp, "Value","Text",Model.FamilyMemberWorksInPoliceOrSecurityCorp))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.HaveOwnCar" class=""></label>
+                <select class="form-control input-rounded desActIE" asp-for="@Model.HaveOwnCar" asp-items="@(new SelectList(Model.HaveOwnCarOp, "Value","Text",Model.HaveOwnCar))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.HaveOwnCarBrand" class=""></label>
+                <input type="text" disabled class="form-control desActIE" asp-for="@Model.HaveOwnCarBrand" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.HaveOwnCarModel" class=""></label>
+                <input type="text" disabled class="form-control desActIE" asp-for="@Model.HaveOwnCarModel" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.CreditCardHandle" class=""></label>
+                <input type="text" class="form-control desActIE" asp-for="@Model.CreditCardHandle" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.HaveProperties" class=""></label>
+                <select class="form-control input-rounded desActIE" asp-for="@Model.HaveProperties" asp-items="@(new SelectList(Model.HavePropertiesOp, "Value","Text",Model.HaveProperties))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PropertiesLocation" class=""></label>
+                <input type="text" disabled class="form-control desActIE" asp-for="@Model.PropertiesLocation" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.WhoLivesAtHome" class=""></label>
+                <input type="hidden" class="form-control desActIE" asp-for="@Model.WhoLivesAtHome" />
+            </div>
+            <div class="form-group">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Nombre</th>
+                                <th class="text-center">Parentesco</th>
+                                <th class="text-center">¿Dependiente Economico?</th>
+                            </tr>
+                        </thead>
+                        <tbody id="parientes">
+                            @foreach (var item in Model.FamilyMemberLiveAtHome)
+                            {
+                                <tr>
+                                    <th class="text-center">@item.FullName</th>
+                                    <th class="text-center">@item.Kinship</th>
+                                    <th class="text-center">@item.EconomicDependent</th>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" id="btnIncomExpenses" class="btn btn-sissa-green-light form-control-file desActIE" style="color:#fff" value="Guardar" />
+            </div>
+
+        </form>
+
+
+    </div>
+
+
+</div>

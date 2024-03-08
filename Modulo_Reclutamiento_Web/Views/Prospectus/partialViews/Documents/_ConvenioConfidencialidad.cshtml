@@ -1,0 +1,181 @@
+﻿@model Leaflet_Information
+<div class="card">
+    <div class="card-body">
+
+        <div class="row" id="doc5">
+            <div class="row">
+                <div class="col-2 borde">
+                    <img id="logo" src="../images/_logo.png" width="80px" height="80px" title="logo" />
+                </div>
+                <div class="col-6 borde">
+                    <p style="color: black; text-align: center; margin-top: 2rem; font-size: 16px">
+                        <strong>
+                            CONVENIO DE CONFIDENCIALIDAD
+                            PARA EMPLEADOS
+                        </strong>
+                    </p>
+                </div>
+                <div class="col-4 borde">
+                    <div class="row">
+                        <div class="col-5 borde text-left" style="background-color: #C0A7C9">Código:</div>
+                        <div class="col-7 borde text-left">FO-RHU-52</div>
+                        <div class="col-5 borde text-left" style="background-color: #C0A7C9">Versión:</div>
+                        <div class="col-7 borde text-left">01</div>
+                        <div class="col-5 borde text-left" style="background-color: #C0A7C9">Fecha:</div>
+                        <div id="fecha1" class="col-7 borde text-left">@DateTime.Today.ToString("dd MMM yyyy")</div>
+                        <div class="col-5 borde text-left" style="background-color: #C0A7C9 "> Página:</div>
+                        <div class="col-7 borde text-left">1 de 3</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12">
+            <p class="text-right">Monterrey, N.L. a @DateTime.Today.ToString("dd MMM yyyy") </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>
+                    CONVENIO DE CONFIDENCIALIDAD PARA EL TRATAMIENTO DE DATOS PERSONALES QUE CELEBRAN POR UNA PARTE SERVICIO INTEGRAL DE SEGURIDAD, S.A. DE C.V. REPRESENTADO EN ESTE MOMENTO POR EL C. ENRIQUE VILLANUEVA HERNANDEZ, EN LO SUCESIVO “LA ENTIDAD”,
+                    Y POR LA OTRA EL, HOMERO CARREON SALAZAR , EN LO SUCESIVO “EL EMPLEADO”, AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS:
+                </strong>
+            </p>
+        </div>
+        <div class="row">
+            <p class="">
+                <strong>D E C L A R A C I O N E S:</strong>
+            </p>
+            <p class="text-left-5"><strong>I.	“LA ENTIDAD”</strong> declara por conducto de apoderado jurídico:</p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                a) Ser una empresa tiene por objeto social:<strong>
+                    Servicio de seguridad y proteccion, reclutamiento y selección de personal de seguridad, proteccion personal y familiar, guardias especiales, traslados especiales de valores, asesorias,
+                    investigaciones, capacitacion.
+                </strong>, y quien tiene su domicilio en <strong>Juan Álvarez #209, Col. Centro, Monterrey C.P. 64000.</strong>
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                b) Con la finalidad de la consecución de su objeto social, <strong>“LA ENTIDAD”</strong>, obtiene de sus clientes, proveedores y empleados, información que la ley clasifica como “DATOS PERSONALES”.
+            </p>
+            <p class="text-justify">Que estos “DATOS PERSONALES” los conocen o adquiere con motivo de su trabajo “EL EMPLEADO”.</p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                C) Por Disposición de LA LEY,<strong>“LA ENTIDAD”</strong>  está obligado a implementar protocolos de seguridad y protección de los citados “DATOS PERSONALES”, y por ende comprometer a sus empleados a NO DIVULGAR, NI USAR CON FINES ILÍCITOS tales “DATOS PERSONALES”.
+            </p>
+            <p class="text-left-5"><strong>II.	EL EMPLEADO</strong> declara:</p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                a) Ser una persona fisica de nombre <strong>C. <span id="nombreConvenio"></span></strong> y que desempeña sus labores en el domicilio ubicado en
+                <strong>Juan Alvarez #209, Col. Centro, Monterrey C.P. 64000.</strong> Asi como en su modalidad TRABAJO A DISTANCIA.
+
+            </p>
+
+        </div>
+
+        <div class="row">
+            <p class="text-justify">
+                b) Que es trabajador de la <strong>“LA ENTIDAD”</strong> y por ello participa de los conocimientos de “LOS DATOS PERSONALES” de clientes, empleados, y proveedores de su <strong>“LA ENTIDAD”</strong>, y que desea formalizar por escrito su compromiso de NO DIVULGACIÓN O USO ILÍCITO de los “DATOS PERSONALES”,
+            </p>
+            <p class="text-left-5"><strong>III.	AMBAS partes declaran:</strong></p>
+            <p class="text-justify">Que en virtud del contrato de prestación de servicios que tienen celebrado, es su deseo celebrar el presente convenio de confidencialidad.</p>
+        </div>
+        <div class="row">
+            <p>
+                <strong>C L A U S U L A S:</strong>
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong> PRIMERA.-</strong> <strong><u>“EL EMPLEADO”</u></strong> se obliga a proteger y guardar escrupulosamente la información confidencial y “DATOS PERSONALES” DE CLIENTES, PROVEEDORES y EMPLEADOS, de <strong>“LA ENTIDAD”</strong> , QUE LLEGUE A CONOCER O CONOZCA CON MOTIVO DE SU TRABAJO, ya sea en medios físicos como electrónicos,
+                y en consecuencia a NO DIVULGARLA, NI APROVECHARSE PARA SI, por lo que reconoce y se obliga a tener estrictamente prohibido revelarla, apoderarse o usarla directa o indirectamente o por interpósita persona, para fines distintos a los estrictamente laborales.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong> SEGUNDA. - “EL EMPLEADO”</strong> conviene en no EJECUTAR ACCIÓN ALGUNA, que viole la confidencialidad de los citados “DATOS PERSONALES”.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>TERCERA. -</strong> En el caso de que <strong>“EL EMPLEADO”</strong> incumpla alguna de las estipulaciones del presente Convenio, se sujetara a las sanciones laborales, penales y administrativas, que establezca la LEY vigente al momento de la infracción.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>CUARTA. - “EL EMPLEADO”</strong> deberá devolver a <strong>“LA ENTIDAD”</strong>, en el momento en que ésta se lo solicite, la información que posea en rango de “DATOS PERSONALES” de clientes, empleados y proveedores de <strong>“LA ENTIDAD”</strong>.
+            </p>
+            <p class="text-justify">
+                Así mismo, tampoco podrá sustraer del domicilio de <strong>“LA ENTIDAD”</strong> o del lugar donde presta sus servicios, cualquiera de los medios materiales en donde conste la información confidencial, tales como documentos, medios electromecánicos, magnéticos,
+                discos ópticos, microfilmes, películas u otros instrumentos similares. Así como también los diarios, memorias, notas, correspondencia, dibujos, planos, especificaciones y otros documentos relacionados directa o indirectamente con la información confidencial que
+                haya elaborado, recopilado u obtenido de <strong>“LA ENTIDAD”</strong> o de cualquier tercero relacionado con éste.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong> QUINTA. - “EL EMPLEADO”</strong> no podrá, utilizar la información confidencial de rango de “DATOS PERSONALES” que haya adquirido, obtenido o generado durante su permanencia laboral con <strong>“LA ENTIDAD”</strong>, cuando preste servicios a terceras personas o se
+                emplee por cuenta propia o como funcionario, miembro, empleado, accionista, consultor, prestador de servicios, representante o asesor de otra persona física o moral, o entidad gubernamental.
+            </p>
+            <p class="text-justify">
+                No podrá, por lo tanto, por si o por interpósita persona, contribuir con dichos conocimientos e información confidencial o DATOS PERSONALES DE TERCEROS o de <strong>“LA ENTIDAD”</strong>, en ningún tipo de labor o en ventas relacionadas con cualquier
+                servicio que tenga conexión directa o indirecta con los servicios prestados a favor de <strong>“LA ENTIDAD”</strong>, ni con cualquiera de los clientes o empleados de <strong>“LA ENTIDAD”</strong>.
+            </p>
+            <p class="text-justify">
+                <strong> “EL EMPLEADO”</strong> se obliga en el caso de cualquier incumplimiento a los compromisos aquí adquiridos, a realizar el pago de los daños y perjuicios que tal incumplimiento ocasione a <strong>“LA ENTIDAD”</strong>, sin perjuicio de las demás acciones legales que procedan en su contra
+                por aplicación de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong> SEXTA. - </strong>Para la interpretación, cumplimiento y ejecución del presente instrumento, las partes se someten expresamente a la competencia, jurisdicción y fuero de las leyes de la ciudad de MÉXICO renunciando desde ahora a cualquier otro fuero que por razón de sus domicilios en el presente o futuro pudiere corresponderles.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                LEÍDO QUE FUE POR AMBAS PARTES EL PRESENTE CONVENIO Y CONOCIENDO SU VALOR, CONTENIDO Y ALCANCE LO FIRMAN POR DUPLICADO EL 08 DE JUNIO DEL AÑO DOS MIL VEINTITRES (2023), siendo constancia de su firma de entrega-recepción de un ejemplar original para EL EMPLEADO.
+            </p>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <div class="col-12 text-center">
+                    @if (Model.Document_Status == "Y")
+                    {
+                        <img id="fingerLeft" src="@Model.FingerPrints.FingerPrintLeft" width="60px" class="visually-hidden imgLeft" height="80px" />
+                    }
+                    <p><strong>EL PATRON</strong></p>
+                    <img id="patronFirmaConvenio" src="@Model.Document_Signatures[0].Signature" width="175px" height="80px" />
+                    <p class="text-center"><strong>C. @Model.Document_Signatures[0].Name</strong> </p>
+                    <p class="text-center"><strong>SERVICIO INTEGRAL DE SEGURIDAD, S.A. DE C.V.</strong> </p>
+                </div>
+            </div>
+            <div class="col-6">
+                @if (Model.Document_Status == "Y")
+                {
+                    <div class="col-12">
+                        <p><strong>EL TRABAJADOR</strong></p>
+                        <img id="firmaConvenioConfCandidato" src="@Model.Signature" width="175px" height="80px" />
+                        <img id="fingerRight" src="@Model.FingerPrints.FingerPrintRight" width="60px" class="visually-hidden imgRight" height="80px" />
+                        <p class="text-center"> <strong>C. <span class="text-justify" id="nombre_Convenio_Conf">@Model.Name</span></strong></p>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-12">
+                        <button id="btn_Convenio_Conf" class="btn btn-primary btn-lg ">Firmar</button>
+                    </div>
+                }
+
+
+            </div>
+
+        </div>
+
+
+        <!--fin cardbody-->
+    </div>
+</div>

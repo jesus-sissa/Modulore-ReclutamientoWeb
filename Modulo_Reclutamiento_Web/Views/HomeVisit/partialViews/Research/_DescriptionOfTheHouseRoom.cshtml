@@ -1,0 +1,122 @@
+﻿@using Modulo_Reclutamiento_Web.Models.HomeVisitData;
+@model DescriptionOfTheHouseRoom;
+<div class="card">
+    <div class="card-title">
+        <div class="row">
+            <div class="col-12 p-30">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" title="encabezado" />
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form id="formDescriptionOfTheHouseRoom" method="post" asp-action="saveUpdDescriptionOfTheHouseRoom" asp-controller="HomeVisit">
+            <input type="hidden" asp-for="@Model.ResearchParam.prosp" />
+            <input type="hidden" asp-for="@Model.ResearchParam.idvisit" />
+            <input type="hidden" asp-for="@Model.ResearchParam.filter" />
+            <input type="hidden" asp-for="@Model.ResearchParam.stat" />
+            <input type="hidden" asp-for="@Model.Id " />
+            <div class="form-group">
+                <label asp-for="@Model.NameOwnerOfTheProperty" class=""></label>
+                <input type="text" class="form-control validar" asp-for="@Model.NameOwnerOfTheProperty" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.NumberOfInhabitants" class=""></label>
+                <input type="number" class="form-control validar" asp-for="@Model.NumberOfInhabitants" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.FloorsInTheProperty" class=""></label>
+                <input type="number" class="form-control validar" asp-for="@Model.FloorsInTheProperty" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DistributionOfTheProperty" class=""></label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label asp-for="@Model.hasALivingRoom" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input" asp-for="@Model.hasALivingRoom" checked="@Model.hasALivingRoom" />
+            </div>
+            <div class="form-check form-check-inline">
+                <label asp-for="@Model.hasAKitchen" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input" asp-for="@Model.hasAKitchen" checked="@Model.hasAKitchen" />
+            </div>
+            <div class="form-check form-check-inline">
+                <label asp-for="@Model.hasDiningRoom" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input" asp-for="@Model.hasDiningRoom" checked="@Model.hasDiningRoom" />
+            </div>
+            <div class="form-check form-check-inline">
+                <label asp-for="@Model.hasAPatio" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input" asp-for="@Model.hasAPatio" checked="@Model.hasAPatio" />
+            </div>
+            <div class="form-check form-check-inline">
+                <label asp-for="@Model.hasAGarage" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input" asp-for="@Model.hasAGarage" checked="@Model.hasAGarage" />
+            </div>
+            <div class="form-check form-check-inline">
+                <label asp-for="@Model.hasMaidsRoom" class="form-check-label"></label>
+                <input type="checkbox" class="form-check-input" asp-for="@Model.hasMaidsRoom" checked="@Model.hasMaidsRoom" />
+            </div>
+            <hr class="hr" />
+            <div class="form-group">
+                <label asp-for="@Model.NumberOfRooms" class=""></label>
+                <input type="number" class="form-control validar" asp-for="@Model.NumberOfRooms" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.NumberOfBathrooms" class=""></label>
+                <input type="number" class="form-control validar" asp-for="@Model.NumberOfBathrooms" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.RoomType" class=""></label>
+                <select class="form-control input-rounded" asp-for="@Model.RoomType" asp-items="@(new SelectList(Model.RoomTypeOp, "Value","Text",Model.RoomType))"></select>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.RoomTypeOther" class=""></label>
+               <input type="text" disabled class="form-control" asp-for="@Model.RoomTypeOther" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.TypeOfContruction" class=""></label>
+                <select class="form-control input-rounded" asp-for="@Model.TypeOfContruction" asp-items="@(new SelectList(Model.TypeOfContructionOp, "Value","Text",Model.TypeOfContruction))"></select>
+            </div>
+              <div class="form-group">
+                <label asp-for="@Model.TypeOfConstructionOther" class=""></label>
+               <input type="text" disabled class="form-control" asp-for="@Model.TypeOfConstructionOther" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.DescriptionExteriorFacade" class=""></label>
+                <input type="text" class="form-control" asp-for="@Model.DescriptionExteriorFacade" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Furniture" class=""></label>
+                <select class="form-control input-rounded" asp-for="@Model.Furniture" asp-items="@(new SelectList(Model.FurnitureOp, "Value","Text",Model.Furniture))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.QualityOfFurnature" class=""></label>
+                <select class="form-control input-rounded" asp-for="@Model.QualityOfFurnature" asp-items="@(new SelectList(Model.QualityOfFurnatureOp, "Value","Text",Model.QualityOfFurnature))"></select>
+            </div>
+              <div class="form-group">
+                <label asp-for="@Model.QualityOfFurnatureDescription" class=""></label>
+               <input type="text" disabled class="form-control" asp-for="@Model.QualityOfFurnatureDescription" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.TypeOfFurniture" class=""></label>
+                <select class="form-control input-rounded" asp-for="@Model.TypeOfFurniture" asp-items="@(new SelectList(Model.TypeOfFurnitureOp, "Value","Text",Model.TypeOfFurniture))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.TypeOfFurnitureDescription" class=""></label>
+                <input type="text" class="form-control" disabled asp-for="@Model.TypeOfFurnitureDescription" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ObservedCleanAndTidy" class=""></label>
+                <select class="form-control input-rounded" asp-for="@Model.ObservedCleanAndTidy" asp-items="@(new SelectList(Model.ObservedCleanAndTidyOp, "Value","Text",Model.ObservedCleanAndTidyOp))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Comments" class=""></label>
+                <input type="text" class="form-control" asp-for="@Model.Comments" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" id="btnDescriptionHouse" class="btn btn-sissa-green-light form-control-file" style="color:#fff" value="Guardar" />
+            </div>
+
+        </form>
+    </div>
+</div>

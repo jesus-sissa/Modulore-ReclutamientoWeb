@@ -1,0 +1,7 @@
+﻿@using Modulo_Reclutamiento_Web.Models.GeneralData
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model EmploymentData
+<label asp-for="@Model.City" class="text-muted m-b-15 f-s-12"></label>
+<select class="form-control input-rounded" asp-for="@Model.City" asp-items="@(new SelectList(Model.CityOp, "Value","Text",Model.City))"></select>

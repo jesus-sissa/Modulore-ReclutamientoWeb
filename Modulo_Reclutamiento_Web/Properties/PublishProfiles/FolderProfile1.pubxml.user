@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\default\cajerosinteligentesQA</_PublishTargetUrl>
+    <History>True|2023-12-08T21:17:47.2389881Z;True|2023-07-24T10:17:21.4582266-06:00;True|2023-07-24T10:10:46.1194498-06:00;True|2023-07-24T10:01:03.5722305-06:00;False|2023-07-24T09:59:37.2580860-06:00;True|2023-07-20T15:34:26.9978018-06:00;True|2023-07-20T15:27:14.2529820-06:00;False|2023-07-19T18:01:07.6734022-06:00;True|2023-07-19T17:58:22.7692556-06:00;True|2023-07-19T17:53:34.5244686-06:00;True|2023-07-19T17:48:25.5270911-06:00;True|2023-07-19T17:45:52.2881706-06:00;True|2023-07-19T17:45:17.8272189-06:00;True|2023-07-19T15:24:59.9760639-06:00;True|2023-07-19T15:16:23.5087258-06:00;</History>
+  </PropertyGroup>
+</Project>

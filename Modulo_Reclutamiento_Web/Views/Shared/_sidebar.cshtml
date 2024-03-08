@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+     var menus =(List<Menu>) ((List<Menu>) @ViewData["menus"]);
+}
+<div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+    <div class="nano has-scrollbar">
+        <div class="nano-content active" tabindex="0" style="right: -17px;">
+            <ul class="d-block">
+                <div class="logo">
+                    <div class="app-brand w-100 d-flex justify-content-center border-bottom-0">
+                        <a class="w-auto pl-0" href="@Url.Action("Index","Home")">
+                            <img src="~/images/_logo.png" alt="Mono">
+                        </a>
+                    </div>
+                </div>
+               
+                @if (((List<Menu>) @ViewData["menus"]).Count >0)
+                {
+                    for (int i = 0; i <= menus.Count-1; i++)
+                    {
+                        
+                        @if (menus[i].subMenus !=null)
+                        {
+                             <li>
+                               <a class="sidebar-sub-toggle">@menus[i].Name <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                               <ul>
+                                   @for (int s = 0; s <= menus[i].subMenus.Count-1; s++)
+                                {
+                                     <li><a href=@Url.Content(@menus[i].subMenus[s].Link)>@menus[i].subMenus[s].Name</a></li>
+                                }
+                               </ul>
+                           </li>
+                        }
+                          
+                    }
+                }
+             
+
+                @*<li><a href="@Url.Action("LogOut","Users")"><i class="ti-close"></i> Logout</a></li>*@
+            </ul>
+        </div>
+        <div class="nano-pane"><div class="nano-slider" style="height: 798px; transform: translate(0px, 0px);"></div></div>
+    </div>
+</div>
+<!-- /# sidebar -->

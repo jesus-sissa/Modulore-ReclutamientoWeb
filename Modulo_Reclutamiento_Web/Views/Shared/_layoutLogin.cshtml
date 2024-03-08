@@ -1,0 +1,69 @@
+﻿@*@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Reclutamiento Web: Login</title>
+
+    <!-- Styles -->
+    <link href="~/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="~/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/lib/helper.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/lib/toastr/toastr.min.css" rel="stylesheet">
+    <style type="text/css">
+        .form-input-content {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #fbf8f0;
+            /*background: #f1ebe0;*/
+            color: #848382;
+            font-size: 16px;
+        }
+
+        .btn-sissa {
+            background: #c59a56;
+            border-color: #c59a56;
+            color: #ffffff;
+        }
+
+            .btn-sissa.active, .btn-sissa:focus, .btn-sissa:hover {
+                background: #b08e6b;
+                border-color: #b08e6b;
+                color: #ffffff;
+                box-shadow: none;
+            }
+
+            .btn-sissa:hover {
+                color: #fff;
+                background-color: #b08e6b;
+                border-color: #b08e6b;
+            }
+    </style>
+</head>
+
+<body class="">
+
+    @RenderBody();
+    <script src="~/js/lib/jquery.min.js"></script>
+    <script src="~/js/lib/toastr/toastr.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

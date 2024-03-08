@@ -1,0 +1,73 @@
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\appsettings.Development.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\appsettings.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.staticwebassets.runtime.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.exe
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.deps.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.runtimeconfig.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.pdb
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\System.Data.SqlClient.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.csproj.AssemblyReference.cache
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.AssemblyInfoInputs.cache
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.AssemblyInfo.cs
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.csproj.CoreCompileInputs.cache
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.RazorAssemblyInfo.cache
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.RazorAssemblyInfo.cs
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\scopedcss\bundle\Modulo_Reclutamiento_Web.styles.css
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\scopedcss\projectbundle\Modulo_Reclutamiento_Web.bundle.scp.css
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.csproj.CopyComplete
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\refint\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.pdb
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.genruntimeconfig.cache
+C:\Users\jesus.medrano\Documents\Jesus Medrano\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\ref\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\appsettings.Development.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\appsettings.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.staticwebassets.runtime.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.exe
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.deps.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.runtimeconfig.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Modulo_Reclutamiento_Web.pdb
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\System.Data.SqlClient.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.csproj.AssemblyReference.cache
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.AssemblyInfoInputs.cache
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.AssemblyInfo.cs
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.csproj.CoreCompileInputs.cache
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.RazorAssemblyInfo.cache
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.RazorAssemblyInfo.cs
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets\msbuild.Modulo_Reclutamiento_Web.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets\msbuild.build.Modulo_Reclutamiento_Web.props
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Modulo_Reclutamiento_Web.props
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Modulo_Reclutamiento_Web.props
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets.pack.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\scopedcss\bundle\Modulo_Reclutamiento_Web.styles.css
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\scopedcss\projectbundle\Modulo_Reclutamiento_Web.bundle.scp.css
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.csproj.CopyComplete
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\refint\Modulo_Reclutamiento_Web.dll
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.pdb
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\Modulo_Reclutamiento_Web.genruntimeconfig.cache
+C:\Users\jesus.ortega\Desktop\Modulo Reclutamiento 2023\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\obj\Release\net6.0\ref\Modulo_Reclutamiento_Web.dll

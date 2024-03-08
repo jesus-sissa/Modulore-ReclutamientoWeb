@@ -1,0 +1,176 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Modulo_Reclutamiento_Web.Models.MedicalQuestionData
+@model MedicalQuestion
+<div class="card" id="tabGineAntecCard">
+    <div class="card-body">
+        <div class="form-group">
+            <label class="text-muted m-b-15 f-s-12">Antecedentes Ginecologicos</label>
+        </div>
+          <input type="hidden" asp-for="@Model.gynecologicalAntecento.Id" />
+        <div class="row">
+            <div class="col-lg-6 col-xl-3">
+                <div class="form-group">
+                    <label asp-for="@Model.gynecologicalAntecento.Pregnancies" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="number" asp-for="@Model.gynecologicalAntecento.Pregnancies" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3">
+                <div class="form-group">
+                    <label asp-for="@Model.gynecologicalAntecento.Births" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="number" asp-for="@Model.gynecologicalAntecento.Births" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3">
+                <div class="form-group">
+                    <label asp-for="@Model.gynecologicalAntecento.Cesarias" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="number" asp-for="@Model.gynecologicalAntecento.Cesarias" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-3">
+                <div class="form-group">
+                    <label asp-for="@Model.gynecologicalAntecento.Abortion" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="number" asp-for="@Model.gynecologicalAntecento.Abortion" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.ChildrensBirthDates" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.gynecologicalAntecento.ChildrensBirthDates" class="form-control input-rounded" placeholder="separar oor comas Ejemplo '2000/01/01,2005/02/01'">
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.MenstrualIrregularities" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.MenstrualIrregularities" asp-items="@(new SelectList(Model.gynecologicalAntecento.MenstrualIrregularitiesOp, "Value","Text",Model.gynecologicalAntecento.MenstrualIrregularities))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.Infections" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.Infections" asp-items="@(new SelectList(Model.gynecologicalAntecento.InfectionsOp, "Value","Text",Model.gynecologicalAntecento.Infections))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.Cysts" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.Cysts" asp-items="@(new SelectList(Model.gynecologicalAntecento.CystsOp, "Value","Text",Model.gynecologicalAntecento.CystsOp))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.Sterility" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.Sterility" asp-items="@(new SelectList(Model.gynecologicalAntecento.SterilityOp, "Value","Text",Model.gynecologicalAntecento.Sterility))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.OtherProblems" class="text-muted m-b-15 f-s-12"></label>
+            <select id="OtherProblems" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.OtherProblems" asp-items="@(new SelectList(Model.gynecologicalAntecento.OtherProblemsOp, "Value","Text",Model.gynecologicalAntecento.OtherProblems))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.OtherProblemsDesc" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.gynecologicalAntecento.OtherProblemsDesc" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="text-muted m-b-15 f-s-12">Problemas de Seno o Glandulas Mamarias</label>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.BreastBall" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.BreastBall" asp-items="@(new SelectList(Model.gynecologicalAntecento.BreastBallOp, "Value","Text",Model.gynecologicalAntecento.BreastBall))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.BreastCysts" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.BreastCysts" asp-items="@(new SelectList(Model.gynecologicalAntecento.BreastCystsOp, "Value","Text",Model.gynecologicalAntecento.BreastCysts))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.Secretion" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.Secretion" asp-items="@(new SelectList(Model.gynecologicalAntecento.SecretionOp, "Value","Text",Model.gynecologicalAntecento.Secretion))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.OtherProblemsBreast" class="text-muted m-b-15 f-s-12"></label>
+            <select id="OtherProblemsBreast" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.OtherProblemsBreast" asp-items="@(new SelectList(Model.gynecologicalAntecento.OtherProblemsBreastOp, "Value","Text",Model.gynecologicalAntecento.OtherProblemsBreast))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.OtherProblemsBreastDesc" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.gynecologicalAntecento.OtherProblemsBreastDesc" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.GynecologicalReviews" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.GynecologicalReviews" asp-items="@(new SelectList(Model.gynecologicalAntecento.GynecologicalReviewsOp, "Value","Text",Model.gynecologicalAntecento.GynecologicalReviews))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.LastDateMedicalReview" class="text-muted m-b-15 f-s-12"></label>
+            <input type="date" asp-for="@Model.gynecologicalAntecento.LastDateMedicalReview" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+        </div>
+        <div class="form-group">
+            <label class="text-muted m-b-15 f-s-12">Lugar</label>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.gynecologicalAntecento.placeAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckpl_@i" asp-for="@Model.gynecologicalAntecento.placeAnswers[i].Selected" class="form-check-input checkplace" />
+                        <input type="hidden" asp-for="@Model.gynecologicalAntecento.placeAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.gynecologicalAntecento.placeAnswers[i].Value" />
+                        <label class="form-check-label checkplace" asp-for="@Model.gynecologicalAntecento.placeAnswers[i].Selected">
+                            @Model.gynecologicalAntecento.placeAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.LastDateCancerScreeningTest" class="text-muted m-b-15 f-s-12"></label>
+            <div class="form-group">
+                @for (int i = 0; i < Model.gynecologicalAntecento.LastDateCancerScreeningTestAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="cklcan_@i" asp-for="@Model.gynecologicalAntecento.LastDateCancerScreeningTestAnswers[i].Selected" class="form-check-input checkLastDCancer" />
+                        <input type="hidden" asp-for="@Model.gynecologicalAntecento.LastDateCancerScreeningTestAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.gynecologicalAntecento.LastDateCancerScreeningTestAnswers[i].Value" />
+                        <label class="form-check-label checkLastDCancer" asp-for="@Model.gynecologicalAntecento.LastDateCancerScreeningTestAnswers[i].Selected">
+                            @Model.gynecologicalAntecento.LastDateCancerScreeningTestAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+            <input type="date" asp-for="@Model.gynecologicalAntecento.LastDateCancerScreeningTest" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.ContraceptiveMethod" class="text-muted m-b-15 f-s-12"></label>
+            <select id="ContraceptiveMethod" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.ContraceptiveMethod" asp-items="@(new SelectList(Model.gynecologicalAntecento.ContraceptiveMethodOp, "Value","Text",Model.gynecologicalAntecento.ContraceptiveMethod))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.ContraceptiveMethodDesc" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.gynecologicalAntecento.ContraceptiveMethodDesc" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.LastMenstruation" class="text-muted m-b-15 f-s-12"></label>
+            <div class="form-group">
+                @for (int i = 0; i < Model.gynecologicalAntecento.LastMenstruationAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="cklmen_@i" asp-for="@Model.gynecologicalAntecento.LastMenstruationAnswers[i].Selected" class="form-check-input checkLastMens" />
+                        <input type="hidden" asp-for="@Model.gynecologicalAntecento.LastMenstruationAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.gynecologicalAntecento.LastMenstruationAnswers[i].Value" />
+                        <label class="form-check-label checkLastMens" asp-for="@Model.gynecologicalAntecento.LastMenstruationAnswers[i].Selected">
+                            @Model.gynecologicalAntecento.LastMenstruationAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+            <input type="date" asp-for="@Model.gynecologicalAntecento.LastMenstruation" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.ArePregnated" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.ArePregnated" asp-items="@(new SelectList(Model.gynecologicalAntecento.ArePregnatedOp, "Value","Text",Model.gynecologicalAntecento.ArePregnated))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.DueDate" class="text-muted m-b-15 f-s-12"></label>
+            <input type="date" asp-for="@Model.gynecologicalAntecento.DueDate" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.gynecologicalAntecento.SuspectedPregnancy" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.gynecologicalAntecento.SuspectedPregnancy" asp-items="@(new SelectList(Model.gynecologicalAntecento.SuspectedPregnancyOp, "Value","Text",Model.gynecologicalAntecento.SuspectedPregnancyOp))"></select>
+        </div>
+
+
+    </div>
+</div>

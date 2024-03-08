@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProspectusData
+<div class="card">
+    <div class="card-body">
+
+      @*  <div class="form-group">
+            <label asp-for="@Model.FamilyData.FullName" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.FamilyData.FullName" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.Kinship" class="text-muted m-b-15 f-s-12"></label>
+            <select class="form-control" asp-for="@Model.FamilyData.Kinship" asp-items="@(new SelectList(Model.FamilyData.KinshipOp, "Value","Text",Model.FamilyData.Kinship))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.BirthDate" class="text-muted m-b-15 f-s-12"></label>
+            <input type="date" asp-for="@Model.FamilyData.BirthDate" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.LiveIntheSameAddress" class="text-muted m-b-15 f-s-12"></label>
+            <select class="form-control" asp-for="@Model.FamilyData.LiveIntheSameAddress" asp-items="@(new SelectList(Model.FamilyData.LiveIntheSameAddressOp, "Value","Text",Model.FamilyData.LiveIntheSameAddress))"></select>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.Domicile" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.FamilyData.Domicile" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.City" class="text-muted m-b-15 f-s-12"></label>
+            <select class="form-control" asp-for="@Model.FamilyData.City" asp-items="@(new SelectList(Model.FamilyData.CitiesOp, "Value","Text",Model.FamilyData.City))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.Phone" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.FamilyData.Phone" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.Lives" class="text-muted m-b-15 f-s-12"></label>
+            <select class="form-control" asp-for="@Model.FamilyData.Lives" asp-items="@(new SelectList(Model.FamilyData.LivesOp, "Value","Text",Model.FamilyData.Lives))"></select>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="@Model.FamilyData.EconomicDependent" class="text-muted m-b-15 f-s-12"></label>
+           
+            <select class="form-control" asp-for="@Model.FamilyData.EconomicDependent" asp-items="@(new SelectList(Model.FamilyData.EconomicDependentOp, "Value","Text",Model.FamilyData.EconomicDependent))"></select>
+        </div>
+       <a id="addFam" class="btn btn-success">Agregar</a>*@
+
+    </div>
+</div>
+<div class="card">
+    <div class="card-title">
+        <h4>Familiares </h4>
+
+    </div>
+    <div class="card-body">
+       <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Parentesco</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Vive</th>
+                        <th>Dependiente</th>
+                    </tr>
+                </thead>
+                <tbody id="listFamily">
+                   <partial name="../partialViews/selectViews/_listFamily.cshtml" model="@Model"/>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

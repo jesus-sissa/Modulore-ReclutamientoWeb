@@ -1,0 +1,289 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Modulo_Reclutamiento_Web
+build_property.RootNamespace = Modulo_Reclutamiento_Web
+build_property.ProjectDir = D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Reclutamiento_Web\Modulo_Reclutamiento_Web
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Exams/Example.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbXNcRXhhbXBsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Exams/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Forbidden/Illegal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9yYmlkZGVuXElsbGVnYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/ListOfVisits.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XExpc3RPZlZpc2l0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/NewVisit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XE5ld1Zpc2l0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/partialViews/Research/_DescriptionOfTheHouseRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XHBhcnRpYWxWaWV3c1xSZXNlYXJjaFxfRGVzY3JpcHRpb25PZlRoZUhvdXNlUm9vbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/partialViews/Research/_HVGeneralData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XHBhcnRpYWxWaWV3c1xSZXNlYXJjaFxfSFZHZW5lcmFsRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/partialViews/Research/_IncomeNExpensesData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XHBhcnRpYWxWaWV3c1xSZXNlYXJjaFxfSW5jb21lTkV4cGVuc2VzRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/partialViews/Research/_NeighbornhoodReference.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XHBhcnRpYWxWaWV3c1xSZXNlYXJjaFxfTmVpZ2hib3JuaG9vZFJlZmVyZW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/HomeVisit/Research.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZpc2l0XFJlc2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/AcademicData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xBY2FkZW1pY0RhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/AdditionalInformation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xBZGRpdGlvbmFsSW5mb3JtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/Agreements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xBZ3JlZW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/Document.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/EmploymentData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xFbXBsb3ltZW50RGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/FamilyData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xGYW1pbHlEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/Information.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xJbmZvcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/MedicalQuestionnaire.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xNZWRpY2FsUXVlc3Rpb25uYWlyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/Documents/_AvisoCandidatos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcRG9jdW1lbnRzXF9Bdmlzb0NhbmRpZGF0b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/Documents/_AvisoPrivacidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcRG9jdW1lbnRzXF9Bdmlzb1ByaXZhY2lkYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/Documents/_CartaConfidencialidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcRG9jdW1lbnRzXF9DYXJ0YUNvbmZpZGVuY2lhbGlkYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/Documents/_Concentimientos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcRG9jdW1lbnRzXF9Db25jZW50aW1pZW50b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/Documents/_ContratoLaboral.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcRG9jdW1lbnRzXF9Db250cmF0b0xhYm9yYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/Documents/_ConvenioConfidencialidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcRG9jdW1lbnRzXF9Db252ZW5pb0NvbmZpZGVuY2lhbGlkYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/MedicalQuestionnaire/_GynecologicalAntecento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcTWVkaWNhbFF1ZXN0aW9ubmFpcmVcX0d5bmVjb2xvZ2ljYWxBbnRlY2VudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/MedicalQuestionnaire/_PersonalMedicalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcTWVkaWNhbFF1ZXN0aW9ubmFpcmVcX1BlcnNvbmFsTWVkaWNhbERhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/MedicalQuestionnaire/_PersonalMedicalHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3NcTWVkaWNhbFF1ZXN0aW9ubmFpcmVcX1BlcnNvbmFsTWVkaWNhbEhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/selectViews/_selectCitiesOfContry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3Ncc2VsZWN0Vmlld3NcX3NlbGVjdENpdGllc09mQ29udHJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/partialViews/selectViews/_selectCitiesofCountry_Ref.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xwYXJ0aWFsVmlld3Ncc2VsZWN0Vmlld3NcX3NlbGVjdENpdGllc29mQ291bnRyeV9SZWYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Prospectus/PersonalReferencesData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvc3BlY3R1c1xQZXJzb25hbFJlZmVyZW5jZXNEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/ListOfMedicalQuestionnarie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXExpc3RPZk1lZGljYWxRdWVzdGlvbm5hcmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/MedicalQuestionnarie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXE1lZGljYWxRdWVzdGlvbm5hcmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/Message.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXE1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/NewProspectus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXE5ld1Byb3NwZWN0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_listFamily.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfbGlzdEZhbWlseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectCity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0Q2l0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectCityDom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0Q2l0eURvbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectColony.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0Q29sb255LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectContacModeD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0Q29udGFjTW9kZUQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectPositionHomeVisit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0UG9zaXRpb25Ib21lVmlzaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectPositions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0UG9zaXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0U3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/selectViews/_selectZones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xzZWxlY3RWaWV3c1xfc2VsZWN0Wm9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/_ContactData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xfQ29udGFjdERhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/_DomicileData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xfRG9taWNpbGVEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/_FamilyData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xfRmFtaWx5RGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/_InfonavitCreditData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xfSW5mb25hdml0Q3JlZGl0RGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/_PersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xfUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/_PersonalIdentificationData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xfUGVyc29uYWxJZGVudGlmaWNhdGlvbkRhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Recruiter/partialViews/_PositionData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyXHBhcnRpYWxWaWV3c1xfUG9zaXRpb25EYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Representative/Documents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwcmVzZW50YXRpdmVcRG9jdW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Representative/Employees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwcmVzZW50YXRpdmVcRW1wbG95ZWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Representative/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwcmVzZW50YXRpdmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Shared/_header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9oZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Shared/_layoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9sYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Shared/_scripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9zY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Shared/_sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9zaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/REPOSITORY/SOURCE CODE/SIAC ERP/Modulo_Reclutamiento_Web/Modulo_Reclutamiento_Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k7fa51evjd

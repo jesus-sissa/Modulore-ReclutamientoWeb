@@ -1,0 +1,88 @@
+﻿@using Modulo_Reclutamiento_Web.Models.HomeVisitData;
+@model NeighborhoodReference
+
+
+<div class="card">
+    <div class="card-title">
+        <div class="row">
+            <div class="col-12 p-30">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" title="encabezado" />
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+
+        <form id="formNeightRefernce">
+            <input type="hidden" id="idRef" asp-for="Id"/>
+            <div class="form-group">
+                <label asp-for="NeiborhoodName"></label>
+                <input type="text" class="form-control" asp-for="NeiborhoodName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="HowYouWouldDefineThePerson" class=""></label>
+                <select id="HowYouWouldDefineThePerson" class="form-control input-rounded" asp-for="HowYouWouldDefineThePerson" asp-items="@(new SelectList(Model.HowYouWouldDefineThePersonOp, "Value","Text",Model.HowYouWouldDefineThePerson))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="KnowWhatTheCandidateDoes"></label>
+                <input type="text" class="form-control" asp-for="KnowWhatTheCandidateDoes" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DefinitionOfTheFamily"></label>
+                <input type="text" class="form-control" asp-for="DefinitionOfTheFamily" />
+            </div>
+            <div class="form-group">
+                <label asp-for="YearsOfGettingToKnowFamily"></label>
+                <input type="text" class="form-control" asp-for="YearsOfGettingToKnowFamily" />
+            </div>
+
+
+            <div class="form-group" style="">
+                 <a id="addNeightReference" class="btn btn-sissa-green-light" style="color:white;">Agregar</a>
+              
+            </div>
+
+        </form>
+
+        <hr class="hr" />
+
+
+        <div class="form-group">
+            <h4>Referencias Vecinales</h4>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo de Persona</th>
+                        <th>Definicion Persona</th>
+                    </tr>
+                    <tbody>
+                        @if (Model.NeighborhoodReferenceList != null)
+                        {
+                            @foreach (var item in Model.NeighborhoodReferenceList)
+                            {
+                                <tr>
+                                    <th>@item.NeiborhoodName</th>
+                                    <th>@item.HowYouWouldDefineThePerson</th>
+                                    <th>@item.DefinitionOfTheFamily</th>
+                                    <th>
+                                        @if (ViewBag.stat == "R")
+                                        {
+                                               <a id="@item.Id" class="btn btn-danger deleteRef" style="color:white">Eliminar</a>
+                                        }
+                                       
+                                     
+                                    </th>
+                                </tr>
+                            }
+
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>

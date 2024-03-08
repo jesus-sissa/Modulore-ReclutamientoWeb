@@ -1,0 +1,290 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Leaflet_Information
+<div class="card">
+    <div class=" card-body">
+
+        <div class="row" id="doc2">
+            <p class="text-justify">
+                <strong>
+                    CONTRATO INDIVIDUAL DE TRABAJO POR TIEMPO INDETERMINADO QUE CELEBRAN POR UNA PARTE DE LA EMPRESA SERVICIO INTEGRAL DE SEGURIDAD S.A. DE C.V., REPRESENTADA	POR	EL C. LIC.ENRIQUE VILLANUEVA HERNANDEZ ,
+                    A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ “EL PATRÓN”, Y POR LA OTRA EL (LA)<span id="nombre_contrato">@Model.Name</span> QUIEN EN LO SUCESIVO SE LE DENOMINARÁ COMO “EL TRABAJADOR”,
+                    AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS: D E C L A R A C I O N E S
+                </strong>
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                Manifiesta <strong>EL PATRÓN</strong>, ser una persona moral constituida conforma a las leyes del país, por lo que se encuentra registrada
+                ante las Autoridades correspondientes y que tiene su domicilio en el ubicado en <strong><u>JUAN ALVAREZ 209 NTE,COL.CENTRO,MONTERREY.NL,C.P.64000.</u></strong>
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>EL TRABAJADOR</strong> expresa llamarse <strong><span id="nombre_contrato2">@Model.Name</span></strong>  como ha quedado escrito, ser de nacionalidad <strong>MEXICANA<span id="nacionalidad"></span></strong>. Sexo <strong><span id="sexo"></span></strong>, tener
+                <u> <span id="edad">@Model.Age</span></u> años de edad, estado civil <strong><span id="estadoCivil">@Model.Marital_Status</span></strong> con Clave Unica de Registro de  Poblacion <strong><span id="curp" ´>@Model.CURP</span></strong>
+                Registro Federal del Constituyente <strong><span id="rfc">@Model.RFC</span></strong> con domicilio particular en <strong><span id="domicilio">@Model.Address</span></strong>
+            </p>
+            <p class="text-justify">
+                Que tiene la capacidad y las aptitudes necesarias para desarrollar el trabajo origen de este contrato.
+                Estar de acuerdo en desempeñar su actividad conforme a las condiciones establecidas en este contrato.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                Por lo anterior, las partes han convenido celebrar el presente contrato al tenor de las siguientes:
+            </p>
+        </div>
+        <div class="row">
+            <p><strong>C L Á U S U L A</strong></p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>PRIMERA.- EL TRABAJADOR</strong> se obliga a prestar bajo la subordinación, dirección y dependencia del patrón sus servicios personales de  <strong><span id="puesto">@Model.Position</span></strong> para lo que manifiesta tener capacidad, conocimientos,
+                aptitudes y experiencia suficiente para desempeñarlos quedando convenido que acatar en el desempeño de su trabajo, circulares y más determinaciones aceptadas por el Patrón, así como todos los
+                ordenamientos legales que le sean aplicables.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>SEGUNDA.-</strong> Convienen las partes en que , si dentro de los primeros treinta días de la vigencia de este Contrato, <strong>EL TRABAJADOR</strong> no demuestra tener los conocimientos, capacidad, experiencia y habilidad
+                señalados en la Declaración II y cláusula primera de este instrumento, <strong>EL PATRÓN</strong> tendrá derecho de rescindir el presente Contrato, sin responsabilidad para él, con fundamento en lo dispuesto
+                en la Frac. 1 del artículo 47 de la Ley Federal del Trabajo.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>TERCERA.-</strong> Ambas partes convienen en que este contrato es por tiempo indeterminado. En caso de que se requiera, <strong>EL TRABAJADOR</strong> podrá ser movido o
+                cambiado de puesto con la única condición de no afectar su salario, para lo cual está enteramente de acuerdo.
+            </p>
+        </div>
+        <div class="row">
+            <p>
+                El lugar de la prestación de los servicios contratados será el del domicilio de <strong>EL PATRÓN</strong>, otorgando su consentimiento desde este acto, que el trabajo lo desarrollará también en cualquier otro
+                lugar que le sea asignado por la empresa, con el único requisito de avisarle con anticipación de 24 horas en caso de ser en la misma localidad y de una semana en caso de salir del lugar de
+                residencia habitual.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>CUARTA.-</strong> La duración de la jornada de trabajo será hasta por 48 horas semanales, con su respectivo descanso en turnos rotativos, disfrutando de 30 minutos para ingerir sus alimentos fuera de la empresa y
+                sin estar a disposición de la empleadora. No obstante lo anterior, <strong>EL TRABAJADOR</strong> otorga su consentimiento a <strong>EL PATRÓN</strong>, para que se pueda variar el horario de prestación de servicios cuando así lo estime
+                pertinente para la mejor ejecución de los trabajos y/o lo requiera la producción de la empresa, o en su caso, establecer alguna modalidad equivalente que autoriza el dispositivo comentado.
+                Queda estrictamente prohibido al trabajador laborar tiempo extraordinario, salvo previa autorización por escrito por el patrón.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>QUINTA.- EL PATRÓN</strong> se compromete a pagar a <strong>EL TRABAJADOR</strong> por la prestación de los servicios pactados, un salario de <strong><u><span id="sueldo">@Convert.ToDecimal(Model.Salary).ToString("C")</span></u></strong> pesos diarios, el cual será cubierto los
+                días <strong><u>SABADOS</u></strong> de cada <strong><u>CATORCENA</u></strong>, en el domicilio de la empresa o bien, a través del depósito bancario en la cuenta de nómina que se designe para tal
+                efecto en el cual <strong>EL TRABAJADOR</strong> manifiesta su conformidad para realizarlo en esa modalidad, en el cual incluye lo correspondiente a los séptimos días y días festivos, por su parte
+                <strong>EL TRABAJADOR</strong> se obliga firmará el recibo correspondiente que ampare dicho pago.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong> SEXTA.- EL TRABAJADOR</strong> disfrutará un día de descanso rotativo a la semana con goce de salario integro, sin perjuicio de que <strong>EL PATRÓN</strong> podrá modificarlo de acuerdo a los requerimientos de producción o
+                por necesidades de la emprendedora.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>SÉPTIMA.- EL TRABAJADOR</strong> gozará como días de descanso obligatorio los establecidos en el artículo 74 de la Ley.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>OCTAVA.-</strong> Disfrutará <strong>EL TRABAJADOR</strong> de un período anual de vacaciones de doce días, el cual se incrementará anualmente en los términos señalados en el artículo 76 de la Ley Federal del Trabajo, el cual se le concederán dentro
+                de los seis meses siguientes al cumplimiento del año de servicios.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                Asi mismo, percibirá una prima vacacional del 25%, sobre la cantidad que le corresponda por el lapso en cuestión.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>NOVENA.- EL TRABAJADOR</strong> percibirá un aguinaldo anual de 15 días de salario, el cual se cubrirá de manera proporcional al tiempo de los servicios prestados a <strong>EL PATRÓN</strong> durante dicho período, el cual será cubierto antes del día 20 de diciembre
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>DÉCIMO.- EL TRABAJADOR</strong> está obligado a someterse a un reconocimiento médico para comprobar que no tiene incapacidad o que no padece enfermedad contagiosa e incurable, tanto al tiempo de ingresar a sus labores, como podrá ser sometido a
+                petición de <strong>“EL PATRÓN”</strong> durante el desarrollo de la relación de trabajo.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>DÉCIMO PRIMERO.- EL TRABAJADOR</strong> acepta y se compromete a guardar absoluta reserva durante y posterior a la terminación del presente Contrato, de las funciones que se realicen en la empresa y de los cuales tenga conocimiento por motivo de sus actividades. En igual forma no podrá dar a conocer, ya sea en forma parcial o total a
+                personas ajenas a la empresa o clientes y documentos confidenciales. Queda enterado EL TRABAJADOR que la infracción en cualquier forma a la presente cláusula, es causal de demanda legal en su contra, en
+                términos de los Artículos 210 y 211 del Código Penal para el Distrito Federal y sus correlativos para el Estado de Nuevo León.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>DÉCIMO SEGUNDO.-</strong> A través del presente instrumento el  C. <strong><span id="nombre_contrato3">@Model.Name</span></strong> compromete a no revelar, divulgar, utilizar, aprovecharse, explotar, aplicar, asignar, manipular, directa o indirectamente, la información confidencial técnica y/o económica, así como la
+                documentación, procedimiento y demás herramientas de cualquier especie que haya sido o sea obtenidos como consecuencia de las relaciones directas o indirectas de cualquier naturaleza que derive con la empresa <strong>SERVICIO INTEGRAL DE SEGURIDAD, S.A. DE C.V.</strong> por lo que se compromete a partir de la firma del presente documento,
+                a guardar la debida discreción y más estricta confidencialidad en cuanto a ese respecto. En caso contrario se hará acreedor a las sanciones establecidas en la Ley Federal del Trabajo, así como las leyes penales correspondientes.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>DÉCIMO TERCERO.-</strong> Se entiende por información confidencial técnica y/o económica, toda aquella información escrita, verbal o gráfica, así como la contenida por medios electrónicos o electromagnéticos, que sea proporcionada por la empresa  , <strong>SERVICIO INTEGRAL DE SEGURIDAD, S.A. DE C.V.</strong>,
+                misma que por su naturaleza deba considerarse como confidencial. comercial relativa a nombres de clientes o socios potenciales, propuestas de negocios, estrategias de negocios, estructura organizacional, estructura accionaria de las sociedades y de las partes integrantes de un grupo corporativo, los reportes, planes, proyecciones de mercado,
+                datos y cualquier otra información industrial, junto con fórmulas, mecanismos, patrones, métodos, técnicas, procesos de análisis, marcas registradas o no registradas, nombres o avisos comerciales, documentos de trabajo, compilaciones, comparaciones, estudios o cualquier otro y otros documentos preparados y conservados con carácter confidencial.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>DÉCIMO CUARTO.-</strong> Ambas partes están de acuerdo en respetar y observar lo establecido por los artículos 153-A y siguientes del Código Laboral, que se refiere a la obligación de <strong>EL PATRÓN</strong> a otorgar la Capacitación y Adiestramiento necesarios para <strong>EL TRABAJADOR</strong>, y éste a acatar las disposiciones que se dicten al respecto.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong>SEGUNDA.-</strong> Las partes convienen en adicionar una cláusula DECIMAQUINTA al Contrato Individual de Trabajo que tienen celebrado, por lo que la cláusula añadida queda de la siguiente manera:
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify"><strong>DECIMO QUINTA.-	</strong></p>
+            <p class="text-justify">
+                <strong>BENEFICIARIOS</strong>
+                El Empleado manifiesta que, en cumplimiento de la fracción X del artículo 25 de la Ley Federal del Trabajo, es su voluntad designar como beneficiarios para el pago de salarios y/o prestaciones devengadas y no cobradas en caso de fallecimiento o desaparición derivada de un acto delincuencial a la(s) siguiente(s) persona(s):
+            </p>
+        </div>
+        <div class="row">
+            @if (Model.Beneficiaries != null)
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Parentesto</th>
+                            <th scope="col">Porcentaje</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="beneficiarios">
+                        @foreach (var item in Model.Beneficiaries)
+                        {
+                            <tr>
+                                <th>@item.Name</th>
+                                <th>@item.Kinship</th>
+                                <th class="text-right">@item.Percentage%</th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Parentesto</th>
+                            <th scope="col">Porcentaje</th>
+                            <th id="col-add"><button id="addBeneficiario" class="btn btn-success">Agregar</button></th>
+                        </tr>
+                    </thead>
+                    <tbody id="beneficiarios">
+                    </tbody>
+                </table>
+            }
+
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                Las partes acuerdan que en caso de que el Empleado desee modificar los beneficiarios establecidos anteriormente, deberá notificar por escrito a la Empresa, entendiéndose que de no hacerlo, continúa siendo voluntad del Empleado designar a los beneficiarios anteriormente enlistados.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                <strong> DECIMO SEXTA.-</strong>
+            </p>
+            <p class="text-justify">
+                Manifiesta <strong>“EL PATRÓN”</strong> que con el fin de asegurar la protección y privacidad de los datos personales de <strong>“EL TRABAJADOR”</strong> que se encuentran en su posesión, así como para regular el acceso, rectificación, cancelación y oposición del tratamiento de los mismos, ha desarrollado una
+                política de privacidad del manejo de dicha información en conformidad con los principios de la Ley Federal de protección de Datos Personales en Posesión de los Particulares y su Reglamento respecto a las obligaciones derivadas de la relación laboral que se establece con <strong>“EL TRABAJADOR”</strong> plasmadas en el Aviso
+                de Privacidad, mismo que fue puesto a su disposición, dando su consentimiento expreso y por escrito para el tratamiento de sus datos personales normales, para el tratamiento de sus datos personales sensibles, así como para el tratamiento de sus datos personales financieros patrimoniales. Consentimiento que se expresa mediante la firma del presente contrato.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                Asi mismo, manifiesta <strong>“EL PATRÓN”</strong> que ha informado a <strong>“EL TRABAJADOR”</strong> que en su calidad de <strong>RESPONSABLE</strong> del tratamiento de la información personal en su posesión, ha designado como <strong>ENCARGADO</strong> de dicho tratamiento al <span style="color:green">área de Sistemas de Gestión</span>, y que cualquier asunto relacionado a dicho tratamiento
+                en el ejercicio de sus derechos ARCO, deberá dirigirse al representante legal de <span style="color:green">Servicio Integral de Seguridad, S.A. de C.V.</span> según los datos de identificación y contacto que se encuentran en el Aviso de Privacidad, mismo que acepta expresamente que fue puesto a su disposición en el momento de la  firma del presente contrato.
+            </p>
+        </div>
+        <div class="row">
+            <p class="text-justify">
+                Una vez leído que fue el presente contrato y enterado de su contenido, ambas partes lo firman a  @DateTime.Today.ToString("dd MMM yyyy").
+            </p>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <div class="col-12">
+                    <p><strong>EL PATRÓN</strong></p>
+                    <img id="firmaPatron" src="@Model.Document_Signatures[0].Signature" width="175px" height="80px" />
+
+                </div>
+                <div class="col-12">
+                    <p id="nombrePatron">@Model.Document_Signatures[0].Name</p>
+                </div>
+            </div>
+            <div class="col-6">
+                @if (Model.Document_Status == "Y")
+                {
+                    <div class="col-12">
+                        <p><strong>EL TRABAJADOR</strong></p>
+                        <img id="firma_ContratoLaboral" src="@Model.Signature" class="visually-hidden" width="175px" height="80px" />
+                        <img id="fingerRight" src="@Model.FingerPrints.FingerPrintRight" width="60px" class="visually-hidden imgRight" height="80px" />
+                    </div>
+                    <div class="col-12">
+                        <p id="nombre_Contrato">@Model.Name</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <button id="btn-ContratoLaboral" class="btn btn-primary btn-lg ">Firmar</button>
+                    </div>
+                }
+
+
+
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-6">
+                <div class="col-12">
+                    <p><strong>REPRESENTANTE LEGAL</strong></p>
+                    <img id="firmaReprecentante" src="@Model.Document_Signatures[0].Signature" width="175px" height="80px" />
+
+                </div>
+                <div class="col-12">
+                    <p id="nombreReprecentante">@Model.Document_Signatures[0].Name</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="col-12">
+                    <p><strong>TESTIGO</strong></p>
+                    <img id="firmaTestigo" src="@Model.Document_Signatures[1].Signature" width="175px" height="80px" />
+
+                </div>
+
+                <div class="col-12">
+                    <p id="nombreTestigo">@Model.Document_Signatures[1].Name</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!--fin card body-->
+    </div>
+</div>
+

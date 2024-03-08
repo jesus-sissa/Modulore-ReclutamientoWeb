@@ -1,0 +1,716 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Modulo_Reclutamiento_Web.Models.MedicalQuestionData
+@model MedicalQuestion
+
+<div class="card" id="PersonalMedicalHistoryCard">
+    <div class="card-body">
+        <input type="hidden" asp-for="@Model.personalMedicalHistory.Id" />
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.WearGlassesOrPupils" class="text-muted m-b-15 f-s-12"></label>
+                    <select id="WearGlassesOrPupils" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.WearGlassesOrPupils" asp-items="@(new SelectList(Model.personalMedicalHistory.WearGlassesOrPupilsOp, "Value","Text",Model.personalMedicalHistory.WearGlassesOrPupils))"></select>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.WearGlassesOrPupilsSince" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="date" asp-for="@Model.personalMedicalHistory.WearGlassesOrPupilsSince" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                </div>
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <select id="WearGlassesOrPupilsAnswer" class="form-control input-rounded" disabled asp-for="@Model.personalMedicalHistory.WearGlassesOrPupilsAnswer" asp-items="@(new SelectList(Model.personalMedicalHistory.WearGlassesOrPupilsAnswers, "Value","Text",Model.personalMedicalHistory.WearGlassesOrPupilsAnswer))"></select>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.FamyHistory" class="text-muted m-b-15 f-s-12"></label>
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.FamilyHistoryAnswers.Count; i++)
+                {
+                    <div class="form-check-inline">
+                        <input type="checkbox" asp-for="@Model.personalMedicalHistory.FamilyHistoryAnswers[i].Selected" class="form-check-input" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.FamilyHistoryAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.FamilyHistoryAnswers[i].Value" />
+                        <label class="form-check-label" asp-for="@Model.personalMedicalHistory.FamilyHistoryAnswers[i].Selected">
+                            @Model.personalMedicalHistory.FamilyHistoryAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+         <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.CongenitalOrInheritedDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.CongenitalOrInheritedDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.CongenitalOrInheritedDiseaseOp, "Value","Text",Model.personalMedicalHistory.CongenitalOrInheritedDisease))"></select>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.CongenitalDeformity" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.CongenitalDeformity" asp-items="@(new SelectList(Model.personalMedicalHistory.CongenitalDeformityOp, "Value","Text",Model.personalMedicalHistory.CongenitalDeformity))"></select>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.ChildhoodDiseases" class="text-muted m-b-15 f-s-12"></label>
+            <select id="ChildhoodDiseases" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.ChildhoodDiseases" asp-items="@(new SelectList(Model.personalMedicalHistory.ChildhoodDiseasesOp, "Value","Text",Model.personalMedicalHistory.ChildhoodDiseases))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.ChildhoodDiseasesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckcd_@i" disabled asp-for="@Model.personalMedicalHistory.ChildhoodDiseasesAnswers[i].Selected" class="form-check-input checkChildrenD" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.ChildhoodDiseasesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.ChildhoodDiseasesAnswers[i].Value" />
+                        <label class="form-check-label checkChildrenD" disabled asp-for="@Model.personalMedicalHistory.ChildhoodDiseasesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.ChildhoodDiseasesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.ChildhoodDiseasesOther" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.ChildhoodDiseasesOther" class="form-control input-rounded" placeholder="Separar por comas ' , '">
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.Allergies" class="text-muted m-b-15 f-s-12"></label>
+            <select id="Allergies" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.Allergies" asp-items="@(new SelectList(Model.personalMedicalHistory.AllergiesOp, "Value","Text",Model.personalMedicalHistory.Allergies))"></select>
+             <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.AllergiesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckall_@i" disabled asp-for="@Model.personalMedicalHistory.AllergiesAnswers[i].Selected" class="form-check-input checkAllergies" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AllergiesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AllergiesAnswers[i].Value" />
+                        <label class="form-check-label checkAllergies" disabled asp-for="@Model.personalMedicalHistory.AllergiesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.AllergiesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label class="text-muted m-b-15 f-s-12">Enfermedades de los Ojos</label>
+            <label asp-for="@Model.personalMedicalHistory.SeeYourselfWell" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.SeeYourselfWell" asp-items="@(new SelectList(Model.personalMedicalHistory.SeeYourselfWellOp, "Value","Text",Model.personalMedicalHistory.SeeYourselfWell))"></select>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.LeftEye" class="text-muted m-b-15 f-s-12"></label>
+                    <select id="" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.LeftEye" asp-items="@(new SelectList(Model.personalMedicalHistory.LeftEyeOp, "Value","Text",Model.personalMedicalHistory.LeftEye))"></select>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.RightEye" class="text-muted m-b-15 f-s-12"></label>
+                    <select id="" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.RightEye" asp-items="@(new SelectList(Model.personalMedicalHistory.RightEyeOp, "Value","Text",Model.personalMedicalHistory.RightEye))"></select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.EyeSurgery" class="text-muted m-b-15 f-s-12"></label>
+            <select id="EyeSurgery" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.EyeSurgery" asp-items="@(new SelectList(Model.personalMedicalHistory.EyeSurgeryOp, "Value","Text",Model.personalMedicalHistory.EyeSurgery))"></select>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.EyeSurgeryBy" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="text" disabled asp-for="@Model.personalMedicalHistory.EyeSurgeryBy" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.dateSurgery" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="date" asp-for="@Model.personalMedicalHistory.dateSurgery" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLenses" class="text-muted m-b-15 f-s-12"></label>
+            <select id="WearGlassesOrContactLenses" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLenses" asp-items="@(new SelectList(Model.personalMedicalHistory.WearGlassesOrContactLensesOp, "Value","Text",Model.personalMedicalHistory.WearGlassesOrContactLenses))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckwgc_@i" disabled asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Selected" class="form-check-input checkWearGlassCont" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Value" />
+                        <label class="form-check-label checkWearGlassCont" disabled asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.EarDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="EarDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.EarDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.EarDiseaseOp, "Value","Text",Model.personalMedicalHistory.EarDisease))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.EarDiseaseAnswer" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.EarDiseaseAnswer" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.ListenWell" class="text-muted m-b-15 f-s-12"></label>
+            <select id="" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.ListenWell" asp-items="@(new SelectList(Model.personalMedicalHistory.ListenWellOp, "Value","Text",Model.personalMedicalHistory.ListenWell))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.UseHearingAid" class="text-muted m-b-15 f-s-12"></label>
+            <select id="UseHearingAid" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.UseHearingAid" asp-items="@(new SelectList(Model.personalMedicalHistory.UseHearingAidOp, "Value","Text",Model.personalMedicalHistory.UseHearingAid))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.UseHearingAidsince" class="text-muted m-b-15 f-s-12"></label>
+            <input type="date" asp-for="@Model.personalMedicalHistory.UseHearingAidsince" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.DentalDiseases" class="text-muted m-b-15 f-s-12"></label>
+            <select id="DentalDiseases" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.DentalDiseases" asp-items="@(new SelectList(Model.personalMedicalHistory.DentalDiseasesOp, "Value","Text",Model.personalMedicalHistory.DentalDiseases))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.DentalDiseasesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ck_dd@i" disabled asp-for="@Model.personalMedicalHistory.DentalDiseasesAnswers[i].Selected" class="form-check-input checkDentalDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DentalDiseasesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DentalDiseasesAnswers[i].Value" />
+                        <label class="form-check-label checkDentalDis" disabled asp-for="@Model.personalMedicalHistory.DentalDiseasesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.DentalDiseasesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.HormonalDiseases" class="text-muted m-b-15 f-s-12"></label>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.HormonalDiseasesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckhd_@i" asp-for="@Model.personalMedicalHistory.HormonalDiseasesAnswers[i].Selected" class="form-check-input checkHormonalDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.HormonalDiseasesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.HormonalDiseasesAnswers[i].Value" />
+                        <label class="form-check-label checkHormonalDis" asp-for="@Model.personalMedicalHistory.HormonalDiseasesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.HormonalDiseasesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.HormonalDiseasesOther" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.HormonalDiseasesOther" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.LungDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="LungDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.LungDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.LungDiseaseOp, "Value","Text",Model.personalMedicalHistory.LungDisease))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.LungDiseaseAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckld_@i" disabled asp-for="@Model.personalMedicalHistory.LungDiseaseAnswers[i].Selected" class="form-check-input checkLungDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.LungDiseaseAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.LungDiseaseAnswers[i].Value" />
+                        <label class="form-check-label checkLungDis" disabled asp-for="@Model.personalMedicalHistory.LungDiseaseAnswers[i].Selected">
+                            @Model.personalMedicalHistory.LungDiseaseAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.LungDiseaseOther" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.LungDiseaseOther" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.HeartDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="HeartDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.HeartDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.HeartDiseaseOp, "Value","Text",Model.personalMedicalHistory.HeartDisease))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.HeartDiseaseAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckhrd_@i" disabled asp-for="@Model.personalMedicalHistory.HeartDiseaseAnswers[i].Selected" class="form-check-input checkHeartDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.HeartDiseaseAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.HeartDiseaseAnswers[i].Value" />
+                        <label class="form-check-label checkHeartDis" disabled asp-for="@Model.personalMedicalHistory.HeartDiseaseAnswers[i].Selected">
+                            @Model.personalMedicalHistory.HeartDiseaseAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.AlteredBloodPressure" class="text-muted m-b-15 f-s-12"></label>
+            <select id="AlteredBloodPressure" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.AlteredBloodPressure" asp-items="@(new SelectList(Model.personalMedicalHistory.AlteredBloodPressureOp, "Value","Text",Model.personalMedicalHistory.AlteredBloodPressure))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.AlteredBloodPressureAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckhAP_@i" disabled asp-for="@Model.personalMedicalHistory.AlteredBloodPressureAnswers[i].Selected" class="form-check-input checkAlteredB" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AlteredBloodPressureAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AlteredBloodPressureAnswers[i].Value" />
+                        <label class="form-check-label checkAlteredB" disabled asp-for="@Model.personalMedicalHistory.AlteredBloodPressureAnswers[i].Selected">
+                            @Model.personalMedicalHistory.AlteredBloodPressureAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicaments" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicaments" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicalControl" class="text-muted m-b-15 f-s-12"></label>
+            <select id="AlteredBloodPressureMedicalControl" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicalControl" asp-items="@(new SelectList(Model.personalMedicalHistory.AlteredBloodPressureMedicalControlOp, "Value","Text",Model.personalMedicalHistory.AlteredBloodPressureMedicalControl))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.AlteredBloodPressureMedicalControlAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckhAMC_@i" disabled asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicalControlAnswers[i].Selected" class="form-check-input checkAMedical" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicalControlAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicalControlAnswers[i].Value" />
+                        <label class="form-check-label checkAMedical" disabled asp-for="@Model.personalMedicalHistory.AlteredBloodPressureMedicalControlAnswers[i].Selected">
+                            @Model.personalMedicalHistory.AlteredBloodPressureMedicalControlAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.DigestiveDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="DigestiveDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.DigestiveDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.DigestiveDiseaseOp, "Value","Text",Model.personalMedicalHistory.DigestiveDisease))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.DigestiveDiseaseAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckDigd_@i" disabled asp-for="@Model.personalMedicalHistory.DigestiveDiseaseAnswers[i].Selected" class="form-check-input checkDigestiveDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DigestiveDiseaseAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DigestiveDiseaseAnswers[i].Value" />
+                        <label class="form-check-label checkDigestiveDis" disabled asp-for="@Model.personalMedicalHistory.DigestiveDiseaseAnswers[i].Selected">
+                            @Model.personalMedicalHistory.DigestiveDiseaseAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.LiverDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="LiverDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.LiverDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.LiverDiseaseOp, "Value","Text",Model.personalMedicalHistory.LiverDisease))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.LiverDiseaseAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckLvd_@i" disabled asp-for="@Model.personalMedicalHistory.LiverDiseaseAnswers[i].Selected" class="form-check-input checkLiverDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.LiverDiseaseAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.LiverDiseaseAnswers[i].Value" />
+                        <label class="form-check-label checkLiverDis" disabled asp-for="@Model.personalMedicalHistory.LiverDiseaseAnswers[i].Selected">
+                            @Model.personalMedicalHistory.LiverDiseaseAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.DiabetesMellitus" class="text-muted m-b-15 f-s-12"></label>
+            <select id="DiabetesMellitus" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.DiabetesMellitus" asp-items="@(new SelectList(Model.personalMedicalHistory.DiabetesMellitusOp, "Value","Text",Model.personalMedicalHistory.DiabetesMellitus))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.DiabetesMellitusAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckLvd_@i" disabled asp-for="@Model.personalMedicalHistory.DiabetesMellitusAnswers[i].Selected" class="form-check-input checkDiabetesMellitus" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DiabetesMellitusAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DiabetesMellitusAnswers[i].Value" />
+                        <label class="form-check-label checkDiabetesMellitus" disabled asp-for="@Model.personalMedicalHistory.DiabetesMellitusAnswers[i].Selected">
+                            @Model.personalMedicalHistory.DiabetesMellitusAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.DateOfLastExamination" class="text-muted m-b-15 f-s-12"></label>
+            <input type="date" asp-for="@Model.personalMedicalHistory.DateOfLastExamination"  autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.DiabetesMellitusMedicControl" class="text-muted m-b-15 f-s-12"></label>
+            <select id="DiabetesMellitusMedicControl" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.DiabetesMellitusMedicControl" asp-items="@(new SelectList(Model.personalMedicalHistory.DiabetesMellitusMedicControlOp, "Value","Text",Model.personalMedicalHistory.DiabetesMellitusMedicControl))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.DiabetesMellitusMedicControlAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckhDMC_@i" disabled asp-for="@Model.personalMedicalHistory.DiabetesMellitusMedicControlAnswers[i].Selected" class="form-check-input checkDiabetesMellC" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DiabetesMellitusMedicControlAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.DiabetesMellitusMedicControlAnswers[i].Value" />
+                        <label class="form-check-label checkDiabetesMellC" disabled asp-for="@Model.personalMedicalHistory.DiabetesMellitusMedicControlAnswers[i].Selected">
+                            @Model.personalMedicalHistory.DiabetesMellitusMedicControlAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.CholesterolDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="CholesterolDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.CholesterolDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.CholesterolDiseaseOp, "Value","Text",Model.personalMedicalHistory.CholesterolDisease))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.CholesterolDiseaseMedications" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.CholesterolDiseaseMedications" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.UricAcidDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="UricAcidDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.UricAcidDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.UricAcidDiseaseOp, "Value","Text",Model.personalMedicalHistory.UricAcidDisease))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.UricAcidDiseaseMedication" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.UricAcidDiseaseMedication" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.KidneyDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="KidneyDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.KidneyDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.KidneyDiseaseOp, "Value","Text",Model.personalMedicalHistory.KidneyDiseaseOp))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.KidneyDiseaseAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckKd_@i" disabled asp-for="@Model.personalMedicalHistory.KidneyDiseaseAnswers[i].Selected" class="form-check-input checkKidneyDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.KidneyDiseaseAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.KidneyDiseaseAnswers[i].Value" />
+                        <label class="form-check-label checkKidneyDis" disabled asp-for="@Model.personalMedicalHistory.KidneyDiseaseAnswers[i].Selected">
+                            @Model.personalMedicalHistory.KidneyDiseaseAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.NeurologicalDiseases" class="text-muted m-b-15 f-s-12"></label>
+            <select id="NeurologicalDiseases" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.NeurologicalDiseases" asp-items="@(new SelectList(Model.personalMedicalHistory.NeurologicalDiseasesOp, "Value","Text",Model.personalMedicalHistory.NeurologicalDiseases))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.NeurologicalDiseasesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckNeD_@i" disabled asp-for="@Model.personalMedicalHistory.NeurologicalDiseasesAnswers[i].Selected" class="form-check-input checkNeuroDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.NeurologicalDiseasesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.NeurologicalDiseasesAnswers[i].Value" />
+                        <label class="form-check-label checkNeuroDis" disabled asp-for="@Model.personalMedicalHistory.NeurologicalDiseasesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.NeurologicalDiseasesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.PsychiatricIllnesses" class="text-muted m-b-15 f-s-12"></label>
+            <select id="PsychiatricIllnesses" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.PsychiatricIllnesses" asp-items="@(new SelectList(Model.personalMedicalHistory.PsychiatricIllnessesOp, "Value","Text",Model.personalMedicalHistory.PsychiatricIllnesses))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.PsychiatricIllnessesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckPsyIll_@i" disabled asp-for="@Model.personalMedicalHistory.PsychiatricIllnessesAnswers[i].Selected" class="form-check-input checkPsyIll" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.PsychiatricIllnessesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.PsychiatricIllnessesAnswers[i].Value" />
+                        <label class="form-check-label checkPsyIll" disabled asp-for="@Model.personalMedicalHistory.PsychiatricIllnessesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.PsychiatricIllnessesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.MusculoskeletalDiseases" class="text-muted m-b-15 f-s-12"></label>
+            <select id="MusculoskeletalDiseases" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.MusculoskeletalDiseases" asp-items="@(new SelectList(Model.personalMedicalHistory.MusculoskeletalDiseasesOp, "Value","Text",Model.personalMedicalHistory.MusculoskeletalDiseases))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.MusculoskeletalDiseasesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckMusDis_@i" disabled asp-for="@Model.personalMedicalHistory.MusculoskeletalDiseasesAnswers[i].Selected" class="form-check-input checkMuscDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.MusculoskeletalDiseasesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.MusculoskeletalDiseasesAnswers[i].Value" />
+                        <label class="form-check-label checkMuscDis" disabled asp-for="@Model.personalMedicalHistory.MusculoskeletalDiseasesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.MusculoskeletalDiseasesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.SkinDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="SkinDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.SkinDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.SkinDiseaseOp, "Value","Text",Model.personalMedicalHistory.SkinDisease))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.NailDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="NailDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.NailDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.NailDiseaseOp, "Value","Text",Model.personalMedicalHistory.NailDisease))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.HairDisease" class="text-muted m-b-15 f-s-12"></label>
+            <select id="HairDisease" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.HairDisease" asp-items="@(new SelectList(Model.personalMedicalHistory.HairDiseaseOp, "Value","Text",Model.personalMedicalHistory.HairDisease))"></select>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.InfectiousDiseases" class="text-muted m-b-15 f-s-12"></label>
+            <select id="InfectiousDiseases" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.InfectiousDiseases" asp-items="@(new SelectList(Model.personalMedicalHistory.InfectiousDiseasesOp, "Value","Text",Model.personalMedicalHistory.InfectiousDiseases))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.InfectiousDiseasesAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckInfDis_@i" disabled asp-for="@Model.personalMedicalHistory.InfectiousDiseasesAnswers[i].Selected" class="form-check-input checkInfectDis" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.InfectiousDiseasesAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.InfectiousDiseasesAnswers[i].Value" />
+                        <label class="form-check-label checkInfectDis" disabled asp-for="@Model.personalMedicalHistory.InfectiousDiseasesAnswers[i].Selected">
+                            @Model.personalMedicalHistory.InfectiousDiseasesAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.MajorAccidents" class="text-muted m-b-15 f-s-12"></label>
+            <select id="MajorAccidents" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.MajorAccidents" asp-items="@(new SelectList(Model.personalMedicalHistory.MajorAccidentsOp, "Value","Text",Model.personalMedicalHistory.MajorAccidents))"></select>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.BloodTransfusion" class="text-muted m-b-15 f-s-12"></label>
+            <select id="BloodTransfusion" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.BloodTransfusion" asp-items="@(new SelectList(Model.personalMedicalHistory.BloodTransfusionOp, "Value","Text",Model.personalMedicalHistory.BloodTransfusion))"></select>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.AdmissionToHospital" class="text-muted m-b-15 f-s-12"></label>
+            <select id="AdmissionToHospital" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.AdmissionToHospital" asp-items="@(new SelectList(Model.personalMedicalHistory.AdmissionToHospitalOp, "Value","Text",Model.personalMedicalHistory.AdmissionToHospital))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.AdmissionToHospitalAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckAdmHosp_@i" disabled asp-for="@Model.personalMedicalHistory.AdmissionToHospitalAnswers[i].Selected" class="form-check-input checkAdmHosp" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AdmissionToHospitalAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.AdmissionToHospitalAnswers[i].Value" />
+                        <label class="form-check-label checkAdmHosp" disabled asp-for="@Model.personalMedicalHistory.AdmissionToHospitalAnswers[i].Selected">
+                            @Model.personalMedicalHistory.AdmissionToHospitalAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.SurgeriesPerformed" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.personalMedicalHistory.SurgeriesPerformed" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.SomeSequel" class="text-muted m-b-15 f-s-12"></label>
+            <select id="SomeSequel" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.SomeSequel" asp-items="@(new SelectList(Model.personalMedicalHistory.SomeSequelOp, "Value","Text",Model.personalMedicalHistory.SomeSequel))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.PhysicalOrPsychologicalImpairment" class="text-muted m-b-15 f-s-12"></label>
+            <select id="PhysicalOrPsychologicalImpairment" class="form-control" asp-for="@Model.personalMedicalHistory.PhysicalOrPsychologicalImpairment" asp-items="@(new SelectList(Model.personalMedicalHistory.PhysicalOrPsychologicalImpairmentOp, "Value","Text",Model.personalMedicalHistory.PhysicalOrPsychologicalImpairment))"></select>
+        </div>
+        <hr class="hr" />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.ChronicIllness" class="text-muted m-b-15 f-s-12"></label>
+            <select id="ChronicIllness" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.ChronicIllness" asp-items="@(new SelectList(Model.personalMedicalHistory.ChronicIllnessOp, "Value","Text",Model.personalMedicalHistory.ChronicIllness))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.ChronicIllnessAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckChroIll_@i" disabled asp-for="@Model.personalMedicalHistory.ChronicIllnessAnswers[i].Selected" class="form-check-input checkChroIll" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.ChronicIllnessAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.ChronicIllnessAnswers[i].Value" />
+                        <label class="form-check-label checkChroIll" disabled asp-for="@Model.personalMedicalHistory.ChronicIllnessAnswers[i].Selected">
+                            @Model.personalMedicalHistory.ChronicIllnessAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.ChronicIllnessOther" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.ChronicIllnessOther" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.SufferedFromCancerOrMalignantTumor" class="text-muted m-b-15 f-s-12"></label>
+            <select id="PhysicalOrPsychologicalImpairment" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.SufferedFromCancerOrMalignantTumor" asp-items="@(new SelectList(Model.personalMedicalHistory.SufferedFromCancerOrMalignantTumorOp, "Value","Text",Model.personalMedicalHistory.SufferedFromCancerOrMalignantTumor))"></select>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.HaveVaricoseVeins" class="text-muted m-b-15 f-s-12"></label>
+            <select id="PhysicalOrPsychologicalImpairment" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.HaveVaricoseVeins" asp-items="@(new SelectList(Model.personalMedicalHistory.HaveVaricoseVeinsOp, "Value","Text",Model.personalMedicalHistory.HaveVaricoseVeins))"></select>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="text-muted m-b-15 f-s-12">Habitos</label>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.Tabaco" class="text-muted m-b-15 f-s-12"></label>
+            <select id="Tabaco" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.Tabaco" asp-items="@(new SelectList(Model.personalMedicalHistory.TabacoOp, "Value","Text",Model.personalMedicalHistory.Tabaco))"></select>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.TabacoDate" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="date" asp-for="@Model.personalMedicalHistory.TabacoDate" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div id="frmTabacoQuantity" class="form-group">
+                    <label id="LblTabacoQuantity" class="text-muted m-b-15 f-s-12">--</label>
+                    <input type="number" disabled asp-for="@Model.personalMedicalHistory.TabacoQuantity" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.Alcohol" class="text-muted m-b-15 f-s-12"></label>
+            <select id="Alcohol" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.Alcohol" asp-items="@(new SelectList(Model.personalMedicalHistory.AlcoholOp, "Value","Text",Model.personalMedicalHistory.Alcohol))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.Drink" class="text-muted m-b-15 f-s-12"></label>
+            <select id="drinktype" disabled class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.Drink" asp-items="@(new SelectList(Model.personalMedicalHistory.Drinktype, "Value","Text",Model.personalMedicalHistory.Drink))"></select>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.Drugs" class="text-muted m-b-15 f-s-12"></label>
+            <select id="Drugs" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.Drugs" asp-items="@(new SelectList(Model.personalMedicalHistory.DrugsOp, "Value","Text",Model.personalMedicalHistory.Drugs))"></select>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.DrugsDate" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="date" asp-for="@Model.personalMedicalHistory.DrugsDate" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control" />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.DrugType" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="text" disabled asp-for="@Model.personalMedicalHistory.DrugType" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.PhysicalActivity" class="text-muted m-b-15 f-s-12"></label>
+            <select id="PhysicalActivity" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.PhysicalActivity" asp-items="@(new SelectList(Model.personalMedicalHistory.PhysicalActivityOp, "Value","Text",Model.personalMedicalHistory.PhysicalActivity))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.PhysicalActivityType" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.PhysicalActivityType" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.PhysicalActivityTimeSpent" class="text-muted m-b-15 f-s-12"></label>
+            <input type="number" disabled asp-for="@Model.personalMedicalHistory.PhysicalActivityTimeSpent" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.UseOfMedications" class="text-muted m-b-15 f-s-12"></label>
+            <select id="UseOfMedications" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.UseOfMedications" asp-items="@(new SelectList(Model.personalMedicalHistory.UseOfMedicationsOp, "Value","Text",Model.personalMedicalHistory.UseOfMedications))"></select>
+            <br />
+            <div class="form-group">
+                @for (int i = 0; i < Model.personalMedicalHistory.UseOfMedicationsAnswers.Count; i++)
+                {
+                    <div class="form-check-inline ">
+                        <input type="checkbox" id="ckUMed_@i" disabled asp-for="@Model.personalMedicalHistory.UseOfMedicationsAnswers[i].Selected" class="form-check-input checkUseOfMedi" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.UseOfMedicationsAnswers[i].Text" />
+                        <input type="hidden" asp-for="@Model.personalMedicalHistory.UseOfMedicationsAnswers[i].Value" />
+                        <label class="form-check-label checkUseOfMedi" disabled asp-for="@Model.personalMedicalHistory.UseOfMedicationsAnswers[i].Selected">
+                            @Model.personalMedicalHistory.UseOfMedicationsAnswers[i].Text
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.MedicationName" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.MedicationName" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.UsedFor" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.UsedFor" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.TimeOfsleeping" class="text-muted m-b-15 f-s-12"></label>
+            <input type="number" asp-for="@Model.personalMedicalHistory.TimeOfsleeping" class="form-control input-rounded" placeholder="">
+        </div>
+        <hr />
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.OtherJobsToBePerformed" class="text-muted m-b-15 f-s-12"></label>
+            <select id="OtherJobsToBePerformed" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.OtherJobsToBePerformed" asp-items="@(new SelectList(Model.personalMedicalHistory.OtherJobsToBePerformedOp, "Value","Text",Model.personalMedicalHistory.OtherJobsToBePerformed))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.OtherJobsWhere" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" disabled asp-for="@Model.personalMedicalHistory.OtherJobsWhere" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.OtherJobsWhatsHeDoing" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="text" disabled asp-for="@Model.personalMedicalHistory.OtherJobsWhatsHeDoing" class="form-control input-rounded" placeholder="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label asp-for="@Model.personalMedicalHistory.OtherJobsSince" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="date" asp-for="@Model.personalMedicalHistory.OtherJobsSince" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.personalMedicalHistory.PerformHouseholdChores" class="text-muted m-b-15 f-s-12"></label>
+            <select id="OtherJobsToBePerformed" class="form-control input-rounded" asp-for="@Model.personalMedicalHistory.PerformHouseholdChores" asp-items="@(new SelectList(Model.personalMedicalHistory.OtherJobsToBePerformedOp, "Value","Text",Model.personalMedicalHistory.OtherJobsToBePerformed))"></select>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+@*@for (int i = 0; i < Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers.Count; i++)
+{
+    <div class="form-check-inline">
+        <input type="checkbox" asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Selected" class="form-check-input" />
+        <input type="hidden" asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Text" />
+        <input type="hidden" asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Value" />
+        <label class="form-check-label" asp-for="@Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Selected">
+            @Model.personalMedicalHistory.WearGlassesOrContactLensesAnswers[i].Text
+        </label>
+    </div>
+}*@

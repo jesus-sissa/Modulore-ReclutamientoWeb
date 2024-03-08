@@ -1,0 +1,1316 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Modulo_Reclutamiento_Web.Models.MedicalQuestionData
+@model MedicalQuestion
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            @if (ViewBag.stat == "R")
+            {
+                <li class="breadcrumb-item"><a href="@Url.Action("ListOfMedicalQuestionnarie","Recruiter",new{ pto = ViewBag.pto,filter=ViewBag.filter,stat=ViewBag.stat})"><i class="ti-arrow-left"></i> Regresar</a></li>
+            }
+            else
+            {
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Prospectus",new{ pto = ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+            }
+
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Procesos</li>
+            <li class="breadcrumb-item active">Cuestionario Medico</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title">
+        <div class="col-12">
+            <img src="../images/encabezado.jpg" width="100%" height="55px" title="encabezado" />
+
+        </div>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title text-center">CUESTIONARIO MEDICO</h4>
+        <ul class="nav nav-tabs customtab2" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" id="tabPerData" href="#PerData" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span>
+                    <span class="hidden-xs-down">Informacion de Candidato</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" id="tabPerMedHist" href="#PerMedHist" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-heart"></i></span>
+                    <span class="hidden-xs-down">Antecedentes Médicos Personales</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#GineAntec" id="tabGineAntec" disabled role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-heart-broken"></i></span>
+                    <span class="hidden-xs-down">Conteste Lo siguiente solo si usted es mujer</span>
+                </a>
+            </li>
+        </ul>
+        <form method="post" asp-controller="Prospectus" asp-action="SaveMedicalQuestionnaire">
+
+            <div class="tab-content">
+                <div class="tab-pane active show" id="PerData" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Prospectus/partialViews/MedicalQuestionnaire/_PersonalMedicalData" model="@Model" />
+                    </div>
+                </div>
+                <div class="tab-pane" id="PerMedHist" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Prospectus/partialViews/MedicalQuestionnaire/_PersonalMedicalHistory" model="@Model" />
+                    </div>
+                </div>
+                <div class="tab-pane" id="GineAntec" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Prospectus/partialViews/MedicalQuestionnaire/_GynecologicalAntecento" model="@Model" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xl-4" style="float:left">
+                <div class="form-group">
+                    <input type="button" id="firmar" class="btn btn-sissa-blue-light form-control" value="Firmar" />
+                </div>
+            </div>
+            <div class="col-lg-4 col-xl-4" style="float:right">
+                <div class="form-group">
+                    <input type="submit" id="guardar" class="btn btn-sissa-green-light form-control" value="Guardar" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+
+            if ('@ViewBag.msg' === '0') {
+                sweetAlert("Oops...", "No se pudo guardar el Cuestionario Medico !!", "error");
+            }
+            if ('@ViewBag.msg' === '1') {
+                swal("Cuestionario Medico Guardado!", "", "success");
+            }
+            if ('@ViewBag.msg' === '2') {
+                swal("Cuestionario Medico Actualizado!", "", "success");
+            }
+
+            ///////////////////////////////////////////////////////////////////
+            //se oculta botones si el cuestionario ya fue firmado por el prospecto
+            if ('@ViewBag.CuestionnaireSigned' === 'True') {
+                $("#firmar").attr("disabled", "disabled")
+                $("#firmar").attr("hidden", "hidden")
+                $("#guardar").attr("disabled", "disabled")
+                $("#guardar").attr("hidden", "hidden")
+            } else {
+                $("#firmar").removeAttr("disabled")
+                $("#guardar").removeAttr("disabled")
+            }
+
+            /// bloqueo de elementos cuando se entra como reclutador
+            if ('@ViewBag.stat' === 'R') {
+                $("#Weight").removeAttr("disabled")
+                $("#height").removeAttr("disabled")
+                $("#personalMedicalHistory_BloodPressure").removeAttr("disabled")
+                $("#personalMedicalHistory_Glucose").removeAttr("disabled")
+                $("#personalMedicalHistory_Remarks").removeAttr("disabled")
+                $("#Antidoping").removeAttr("disabled")
+                $("#IMC").removeAttr("disabled")
+                $("#MedicalServices").removeAttr("disabled")
+                $("#MedicalServiceApproval").removeAttr("disabled")
+                $("#Remarks").removeAttr("disabled")
+
+
+                $("#guardar").removeAttr("disabled")
+                $("#guardar").removeAttr("hidden")
+
+                $("#firmar").attr("disabled", "disabled")
+                $("#firmar").attr("hidden", "hidden")
+
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            /// bloqueo de elementos en tap cuando se entra como reclutador
+            //informacion personal
+            $("#tabPerData").click(function() {
+
+                if ('@ViewBag.stat' === 'R') {
+                    $("#guardar").removeAttr("disabled")
+                    $("#guardar").removeAttr("hidden")
+                }
+            });
+            //antecedentes medicos
+            $("#tabPerMedHist").click(function() {
+
+                if ('@ViewBag.stat' === 'R') {
+
+                    $("#PersonalMedicalHistoryCard select").each(function(index, element) {
+
+                        $(element).attr("disabled", "disabled");
+                    });
+                    $("#PersonalMedicalHistoryCard input").each(function(index, element) {
+                        $(element).attr("disabled", "disabled");
+                    });
+
+                    $("#guardar").attr("disabled", "disabled")
+                    $("#guardar").attr("hidden", "hidden")
+                } else {
+                    $("#guardar").removeAttr("disabled")
+                    $("#guardar").removeAttr("hidden")
+                }
+
+            });
+            //antecedentes ginecologicos
+            $("#tabGineAntec").click(function() {
+
+                if ('@ViewBag.stat' === 'R') {
+
+                    $("#tabGineAntecCard select").each(function(index, element) {
+
+                        $(element).attr("disabled", "disabled");
+                    });
+                    $("#tabGineAntecCard input").each(function(index, element) {
+                        $(element).attr("disabled", "disabled");
+                    });
+
+                    $("#guardar").attr("disabled", "disabled")
+                    $("#guardar").attr("hidden", "hidden")
+                } else {
+                    $("#guardar").removeAttr("disabled")
+                    $("#guardar").removeAttr("hidden")
+                }
+
+            });
+
+            //--------------------------------------------------------------//
+            //validaciones al cargar la informacion del cuestionario medico
+            //--------------------------------------------------------------//
+            //-----------------------------------------------------------------------
+            //-- ANTECEDENTES MEDICO PERSONAL
+            //-----------------------------------------------------------------------
+            //usarlentes o pupilente
+            var _wearGlassesVal = $("#WearGlassesOrPupils").val();
+            if (_wearGlassesVal === "S") {
+                $("#WearGlassesOrPupilsAnswer").removeAttr("disabled")
+                $("#personalMedicalHistory_WearGlassesOrPupilsSince").removeAttr("disabled")
+            } else {
+                $("#WearGlassesOrPupilsAnswer").attr("disabled", "disabled")
+                $("#personalMedicalHistory_WearGlassesOrPupilsSince").attr("disabled", "disabled")
+            }
+            //enfermedades infantiles
+            var _ChildhoodDiseases = $("#ChildhoodDiseases").val();
+            //console.log(_wearGlassesVal);
+            if (_ChildhoodDiseases === "S") {
+                $(".checkChildrenD").removeAttr("disabled")
+            } else {
+                $(".checkChildrenD").attr("disabled", "disabled")
+                $(".checkChildrenD").removeAttr("checked")
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").val("")
+            }
+            //otra enfermedad infantil diferentes a las opciones dadas
+            if ($("#ckcd_6").is(':checked')) {
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").attr("disabled", "disabled")
+            }
+            //alergias
+            var _Allergies = $("#Allergies").val();
+            //console.log(_wearGlassesVal);
+            if (_Allergies === "S") {
+                $(".checkAllergies").removeAttr("disabled")
+            } else {
+                $(".checkAllergies").attr("disabled", "disabled")
+                $(".checkAllergies").removeAttr("checked")
+            }
+            //cirugia ocular
+            var _EyeSurgery = $("#EyeSurgery").val();
+            //console.log(_wearGlassesVal);
+            if (_EyeSurgery === "S") {
+                $("#personalMedicalHistory_EyeSurgeryBy").removeAttr("disabled")
+                $("#personalMedicalHistory_dateSurgery").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_EyeSurgeryBy").attr("disabled", "disabled")
+                $("#personalMedicalHistory_dateSurgery").attr("disabled", "disabled")
+            }
+
+            //uso de lentes o lentes de contacto
+            var _WearGlasses = $("#WearGlassesOrContactLenses").val();
+            //console.log(_wearGlassesVal);
+            if (_WearGlasses === "S") {
+                $(".checkWearGlassCont").removeAttr("disabled")
+            } else {
+                $(".checkWearGlassCont").attr("disabled", "disabled")
+                $(".checkWearGlassCont").removeAttr("checked")
+            }
+            //enfermedad de los oidos
+            var _EarDisease = $("#EarDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_EarDisease === "S") {
+                $("#personalMedicalHistory_EarDiseaseAnswer").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_EarDiseaseAnswer").attr("disabled", "disabled")
+            }
+            //usa aparato auditivo
+            var _EarDisease = $("#UseHearingAid").val();
+            //console.log(_wearGlassesVal);
+            if (_EarDisease === "S") {
+                $("#personalMedicalHistory_UseHearingAidsince").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_UseHearingAidsince").attr("disabled", "disabled")
+            }
+            //enfermedad mental
+            var _DentalDiseases = $("#DentalDiseases").val();
+            //console.log(_wearGlassesVal);
+            if (_DentalDiseases === "S") {
+                $(".checkDentalDis").removeAttr("disabled")
+            } else {
+                $(".checkDentalDis").attr("disabled", "disabled")
+                $(".checkDentalDis").removeAttr("checked")
+            }
+            //otra enfermedad hormonal
+            if ($("#ckhd_5").is(':checked')) {
+                $("#personalMedicalHistory_HormonalDiseasesOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_HormonalDiseasesOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_HormonalDiseasesOther").val("")
+            }
+            //enfermedad pulmonar
+            var _LungDisease = $("#LungDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_LungDisease === "S") {
+                $(".checkLungDis").removeAttr("disabled")
+            } else {
+                $(".checkLungDis").attr("disabled", "disabled")
+                $(".checkLungDis").removeAttr("checked")
+                $("#personalMedicalHistory_LungDiseaseOther").attr("disabled", "disabled")
+            }
+            //otra enfermedad pulmunar
+            if ($("#ckld_4").is(':checked')) {
+                $("#personalMedicalHistory_LungDiseaseOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_LungDiseaseOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_LungDiseaseOther").val("")
+            }
+            //enfermedad del corazon
+            var _HeartDisease = $("#HeartDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_HeartDisease === "S") {
+                $(".checkHeartDis").removeAttr("disabled")
+            } else {
+                $(".checkHeartDis").attr("disabled", "disabled")
+                $(".checkHeartDis").removeAttr("checked")
+
+            }
+            //alteracion del la presion arterial
+            var _AlteredBloodPressure = $("#AlteredBloodPressure").val();
+            //console.log(_wearGlassesVal);
+            if (_AlteredBloodPressure === "S") {
+                $(".checkAlteredB").removeAttr("disabled")
+                $("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkAlteredB").attr("disabled", "disabled")
+                $("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkAlteredB").removeAttr("checked")
+
+            }
+            //control medico de la presion arterial
+            var _AlterMedCont = $("#AlteredBloodPressureMedicalControl").val();
+            //console.log(_wearGlassesVal);
+            if (_AlterMedCont === "S") {
+                $(".checkAMedical").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkAMedical").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkAMedical").removeAttr("checked")
+
+            }
+            //enfermedad digestiva
+            var _DigestiveD = $("#DigestiveDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_DigestiveD === "S") {
+                $(".checkDigestiveDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkDigestiveDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkDigestiveDis").removeAttr("checked")
+
+            }
+            //enfermedad del higado
+            var _LiverD = $("#LiverDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_LiverD === "S") {
+                $(".checkLiverDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkLiverDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkLiverDis").removeAttr("checked")
+
+            }
+            //diabetes
+            var _DiabetesMell = $("#DiabetesMellitus").val();
+            //console.log(_wearGlassesVal);
+            if (_DiabetesMell === "S") {
+                $(".checkDiabetesMellitus").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkDiabetesMellitus").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkDiabetesMellitus").removeAttr("checked")
+
+            }
+            //control medico de diables
+            var _DiabetesMellCont = $("#DiabetesMellitusMedicControl").val();
+            //console.log(_wearGlassesVal);
+            if (_DiabetesMellCont === "S") {
+                $(".checkDiabetesMellC").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkDiabetesMellC").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkDiabetesMellC").removeAttr("checked")
+
+            }
+
+            $("input.checkDiabetesMellC").each(function(i, e) {
+                if ($(e).is(":checked")) {
+                    $(e).removeAttr("disabled")
+                } else {
+                    $(e).attr("disabled", "disabled")
+                }
+            });
+
+
+            //colesterol
+            var _CholesterolDisease = $("#CholesterolDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_CholesterolDisease === "S") {
+                $("#personalMedicalHistory_CholesterolDiseaseMedications").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_CholesterolDiseaseMedications").attr("disabled", "disabled")
+                $("#personalMedicalHistory_CholesterolDiseaseMedications").val("")
+            }
+            //acido urico
+            var _UricAcidDisease = $("#UricAcidDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_UricAcidDisease === "S") {
+                $("#personalMedicalHistory_UricAcidDiseaseMedication").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_UricAcidDiseaseMedication").attr("disabled", "disabled")
+                $("#personalMedicalHistory_UricAcidDiseaseMedication").val("")
+            }
+            //riñones
+            var _KidneyDisease = $("#KidneyDisease").val();
+            //console.log(_wearGlassesVal);
+            if (_KidneyDisease === "S") {
+                $(".checkKidneyDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkKidneyDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkKidneyDis").removeAttr("checked")
+
+            }
+            //enfermedad neurologica
+            var _NeurologicalDiseases = $("#NeurologicalDiseases").val();
+            //console.log(_wearGlassesVal);
+            if (_NeurologicalDiseases === "S") {
+                $(".checkNeuroDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkNeuroDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkNeuroDis").removeAttr("checked")
+
+            }
+            //enfermedad psicologica
+            var _PsychiatricIllnesses = $("#PsychiatricIllnesses").val();
+            //console.log(_wearGlassesVal);
+            if (_PsychiatricIllnesses === "S") {
+                $(".checkPsyIll").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkPsyIll").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkPsyIll").removeAttr("checked")
+
+            }
+            //enfermedad muscular
+            var _MusculoskeletalDiseases = $("#MusculoskeletalDiseases").val();
+            //console.log(_wearGlassesVal);
+            if (_MusculoskeletalDiseases === "S") {
+                $(".checkMuscDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkMuscDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkMuscDis").removeAttr("checked")
+
+            }
+            //enfermedades infecciosas
+            var _InfectiousDiseases = $("#InfectiousDiseases").val();
+            //console.log(_wearGlassesVal);
+            if (_InfectiousDiseases === "S") {
+                $(".checkInfectDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkInfectDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkInfectDis").removeAttr("checked")
+
+            }
+            //ingreso al hospital
+            var _AdmissionToHospital = $("#AdmissionToHospital").val();
+            //console.log(_wearGlassesVal);
+            if (_AdmissionToHospital === "S") {
+                $(".checkAdmHosp").removeAttr("disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").removeAttr("disabled")
+            } else {
+                $(".checkAdmHosp").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").val("")
+                $(".checkAdmHosp").removeAttr("checked")
+
+            }
+            //enfermadad cronica
+            var _ChronicIllness = $("#ChronicIllness").val();
+            //console.log(_wearGlassesVal);
+            if (_ChronicIllness === "S") {
+                $(".checkChroIll").removeAttr("disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").removeAttr("disabled")
+            } else {
+                $(".checkChroIll").attr("disabled", "disabled")
+                $(".checkChroIll").removeAttr("checked")
+            }
+
+            //otra enfermedad cronica
+            if ($("#ckChroIll_9").is(':checked')) {
+                $("#personalMedicalHistory_ChronicIllnessOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_ChronicIllnessOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_ChronicIllnessOther").val("")
+            }
+
+
+
+            //tabaco
+            var _Tabaco = $("#Tabaco").val();
+            //console.log(_wearGlassesVal);
+            if (_Tabaco === "2") {
+                $("#personalMedicalHistory_TabacoDate").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_TabacoDate").attr("disabled", "disabled")
+            }
+            if (_Tabaco === "4") {
+                $("#LblTabacoQuantity").html("Cantidad de Cigarros que fuma al dia")
+                $("#personalMedicalHistory_TabacoQuantity").removeAttr("disabled")
+            }
+            else if (_Tabaco === "5") {
+                $("#LblTabacoQuantity").html("Cantidad de Cigarros que fuma semanalmente")
+                $("#personalMedicalHistory_TabacoQuantity").removeAttr("disabled")
+            }
+            else {
+                $("#LblTabacoQuantity").html("")
+                $("#personalMedicalHistory_TabacoQuantity").attr("disabled", "disabled")
+                $("#personalMedicalHistory_TabacoQuantity").val("")
+            }
+            //alcohol
+            var _Alcohol = $("#Alcohol").val();
+            if (_Alcohol !== "1") {
+                $("#drinktype").removeAttr("disabled")
+            } else {
+                $("#drinktype").attr("disabled", "disabled")
+                $("#drinktype").val("0")
+            }
+            //drogas
+            var _drugs = $("#Drugs").val();
+            if (_drugs === "4") {
+                $("#personalMedicalHistory_DrugsDate").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_DrugsDate").attr("disabled", "disabled")
+            }
+            if (_drugs !== "1" && _drugs !== "4") {
+                $("#personalMedicalHistory_DrugType").removeAttr("disabled")
+            }
+            else {
+                $("#personalMedicalHistory_DrugType").attr("disabled", "disabled")
+                $("#personalMedicalHistory_DrugType").val("")
+            }
+            //actividad fisica
+            var _PhysicalActivity = $("#PhysicalActivity").val();
+            if (_PhysicalActivity !== "1") {
+                $("#personalMedicalHistory_PhysicalActivityType").removeAttr("disabled")
+                $("#personalMedicalHistory_PhysicalActivityTimeSpent").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_PhysicalActivityType").attr("disabled", "disabled")
+                $("#personalMedicalHistory_PhysicalActivityType").val("")
+                $("#personalMedicalHistory_PhysicalActivityTimeSpent").attr("disabled", "disabled")
+                $("#personalMedicalHistory_PhysicalActivityTimeSpent").val("")
+            }
+            //uso de medicamentos
+            var _UseOfMedications = $("#UseOfMedications").val();
+            if (_UseOfMedications === "S") {
+                $(".checkUseOfMedi").removeAttr("disabled")
+                $("#personalMedicalHistory_MedicationName").removeAttr("disabled")
+                $("#personalMedicalHistory_UsedFor").removeAttr("disabled")
+            } else {
+                $(".checkUseOfMedi").attr("disabled", "disabled")
+                $(".checkUseOfMedi").removeAttr("checked")
+                $("#personalMedicalHistory_MedicationName").attr("disabled", "disabled")
+                $("#personalMedicalHistory_MedicationName").val("")
+                $("#personalMedicalHistory_UsedFor").attr("disabled", "disabled")
+                $("#personalMedicalHistory_UsedFor").val("")
+            }
+            //otros trabajos a desempeñar
+            var _OtherJobsToBePerformed = $("#OtherJobsToBePerformed").val();
+            if (_OtherJobsToBePerformed === "S") {
+                $("#personalMedicalHistory_OtherJobsWhere").removeAttr("disabled")
+                $("#personalMedicalHistory_OtherJobsWhatsHeDoing").removeAttr("disabled")
+                $("#personalMedicalHistory_OtherJobsSince").removeAttr("disabled")
+            } else {
+
+                $("#personalMedicalHistory_OtherJobsWhere").attr("disabled", "disabled")
+                $("#personalMedicalHistory_OtherJobsWhere").val("")
+                $("#personalMedicalHistory_OtherJobsWhatsHeDoing").attr("disabled", "disabled")
+                $("#personalMedicalHistory_OtherJobsWhatsHeDoing").val("")
+                $("#personalMedicalHistory_OtherJobsSince").attr("disabled", "disabled")
+                $("#personalMedicalHistory_OtherJobsSince").val("")
+            }
+            //
+            //-----------------------------------------------------------------------
+            //-- ANTECEDENTES GINECOLOGICOS
+            //-----------------------------------------------------------------------
+            var _OtherProblems = $("#OtherProblems").val();
+            if (_OtherProblems === "S") {
+                $("#gynecologicalAntecento_OtherProblemsDesc").removeAttr("disabled")
+            } else {
+                $("#gynecologicalAntecento_OtherProblemsDesc").attr("disabled", "disabled")
+                $("#gynecologicalAntecento_OtherProblemsDesc").val("")
+            }
+
+            var _ContraceptiveMethod = $("#ContraceptiveMethod").val();
+            if (_ContraceptiveMethod === "S") {
+                $("#gynecologicalAntecento_ContraceptiveMethodDesc").removeAttr("disabled")
+            } else {
+                $("#gynecologicalAntecento_ContraceptiveMethodDesc").attr("disabled", "disabled")
+                $("#gynecologicalAntecento_ContraceptiveMethodDesc").val("")
+            }
+
+            var _OtherProblemsBreast = $("#OtherProblemsBreast").val();
+            if (_OtherProblemsBreast === "S") {
+                $("#gynecologicalAntecento_OtherProblemsBreastDesc").removeAttr("disabled")
+            } else {
+                $("#gynecologicalAntecento_OtherProblemsBreastDesc").attr("disabled", "disabled")
+                $("#gynecologicalAntecento_OtherProblemsBreastDesc").val("")
+            }
+
+
+        });
+
+        ///////////////////////////////////////////////////////////////////////////////
+        //- VALIDACIONES DE BOTONES AL INTERACTUAR CON ELLOS
+        ///////////////////////////////////////////////////////////////////////////////
+        //- ANTECEDENTE MEDICO PERSONAL
+        ///////////////////////////////////////////////////////////////////////////////
+        $("#WearGlassesOrPupils").change(function() {
+            var _wearGlassesVal = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_wearGlassesVal === "S") {
+                $("#WearGlassesOrPupilsAnswer").removeAttr("disabled")
+                $("#personalMedicalHistory_WearGlassesOrPupilsSince").removeAttr("disabled")
+            } else {
+                $("#WearGlassesOrPupilsAnswer").attr("disabled", "disabled")
+                $("#personalMedicalHistory_WearGlassesOrPupilsSince").attr("disabled", "disabled")
+            }
+        });
+
+        $("#ChildhoodDiseases").change(function() {
+            var _ChildhoodDiseases = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_ChildhoodDiseases === "S") {
+                $(".checkChildrenD").removeAttr("disabled")
+            } else {
+                $(".checkChildrenD").attr("disabled", "disabled")
+                $(".checkChildrenD").removeAttr("checked")
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").val("")
+            }
+        });
+
+        $("#ckcd_6").change(function() {
+            if ($(this).is(':checked')) {
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_ChildhoodDiseasesOther").attr("disabled", "disabled")
+            }
+        });
+
+        $("#Allergies").change(function() {
+            var _Allergies = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_Allergies === "S") {
+                $(".checkAllergies").removeAttr("disabled")
+            } else {
+                $(".checkAllergies").attr("disabled", "disabled")
+                $(".checkAllergies").removeAttr("checked")
+            }
+        });
+
+        $("#EyeSurgery").change(function() {
+            var _EyeSurgery = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_EyeSurgery === "S") {
+                $("#personalMedicalHistory_EyeSurgeryBy").removeAttr("disabled")
+                $("#personalMedicalHistory_dateSurgery").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_EyeSurgeryBy").attr("disabled", "disabled")
+                $("#personalMedicalHistory_dateSurgery").attr("disabled", "disabled")
+            }
+
+        });
+
+        $("#WearGlassesOrContactLenses").change(function() {
+            var _WearGlasses = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_WearGlasses === "S") {
+                $(".checkWearGlassCont").removeAttr("disabled")
+            } else {
+                $(".checkWearGlassCont").attr("disabled", "disabled")
+                $(".checkWearGlassCont").removeAttr("checked")
+            }
+        });
+
+        $("#EarDisease").change(function() {
+            var _EarDisease = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_EarDisease === "S") {
+                $("#personalMedicalHistory_EarDiseaseAnswer").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_EarDiseaseAnswer").attr("disabled", "disabled")
+            }
+        });
+
+        $("#UseHearingAid").change(function() {
+            var _EarDisease = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_EarDisease === "S") {
+                $("#personalMedicalHistory_UseHearingAidsince").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_UseHearingAidsince").attr("disabled", "disabled")
+            }
+        });
+
+        $("#DentalDiseases").change(function() {
+            var _DentalDiseases = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_DentalDiseases === "S") {
+                $(".checkDentalDis").removeAttr("disabled")
+            } else {
+                $(".checkDentalDis").attr("disabled", "disabled")
+                $(".checkDentalDis").removeAttr("checked")
+            }
+        });
+
+        $("#ckhd_5").change(function() {
+            if ($(this).is(':checked')) {
+                $("#personalMedicalHistory_HormonalDiseasesOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_HormonalDiseasesOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_HormonalDiseasesOther").val("")
+            }
+        });
+
+        $("#LungDisease").change(function() {
+            var _LungDisease = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_LungDisease === "S") {
+                $(".checkLungDis").removeAttr("disabled")
+            } else {
+                $(".checkLungDis").attr("disabled", "disabled")
+                $(".checkLungDis").removeAttr("checked")
+                $("#personalMedicalHistory_LungDiseaseOther").attr("disabled", "disabled")
+            }
+        });
+        $("#ckld_4").change(function() {
+            if ($(this).is(':checked')) {
+                $("#personalMedicalHistory_LungDiseaseOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_LungDiseaseOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_LungDiseaseOther").val("")
+            }
+        });
+
+        $("#HeartDisease").change(function() {
+            var _HeartDisease = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_HeartDisease === "S") {
+                $(".checkHeartDis").removeAttr("disabled")
+            } else {
+                $(".checkHeartDis").attr("disabled", "disabled")
+                $(".checkHeartDis").removeAttr("checked")
+
+            }
+        });
+
+        $("#AlteredBloodPressure").change(function() {
+            var _AlteredBloodPressure = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_AlteredBloodPressure === "S") {
+                $(".checkAlteredB").removeAttr("disabled")
+                $("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkAlteredB").attr("disabled", "disabled")
+                $("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkAlteredB").removeAttr("checked")
+
+            }
+        });
+
+        $("input.checkAlteredB").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_');
+            if ($(this).is(":checked")) {
+                $("input.checkAlteredB").each(function(i, e) {
+                    if (i !== parseInt(_idnum[1])) {
+                        $(e).attr("disabled", "disabled")
+                    }
+                });
+            }
+            else {
+
+                $("input.checkAlteredB").each(function(i, e) {
+                    $(e).removeAttr("disabled")
+                });
+            }
+        });
+
+        $("#AlteredBloodPressureMedicalControl").change(function() {
+            var _AlterMedCont = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_AlterMedCont === "S") {
+                $(".checkAMedical").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkAMedical").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkAMedical").removeAttr("checked")
+
+            }
+        });
+
+        $("input.checkAMedical").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_')
+            if ($(this).is(":checked")) {
+                $("input.checkAMedical").each(function(i, e) {
+                    if (i !== parseInt(_idnum[1])) {
+                        $(e).attr("disabled", "disabled")
+                    }
+                });
+            } else {
+                $("input.checkAMedical").each(function(i, e) {
+                    $(e).removeAttr("disabled")
+                });
+            }
+        });
+
+        $("#DigestiveDisease").change(function() {
+            var _DigestiveD = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_DigestiveD === "S") {
+                $(".checkDigestiveDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkDigestiveDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkDigestiveDis").removeAttr("checked")
+
+            }
+        });
+
+        $("#LiverDisease").change(function() {
+            var _LiverD = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_LiverD === "S") {
+                $(".checkLiverDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkLiverDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkLiverDis").removeAttr("checked")
+
+            }
+        });
+
+        $("#DiabetesMellitus").change(function() {
+            var _DiabetesMell = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_DiabetesMell === "S") {
+                $(".checkDiabetesMellitus").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkDiabetesMellitus").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkDiabetesMellitus").removeAttr("checked")
+
+            }
+        });
+
+        $("#DiabetesMellitusMedicControl").change(function() {
+            var _DiabetesMellCont = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_DiabetesMellCont === "S") {
+                $(".checkDiabetesMellC").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkDiabetesMellC").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkDiabetesMellC").removeAttr("checked")
+
+            }
+        });
+
+        $("input.checkDiabetesMellC").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_')
+            if ($(this).is(":checked")) {
+                $("input.checkDiabetesMellC").each(function(i, e) {
+                    if (i !== parseInt(_idnum[1])) {
+                        $(e).attr("disabled", "disabled")
+                    }
+                });
+            } else {
+                $("input.checkDiabetesMellC").each(function(i, e) {
+                    $(e).removeAttr("disabled")
+                });
+            }
+        });
+
+        $("#CholesterolDisease").change(function() {
+            var _CholesterolDisease = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_CholesterolDisease === "S") {
+                $("#personalMedicalHistory_CholesterolDiseaseMedications").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_CholesterolDiseaseMedications").attr("disabled", "disabled")
+                $("#personalMedicalHistory_CholesterolDiseaseMedications").val("")
+            }
+        });
+
+        $("#UricAcidDisease").change(function() {
+            var _UricAcidDisease = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_UricAcidDisease === "S") {
+                $("#personalMedicalHistory_UricAcidDiseaseMedication").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_UricAcidDiseaseMedication").attr("disabled", "disabled")
+                $("#personalMedicalHistory_UricAcidDiseaseMedication").val("")
+            }
+        });
+
+        $("#KidneyDisease").change(function() {
+            var _KidneyDisease = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_KidneyDisease === "S") {
+                $(".checkKidneyDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkKidneyDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkKidneyDis").removeAttr("checked")
+
+            }
+        });
+
+        $("#NeurologicalDiseases").change(function() {
+            var _NeurologicalDiseases = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_NeurologicalDiseases === "S") {
+                $(".checkNeuroDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkNeuroDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkNeuroDis").removeAttr("checked")
+
+            }
+        });
+
+        $("#PsychiatricIllnesses").change(function() {
+            var _PsychiatricIllnesses = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_PsychiatricIllnesses === "S") {
+                $(".checkPsyIll").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkPsyIll").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkPsyIll").removeAttr("checked")
+
+            }
+        });
+
+        $("#MusculoskeletalDiseases").change(function() {
+            var _MusculoskeletalDiseases = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_MusculoskeletalDiseases === "S") {
+                $(".checkMuscDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkMuscDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkMuscDis").removeAttr("checked")
+
+            }
+        });
+
+        $("#InfectiousDiseases").change(function() {
+            var _InfectiousDiseases = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_InfectiousDiseases === "S") {
+                $(".checkInfectDis").removeAttr("disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").removeAttr("disabled")
+            } else {
+                $(".checkInfectDis").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_AlteredBloodPressureMedicaments").attr("disabled", "disabled")
+                $(".checkInfectDis").removeAttr("checked")
+
+            }
+        });
+
+        $("#AdmissionToHospital").change(function() {
+            var _AdmissionToHospital = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_AdmissionToHospital === "S") {
+                $(".checkAdmHosp").removeAttr("disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").removeAttr("disabled")
+            } else {
+                $(".checkAdmHosp").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").attr("disabled", "disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").val("")
+                $(".checkAdmHosp").removeAttr("checked")
+
+            }
+        });
+
+        $("input.checkAdmHosp").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_')
+            if ($(this).is(":checked")) {
+                $("input.checkAdmHosp").each(function(i, e) {
+                    if (i !== parseInt(_idnum[1])) {
+                        $(e).attr("disabled", "disabled")
+                    }
+                });
+            } else {
+                $("input.checkAdmHosp").each(function(i, e) {
+                    $(e).removeAttr("disabled")
+                });
+            }
+        });
+
+        $("#ChronicIllness").change(function() {
+            var _ChronicIllness = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_ChronicIllness === "S") {
+                $(".checkChroIll").removeAttr("disabled")
+                //$("#personalMedicalHistory_SurgeriesPerformed").removeAttr("disabled")
+            } else {
+                $(".checkChroIll").attr("disabled", "disabled")
+                $(".checkChroIll").removeAttr("checked")
+            }
+        });
+
+        $("#ckChroIll_9").change(function() {
+            if ($(this).is(':checked')) {
+                $("#personalMedicalHistory_ChronicIllnessOther").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_ChronicIllnessOther").attr("disabled", "disabled")
+                $("#personalMedicalHistory_ChronicIllnessOther").val("")
+            }
+        });
+
+        $("#Tabaco").change(function() {
+            var _Tabaco = $(this).val();
+            //console.log(_wearGlassesVal);
+            if (_Tabaco === "2") {
+                $("#personalMedicalHistory_TabacoDate").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_TabacoDate").attr("disabled", "disabled")
+            }
+            if (_Tabaco === "4") {
+                $("#LblTabacoQuantity").html("Cantidad de Cigarros que fuma al dia")
+                $("#personalMedicalHistory_TabacoQuantity").removeAttr("disabled")
+            }
+            else if (_Tabaco === "5") {
+                $("#LblTabacoQuantity").html("Cantidad de Cigarros que fuma semanalmente")
+                $("#personalMedicalHistory_TabacoQuantity").removeAttr("disabled")
+            }
+            else {
+                $("#LblTabacoQuantity").html("")
+                $("#personalMedicalHistory_TabacoQuantity").attr("disabled", "disabled")
+                $("#personalMedicalHistory_TabacoQuantity").val("")
+            }
+        });
+
+        $("#Alcohol").change(function() {
+            var _Alcohol = $(this).val();
+            if (_Alcohol !== "1") {
+                $("#drinktype").removeAttr("disabled")
+            } else {
+                $("#drinktype").attr("disabled", "disabled")
+                $("#drinktype").val("0")
+            }
+
+        });
+
+        $("#Drugs").change(function() {
+            var _drugs = $(this).val();
+            if (_drugs === "4") {
+                $("#personalMedicalHistory_DrugsDate").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_DrugsDate").attr("disabled", "disabled")
+            }
+            if (_drugs !== "1" && _drugs !== "4") {
+                $("#personalMedicalHistory_DrugType").removeAttr("disabled")
+            }
+            else {
+                $("#personalMedicalHistory_DrugType").attr("disabled", "disabled")
+                $("#personalMedicalHistory_DrugType").val("")
+            }
+
+        });
+
+        $("#PhysicalActivity").change(function() {
+            var _PhysicalActivity = $(this).val();
+            if (_PhysicalActivity !== "1") {
+                $("#personalMedicalHistory_PhysicalActivityType").removeAttr("disabled")
+                $("#personalMedicalHistory_PhysicalActivityTimeSpent").removeAttr("disabled")
+            } else {
+                $("#personalMedicalHistory_PhysicalActivityType").attr("disabled", "disabled")
+                $("#personalMedicalHistory_PhysicalActivityType").val("")
+                $("#personalMedicalHistory_PhysicalActivityTimeSpent").attr("disabled", "disabled")
+                $("#personalMedicalHistory_PhysicalActivityTimeSpent").val("")
+            }
+        });
+
+        $("#UseOfMedications").change(function() {
+            var _UseOfMedications = $(this).val();
+            if (_UseOfMedications === "S") {
+                $(".checkUseOfMedi").removeAttr("disabled")
+            } else {
+                $(".checkUseOfMedi").attr("disabled", "disabled")
+                $(".checkUseOfMedi").removeAttr("checked")
+                $("#personalMedicalHistory_MedicationName").attr("disabled", "disabled")
+                $("#personalMedicalHistory_MedicationName").val("")
+                $("#personalMedicalHistory_UsedFor").attr("disabled", "disabled")
+                $("#personalMedicalHistory_UsedFor").val("")
+            }
+        });
+
+        $("input.checkUseOfMedi").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_')
+            if ($(this).is(":checked")) {
+                $("input.checkUseOfMedi").each(function(i, e) {
+                    if (i !== parseInt(_idnum[1])) {
+                        $(e).attr("disabled", "disabled")
+
+                    }
+                    $("#personalMedicalHistory_MedicationName").removeAttr("disabled")
+                    $("#personalMedicalHistory_UsedFor").removeAttr("disabled")
+                });
+            } else {
+                $("input.checkUseOfMedi").each(function(i, e) {
+                    $(e).removeAttr("disabled")
+                });
+                $("#personalMedicalHistory_MedicationName").attr("disabled", "disabled")
+                $("#personalMedicalHistory_MedicationName").val("")
+                $("#personalMedicalHistory_UsedFor").attr("disabled", "disabled")
+                $("#personalMedicalHistory_UsedFor").val("")
+
+            }
+        });
+
+        $("#OtherJobsToBePerformed").change(function() {
+            var _OtherJobsToBePerformed = $(this).val();
+            if (_OtherJobsToBePerformed === "S") {
+                $("#personalMedicalHistory_OtherJobsWhere").removeAttr("disabled")
+                $("#personalMedicalHistory_OtherJobsWhatsHeDoing").removeAttr("disabled")
+                $("#personalMedicalHistory_OtherJobsSince").removeAttr("disabled")
+            } else {
+
+                $("#personalMedicalHistory_OtherJobsWhere").attr("disabled", "disabled")
+                $("#personalMedicalHistory_OtherJobsWhere").val("")
+                $("#personalMedicalHistory_OtherJobsWhatsHeDoing").attr("disabled", "disabled")
+                $("#personalMedicalHistory_OtherJobsWhatsHeDoing").val("")
+                $("#personalMedicalHistory_OtherJobsSince").attr("disabled", "disabled")
+                $("#personalMedicalHistory_OtherJobsSince").val("")
+            }
+        });
+
+        //-----------------------------------------------------------------------
+        //-- ANTECEDENTES GINECOLOGICOS
+        //-----------------------------------------------------------------------
+        $("#OtherProblems").change(function() {
+            var _OtherProblems = $(this).val();
+            if (_OtherProblems === "S") {
+                $("#gynecologicalAntecento_ProblemsDesc").removeAttr("disabled")
+            } else {
+                $("#gynecologicalAntecento_ProblemsDesc").attr("disabled", "disabled")
+                $("#gynecologicalAntecento_ProblemsDesc").val("")
+            }
+
+        });
+
+        $("input.checkplace").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_')
+            if ($(this).is(":checked")) {
+                $("input.checkplace").each(function(i, e) {
+                    if (i !== parseInt(_idnum[1])) {
+                        $(e).attr("disabled", "disabled")
+                    }
+                });
+            } else {
+                $("input.checkplace").each(function(i, e) {
+                    $(e).removeAttr("disabled")
+                });
+            }
+        });
+
+        $("input.checkLastDCancer").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_')
+            if ($(this).is(":checked")) {
+                $("#gynecologicalAntecento_LastDateCancerScreeningTest").attr("disabled", "disabled")
+
+            } else {
+                $("#gynecologicalAntecento_LastDateCancerScreeningTest").removeAttr("disabled")
+            }
+        });
+
+        $("#ContraceptiveMethod").change(function() {
+            var _ContraceptiveMethod = $(this).val();
+            if (_ContraceptiveMethod === "S") {
+                $("#gynecologicalAntecento_ContraceptiveMethodDesc").removeAttr("disabled")
+            } else {
+                $("#gynecologicalAntecento_ContraceptiveMethodDesc").attr("disabled", "disabled")
+                $("#gynecologicalAntecento_ContraceptiveMethodDesc").val("")
+            }
+
+        });
+
+        $("#OtherProblemsBreast").change(function() {
+            var _OtherProblemsBreast = $(this).val();
+            if (_OtherProblemsBreast === "S") {
+                $("#gynecologicalAntecento_OtherProblemsBreastDesc").removeAttr("disabled")
+            } else {
+                $("#gynecologicalAntecento_OtherProblemsBreastDesc").attr("disabled", "disabled")
+                $("#gynecologicalAntecento_OtherProblemsBreastDesc").val("")
+            }
+        });
+
+        $("input.checkLastMens").change(function() {
+            var id = $(this).attr("id");
+            var _idnum = id.split('_')
+            if ($(this).is(":checked")) {
+                $("#gynecologicalAntecento_LastMenstruation").attr("disabled", "disabled")
+
+            } else {
+                $("#gynecologicalAntecento_LastMenstruation").removeAttr("disabled")
+            }
+        });
+
+        /////////////////////////////////////////////////////////////////////////////////////
+        //////// firmad cuestionario medico
+        ////////////////////////////////////////////////////////////////////////////////////
+
+        $("#firmar").click(function() {
+            ConfirmDialog();
+
+        });
+
+
+        function ConfirmDialog() {
+            swal(
+                {
+                    title: "Confirmar Clave Prospecto!!",
+                    text: "Ingresa la clave que te proporcionaron",
+                    type: "input",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave",
+                },
+                function(inputValue) {
+                    if (inputValue === false) {
+
+                        return false;
+
+                    }
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresar Clave!");
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+                    }
+                    if ('@ViewBag.pto' === inputValue) {
+                        ConfirmDocument();
+                    } else {
+                        swal.showInputError("Clave Erronea!");
+                        return false;
+                    }
+
+                }
+            );
+        }
+
+        function ConfirmDocument() {
+            var _id = $("#medicalId").val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("ConfirmMedicalQuestionnaireDocument","Prospectus")",
+                data: { medical: _id },
+
+                success: function(data) {
+                    if (data) {
+                        swal("Felicidades!!", "Firmado Correctamente", "success");
+                    }
+                    else {
+                        swal("Oopsss !!", "Parece ocurrio un problema vuelve a intentarlo!!", "error");
+                    }
+
+                    setTimeout(function() {
+                        window.location.href = '@Url.Action("MedicalQuestionnaire","Prospectus",new{ pto=ViewBag.pto,filter=ViewBag.filter})'
+
+                    }, 2000);
+
+
+                },
+                error: function(error) {
+                    console.log(error)
+                    alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function() { }
+            });
+        }
+
+
+    </script>
+}

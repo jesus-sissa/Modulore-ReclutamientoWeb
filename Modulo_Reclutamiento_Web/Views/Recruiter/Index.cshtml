@@ -1,0 +1,165 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Prospectus>
+@{
+
+}
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" class="form-inline" asp-controller="Recruiter" asp-action="Index">
+                    <div class="form-group col-md-4">
+                        <label for="Fecha_Inicio">Fecha Inicio</label>
+                        <input type="date" name="Fecha_Inicio" autocomplete="off" value="@DateTime.Today.AddDays(-14).ToString("yyyy-MM-dd")" id="Fecha_Inicio" class="form-control input-rounded" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="Fecha_Fin">Fecha Fin</label>
+                        <input type="date" name="Fecha_Fin" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" id="Fecha_Fin" class="form-control input-rounded" />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button type="submit" class="btn btn-sissa btn-rounded"><i class="ti-search"></i> Buscar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+@if (@Model != null)
+{
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-title">
+                    <h4>Prospectos </h4>
+
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    @*<th>Clave</th>*@
+                                    <th>Nombre</th>
+                                    <th>Departamento</th>
+                                    <th>Puesto</th>
+                                    <th>Fecha</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        @*<th>@item.Key</th>*@
+                                        <th>@item.Name</th>
+                                        <th>@item.Department</th>
+                                        <th>@item.Position</th>
+                                        <th>@item.Date</th>
+                                        @* <th class="text-right">
+                                <a href="@Url.Action("Investigation","Prospectus",new{ prosp =@item.Key,name=@item.Name})" class="btn btn-sissa-blue-light btn-rounded"><i class="ti-clipboard"></i> Iniciar </a>
+                                </th>*@
+                                        <th class="text-right">
+
+                                            <a href="@Url.Action("Index","Prospectus",new{ pto =@item.Id,name=@item.Name})" class="btn btn-sissa btn-rounded"><i class="ti-clipboard"></i> Iniciar </a>
+                                        </th>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@*<partial name="../Recruiter/Modal/_ModalConfirmValidation.cshtml" />*@
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        //$(document).ready(function() {
+            //$("a[name='reset_prospectus']").click(function() {
+            //    $("#ModalConfirmacionReset").modal("show");
+            //    $("#propspectus_confirm").val($(this).attr("id"));
+            //});
+
+        //    $("a[name='validate_prospectus']").click(function() {
+        //        $("#ModalValidacionProspecto").modal("show");
+        //        $("#propspectus_validate").val($(this).attr("id"));
+        //    });
+
+        //});
+
+
+
+
+
+
+        //$("#btn_validate_prospectus").click(function() {
+        //    $("#btn_validate_prospectus").attr('disabled', 'disabled');
+        //    var _password = $("#password_validate").val();
+        //    var _prosp = $("#propspectus_validate").val();
+
+        //    $.ajax({
+        //        type: "POST",
+        //        url: "@Url.Action("Confirm_Validate","Recruiter")",
+        //        data: { password: _password, pto: _prosp },
+
+        //        success: function(data) {
+        //            if (data) {
+        //                alert("Prospecto Validado");
+        //                window.location.href = "@Url.Action("Index","Recruiter")"
+        //            }
+        //            else {
+        //                alert("Aun tiene documentos sin firmar")
+        //            }
+        //            $("#ModalValidacionProspecto").modal("hide");
+
+        //        },
+        //        error: function(error) {
+        //            console.log(error.status)
+        //            if (error.status == 403) {
+        //                alert("No autorizado para hacer esta accion")
+        //            }
+        //            if (error.status == 404) {
+        //                alert("Accion No Disponible")
+        //            }
+        //            if (error.status == 500) {
+        //                alert("Error de Servidor")
+        //            }
+        //            //alert("Error al firmar")
+        //            //window.location.href ="/cajerosinteligentesQA/Home/Index"
+        //        },
+        //        complete: function(xhr, textStatus) {
+        //            console.log(xhr.status);
+        //        }
+        //    });
+
+        //    $("#btn_validate_prospectus").attr('disabled', 'disabled');
+
+        //});
+
+
+
+    </script>
+}

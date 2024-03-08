@@ -1,0 +1,211 @@
+.jqstooltip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    background: rgb(0, 0, 0) transparent;
+    background-color: rgba(0,0,0,0.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    color: white;
+    font: 10px arial, san serif;
+    text-align: left;
+    white-space: nowrap;
+    padding: 5px;
+    border: 1px solid white;
+    z-index: 10000;
+}
+
+.jqsfield {
+    color: white;
+    font: 10px arial, san serif;
+    text-align: left;
+}
+
+/*   body {
+                                            font-family: 'Roboto', sans-serif;
+                                            background: #f0ede7;
+                                            color: #868e96;
+                                            font-size: 14px;
+                                        }*/
+input.disabled {
+    pointer-events: none;
+    color: #AAA;
+    background: #F5F5F5;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fbf8f0;
+    color: #848382;
+    font-size: 16px;
+}
+
+.logo {
+    background: #c1a361;
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    width: 250px;
+    transition: width 300ms ease-in-out;
+}
+
+.btn-sissa {
+    background: #c59a56;
+    border-color: #c59a56;
+    color: #ffffff;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.btn-sissa-blue-light {
+    background: #6c8dd6;
+    border-color: #c59a56;
+    color: #ffffff;
+    margin-top:3px;
+    margin-bottom :3px;
+}
+.btn-sissa-yellow-light {
+    background: #f5fc93;
+    border-color: #c8d51b;
+    color: #ffffff;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.btn-sissa-green-light {
+    background: #5ccb5f;
+    border-color: #28a745;
+    color: #ffffff;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+    .btn-sissa.active, .btn-sissa:focus, .btn-sissa:hover {
+        background: #b08e6b;
+        border-color: #b08e6b;
+        color: #ffffff;
+        box-shadow: none;
+    }
+
+    .btn-sissa:hover {
+        color: #fff;
+        background-color: #b08e6b;
+        border-color: #b08e6b;
+    }
+
+.bg-sissa-light-blue {
+    background: #59aaf5;
+    color: #ffffff;
+    fill: #59aaf5;
+}
+
+.bg-sissa-green {
+    background: #5ccb5f;
+    color: #ffffff;
+    fill: #5ccb5f;
+}
+
+.bg-resp-green {
+    background: #5ccb5f;
+    color: #ffffff;
+    fill: #5ccb5f;
+    border-radius: 5px;
+    margin: 2px;
+}
+.bg-resp-choseen {
+    background: #59aaf5;
+    color: #ffffff;
+    fill: #59aaf5;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.bg-sissa-red {
+    background: #d66c6c;
+    color: #ffffff;
+    fill: #fea65b;
+}
+
+.color-sissa-acuamarine {
+    color: #6cb5d6;
+}
+.color-sissa-green {
+    color: #78d66c;
+}
+.color-sissa-blue {
+    color: #6c8dd6;
+}
+.color-sissa-brown {
+    color: #816d41;
+}
+.color-sissa-black {
+    color: #000000;
+}
+.color-sissa-red {
+    color: #e10808;
+}
+
+.sissa-success {
+    background-color: #78d66c;
+}
+
+.timeline-badge.sissa-success {
+    background-color: #78d66c !important;
+}
+
+.sissa-warning {
+    background-color: #00;
+}
+
+.timeline-badge.sissa-warning {
+    background-color: #e7d769 !important;
+}
+
+.redondo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.marcaAguaSissa {
+    background-image: url(../images/marcaAgua.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: inherit;
+    background-size: contain;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.left-tittle {
+    text-align: left;
+    padding-left: 14%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-left-5 {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.card-body {
+    padding:20px;
+
+}
+.imgLeft {
+    float :left;
+    border-radius :40%;
+}
+.imgRight {
+    float: right;
+    border-radius: 40%;
+}

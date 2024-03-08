@@ -1,0 +1,302 @@
+﻿@using Modulo_Reclutamiento_Web.Models.GeneralData
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model References
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Prospectus",new{ pto = ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Procesos</li>
+            <li class="breadcrumb-item active">Referencias Personales</li>
+        </ol>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <form method="post" asp-action="SavePersonalReferencesData" asp-controller="Prospectus" id="frmReferences">
+
+            <input type="hidden" asp-for="@Model.Id" value="@ViewBag.pto" />
+            <div class="form-group">
+                <label asp-for="@Model.TypeReferences" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control" asp-for="@Model.TypeReferences" asp-items="@(new SelectList(Model.TypeReferencesOp, "Value","Text",Model.TypeReferences))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Name" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.Name" class=" validar form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PaternalName" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.PaternalName" class=" validar form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.MaternalName" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.MaternalName" class=" validar form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Ocupation" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control" asp-for="@Model.Ocupation" asp-items="@(new SelectList(Model.OcupationOp, "Value","Text",Model.Ocupation))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Gender" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control" asp-for="@Model.Gender" asp-items="@(new SelectList(Model.Genders, "Value","Text",Model.Gender))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Country" class="text-muted m-b-15 f-s-12"></label>
+                <select id="country" class="form-control" asp-for="@Model.Country" asp-items="@(new SelectList(Model.CountryOp, "Value","Text",Model.Country))"></select>
+            </div>
+            <div id="citiesofcountry" class="form-group">
+                <label asp-for="@Model.City" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control" asp-for="@Model.City" asp-items="@(new SelectList(Model.CityOp, "Value","Text",Model.City))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Colony" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.Colony" class="  form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PostalCode" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.PostalCode" class="  form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Street" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.Street" class="  form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.StreetBetween1" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.StreetBetween1" class="  form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.StreetBetween2" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.StreetBetween2" class="  form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.InteriorNumber" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.InteriorNumber" class="  form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ExternalNumber" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.ExternalNumber" class="  form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Phone" class="text-muted m-b-15 f-s-12"></label>
+                <input type="tel" asp-for="@Model.Phone" class=" validar form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <input id="btn_References" type="submit" class="btn btn-success input-rounded" value="Agregar" />
+            </div>
+
+        </form>
+    </div>
+
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="hidden">#</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Sexo</th>
+                    <th>Ocupacion</th>
+                    <th>Domicilio</th>
+                    <th>Telefono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ReferencesLists.Count > 0)
+                {
+                    @foreach (var item in Model.ReferencesLists)
+                    {
+                        <tr>
+                            <th scope="row" class="hidden">@item.Id</th>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@item.Gender</td>
+                            <td>@item.Ocupation</td>
+                            <td>@item.Domicile</td>
+                            <td>@item.Phone</td>
+                            <td>
+                                <a id="@item.Id" class="delRef btn btn-danger btn-rounded" style="color:#fff"><i class="ti-trash"></i> Eliminar </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <th scope="row" class="hidden"></th>
+                        <td>No Data</td>
+                        <td>No Data</td>
+                        <td>No Data</td>
+                        <td>No Data</td>
+                        <td>No Data</td>
+                        <td>No Data</td>
+                        <td>No Data</td>
+
+                    </tr>
+
+                }
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if ("@ViewBag.MSG" === "1") {
+                swal("Referencia Agregada!", "", "success");
+            }
+            if ("@ViewBag.MSG" === "0") {
+                sweetAlert("Oops...", "No se pudo Agregar la Referencia !!", "error");
+            }
+
+
+
+        });
+
+        /**
+        * validacion de campos
+        */
+        $(".validar").on("focus", function() {
+            //console.log("event focus")
+            if ($(this).val() === "" || $(this).val() === "0") {
+                $(this).attr("style", "border-color:red")
+            } else {
+                if ($(this).val() !== "" || $(this).val() !== "0") {
+                    $(this).attr("style", "border-color:green")
+                }
+                else {
+                    $(this).removeAttr("style")
+                }
+
+            }
+        }).on("change keyup paste", function() {
+            //console.log("event change keyup paste")
+            if ($(this).val() !== "") {
+                $(this).removeAttr("style")
+                $(this).attr("style", "border-color:green")
+            }
+        });
+        /**
+        * cuando cambia el combo de pais carga los estados y ciudades en el combo posterior
+        */
+        $("#country").change(function() {
+            var _country = $(this).val()
+            console.log("pais:" + _country);
+            UpdateCitiesOfCountry(_country);
+        });
+
+
+        /**
+         *  se agrega listener clic a todos los elementos que contengan la clase .delRef
+         */
+        $(".delRef").click(function() {
+            var _id = $(this).attr("id");
+            DeleteReferences(_id);
+        });
+
+        function UpdateCitiesOfCountry(_country) {
+            $("#citiesofcountry").empty();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectCitiesRef","Prospectus")",
+                data: { country: _country },
+
+                success: function(data) {
+                    console.log(data)
+                    $("#citiesofcountry").html(data);
+
+                    //if (data) {
+                    //    alert("Proceso Reiniciado")
+                    //}
+                    //else {
+                    //    alert("Contraseña Incorrecta")
+                    //}
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function DeleteReferences(_id) {
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DeleteReferencesData","Prospectus")",
+                data: { id: _id },
+
+                success: function(data) {
+                    //console.log(data)
+
+                    if (data) {
+                        swal("Referencia removida!", "", "success");
+                        //sessionStorage.setItem("deleteClick", true);
+                    }
+                    else {
+                        sweetAlert("Oops...", "No se pudo Quitar el Empleo !!", "error");
+                        //sessionStorage.setItem("deleteClick", false);
+                    }
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 3000);
+
+
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+    </script>
+
+
+    }

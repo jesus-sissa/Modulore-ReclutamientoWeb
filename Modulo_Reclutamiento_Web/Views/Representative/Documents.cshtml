@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Leaflet_Information
+
+<div class="page-header">
+    <div class="page-title">
+       <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("Employees","Representative",new{ pto =ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reprecentante Legal</a></li>
+            <li class="breadcrumb-item active">Empleado</li>
+            <li class="breadcrumb-item active">Documentos</li>
+            <li id="doc" class="breadcrumb-item active"></li>
+        </ol>
+    </div>
+</div>
+
+@switch (Model.Document)
+{
+    
+    case 1:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_AvisoCandidatos" model="@Model" />
+            break;
+        }
+    case 2:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_ContratoLaboral" model="@Model" />
+            break;
+        }
+    case 3:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_AvisoPrivacidad" model="@Model" />
+            break;
+        }
+    case 4:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_CartaConfidencialidad" model="@Model" />
+            break;
+        }
+    case 5:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_ConvenioConfidencialidad" model="@Model" />
+            break;
+        }
+    case 6:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_Concentimientos" model="@Model" />
+
+            break;
+        }
+
+}
+
+
+
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            switch(@Model.Document) 
+            {
+                
+                 case 1: 
+                {
+                     $("#doc").html("Aviso Candidato");
+                        break;
+                }
+                 case 2: 
+                {
+                     $("#doc").html("Contrato Laboral");
+                        break;
+                }
+                 case 3: 
+                {
+                     $("#doc").html("Aviso Privacidad");
+                        break;
+                }
+                 case 4: 
+                {
+                     $("#doc").html("Carta Confidencialidad");
+                        break;
+                }
+                 case 5: 
+                {
+                     $("#doc").html("Convenio Confidencialidad");
+                        break;
+                }
+                 case 6: 
+                {
+                     $("#doc").html("Consentimientos");
+                        break;
+                }
+            }
+
+        });
+
+
+
+    </script>
+}
+

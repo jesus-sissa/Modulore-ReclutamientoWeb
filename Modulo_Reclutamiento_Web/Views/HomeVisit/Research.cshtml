@@ -1,0 +1,624 @@
+﻿@using Modulo_Reclutamiento_Web.Models.HomeVisitData;
+@model HomeVisit;
+
+<div class="page-header">
+    <div class="page-title">
+        @if (ViewBag.stat == "R")
+        {
+            <ol class="breadcrumb" style="float:left">
+                <li class="breadcrumb-item"><a href="@Url.Action("ListOfVisits","HomeVisit",new{ pto =ViewBag.pto,filter=ViewBag.Filter,stat="R"})"><i class="ti-arrow-left"></i> Regresar</a></li>
+            </ol>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+                <li class="breadcrumb-item active">Visita Domiciliaria</li>
+                <li class="breadcrumb-item active">Visita</li>
+                <li class="breadcrumb-item active" id="title"></li>
+            </ol>
+        }
+        else
+        {
+            <ol class="breadcrumb" style="float:left">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Prospectus",new{ pto = ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+            </ol>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+                <li class="breadcrumb-item active">Prospectos</li>
+                <li class="breadcrumb-item active">Visita Domiciliaria</li>
+            </ol>
+
+        }
+
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title text-center">Visita Domiciliaria</h4>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs customtab2" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" id="tabDatGen" href="#DatGen" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-layout-media-overlay"></i></span>
+                    <span class="hidden-xs-down">Datos Generales</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#IngEgr" id="tabIngEgr" disabled role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-money"></i></span>
+                    <span class="hidden-xs-down">Ingresos y Egresos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#RefVec" id="tabRefVec" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span>
+                    <span class="hidden-xs-down">Referencias Vecinales</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" data-toggle="tab" id="tabDescCasHab" href="#DescCasHab" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-home"></i></span>
+                    <span class="hidden-xs-down">Descripcion de Casa Habitacion</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active show" id="DatGen" role="tabpanel">
+                <div class="p-20">
+                    <partial name="../HomeVisit/partialViews/Research/_HVGeneralData" model="@Model" />
+                </div>
+            </div>
+            <div class="tab-pane" id="IngEgr" role="tabpanel">
+                <div class="p-20">
+                    <partial name="../HomeVisit/partialViews/Research/_IncomeNExpensesData" model="@Model.IncomeNExpenses" />
+                </div>
+            </div>
+            <div class="tab-pane" id="RefVec" role="tabpanel">
+                <div class="p-20">
+                    <partial name="../HomeVisit/partialViews/Research/_NeighbornhoodReference" model="@Model.NeighborhoodReference" />
+                </div>
+            </div>
+            <div class="tab-pane" id="DescCasHab" role="tabpanel">
+                <div class="p-20">
+                    <partial name="../HomeVisit/partialViews/Research/_DescriptionOfTheHouseRoom" model="@Model.DescriptionOfTheHouseRoom" />
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+@section Scripts
+    {
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            if ("@ViewBag.stat" === "R") {
+                $("#HowYouWouldDefineThePerson").removeAttr("disabled");
+                $("#KnowWhatTheCandidateDoes").removeAttr("disabled");
+                $("#DefinitionOfTheFamily").removeAttr("disabled");
+                $("#tabRefVec").removeClass("disabled");
+                $("#tabDescCasHab").removeClass("disabled");
+                $(".desActIE").attr("disabled","disabled")
+            }
+            else {
+                $("#HowYouWouldDefineThePerson").attr("disabled", "disabled");
+                $("#KnowWhatTheCandidateDoes").attr("disabled", "disabled");
+                $("#DefinitionOfTheFamily").attr("disabled", "disabled");
+                $("#tabRefVec").addClass("disabled");
+                $("#tabDescCasHab").addClass("disabled");
+            }
+
+
+            switch ("@ViewBag.Filter") {
+                case "1": {
+                    $("#title").html("Prospecto");
+                    break;
+                }
+                case "2": {
+                    $("#title").html("Empleado");
+                    break;
+                }
+            }
+            ////////////////////////////////////////////////////////
+            //////     Mensajes                                /////
+            ////////////////////////////////////////////////////////
+            switch ("@ViewBag.MSG") {
+                case "0": { swal.showInputError("Error al Guardar/Actualizar de Ingresos y Egresos!");  break; }
+                case "1": { swal("Felicidades!!", "Ingresos y Egresos Guardados Correctamente", "success");  break; }
+                case "2": { swal("Felicidades!!", "Ingresos y Egresos Actualizados Correctamente", "success");  break; }
+                case "3": { swal.showInputError("Error al Guardar/Actualizar Descripcion de Casa Habitacion!");  break; }
+                case "4": { swal("Felicidades!!", "Descripcion de Casa Habitacion Guardados Correctamente", "success");  break; }
+                case "5": { swal("Felicidades!!", "Descripcion de Casa Habitacion Actualizados Correctamente", "success");  break; } 
+            }
+
+            if (sessionStorage.getItem("referenciaVecinal") === "S") {
+                $("#tabRefVec").click();
+            }
+
+            ////////////////////////////////////////////////////////
+            //////     Ingresos y Egresos - Combobox           /////
+            ////////////////////////////////////////////////////////
+            var longTerm = $("#LongTermBorrowingPlan").val();
+            if (longTerm === "N") {
+                $("#LongTermBorrowingPlanExplication").attr('disabled', 'disabled')
+            } else {
+                $("#LongTermBorrowingPlanExplication").removeAttr('disabled');
+            }
+
+            var haveDebts = $("#HaveDebts").val();
+            if (haveDebts === "N") {
+                $("#DebtsAmount").attr('disabled', 'disabled')
+            } else {
+                $("#DebtsAmount").removeAttr('disabled');
+            }
+
+            var haveowncar = $("#HaveOwnCar").val();
+            if (haveowncar === "N") {
+                $("#HaveOwnCarBrand").attr('disabled', 'disabled')
+                $("#HaveOwnCarModel").attr('disabled', 'disabled')
+            } else {
+                $("#HaveOwnCarBrand").removeAttr('disabled');
+                $("#HaveOwnCarModel").removeAttr('disabled');
+            }
+
+            var haveProp = $("#HaveProperties").val();
+            if (haveProp === "N") {
+                $("#PropertiesLocation").attr('disabled', 'disabled')
+            } else {
+                $("#PropertiesLocation").removeAttr('disabled');
+            }
+
+            ///////////////////////////////////////////////////////////
+            //////     Descripcion de Casa Habitacion - Combobox  /////
+            ///////////////////////////////////////////////////////////
+            var roomtype = $("#RoomType").val();
+            if (roomtype === "5") {
+                $("#RoomTypeOther").removeAttr('disabled');
+            } else {
+                $("#RoomTypeOther").attr('disabled', 'disabled')
+            }
+
+            var roomtype = $("#TypeOfContruction").val();
+            if (roomtype === "5") {
+                $("#TypeOfConstructionOther").removeAttr('disabled');
+            } else {
+                $("#TypeOfConstructionOther").attr('disabled', 'disabled')
+            }
+
+            var roomtype = $("#QualityOfFurnature").val();
+            if (roomtype === "4") {
+                $("#QualityOfFurnatureDescription").removeAttr('disabled');
+            } else {
+                $("#QualityOfFurnatureDescription").attr('disabled', 'disabled')
+            }
+
+            var roomtype = $("#TypeOfFurniture").val();
+            if (roomtype === "4") {
+                $("#TypeOfFurnitureDescription").removeAttr('disabled');
+            } else {
+                $("#TypeOfFurnitureDescription").attr('disabled', 'disabled')
+            }
+
+        });
+
+        ////////////////////////////////////////////////////////
+        //////     Ingresos y Egresos - Combobox           /////
+        ////////////////////////////////////////////////////////
+        $("#LongTermBorrowingPlan").on("change", function() {
+
+            var longTern = $(this).val();
+            if (longTern === "N") {
+                $("#LongTermBorrowingPlanExplication").attr('disabled', 'disabled')
+            } else {
+                $("#LongTermBorrowingPlanExplication").removeAttr('disabled');
+            }
+        });
+
+        $("#HaveDebts").on("change", function() {
+            var haveDebts = $("#HaveDebts").val();
+            if (haveDebts === "N") {
+                $("#DebtsAmount").attr('disabled', 'disabled')
+            } else {
+                $("#DebtsAmount").removeAttr('disabled');
+            }
+        });
+
+        $("#HaveOwnCar").on("change", function() {
+            var haveowncar = $("#HaveOwnCar").val();
+            if (haveowncar === "N") {
+                $("#HaveOwnCarBrand").attr('disabled', 'disabled')
+                $("#HaveOwnCarModel").attr('disabled', 'disabled')
+            } else {
+                $("#HaveOwnCarBrand").removeAttr('disabled');
+                $("#HaveOwnCarModel").removeAttr('disabled');
+            }
+        });
+
+        $("#HaveProperties").on("change", function() {
+            var haveProp = $("#HaveProperties").val();
+            if (haveProp === "N") {
+                $("#PropertiesLocation").attr('disabled', 'disabled')
+            } else {
+                $("#PropertiesLocation").removeAttr('disabled');
+            }
+        });
+
+        ///////////////////////////////////////////////////////////
+        //////     Descripcion de Casa Habitacion - Combobox  /////
+        ///////////////////////////////////////////////////////////
+
+        $("#RoomType").on("change", function() {
+            var roomtype = $("#RoomType").val();
+            if (roomtype === "5") {
+                $("#RoomTypeOther").removeAttr('disabled');
+            } else {
+                $("#RoomTypeOther").attr('disabled', 'disabled')
+            }
+
+        });
+
+        $("#TypeOfContruction").on("change", function() {
+            var roomtype = $("#TypeOfContruction").val();
+            if (roomtype === "5") {
+                $("#TypeOfConstructionOther").removeAttr('disabled');
+            } else {
+                $("#TypeOfConstructionOther").attr('disabled', 'disabled')
+            }
+
+        });
+
+        $("#QualityOfFurnature").on("change", function() {
+            var roomtype = $("#QualityOfFurnature").val();
+            if (roomtype === "4") {
+                $("#QualityOfFurnatureDescription").removeAttr('disabled');
+            } else {
+                $("#QualityOfFurnatureDescription").attr('disabled', 'disabled')
+            }
+
+        });
+
+        $("#TypeOfFurniture").on("change", function() {
+            var roomtype = $("#TypeOfFurniture").val();
+            if (roomtype === "4") {
+                $("#TypeOfFurnitureDescription").removeAttr('disabled');
+            } else {
+                $("#TypeOfFurnitureDescription").attr('disabled', 'disabled')
+            }
+
+        });
+
+        //------------------------------------------------------------------//
+
+        ////////////////////////////////////////////////////////////////
+        ////        Validaciones                            ////////////
+        ///////////////////////////////////////////////////////////////
+        //   Ingresos y Egresos
+        $("#btnIncomExpenses").click(function() {
+
+            if ($("#IncomeAmount").val() === "") {
+                msgError("Ingresos no puede ir vacio")
+                $("#tabIngEgr").click();
+                $("#IncomeAmount").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#IncomeDedicatedToSavings").val() === "") {
+                msgError("Porcentaje dedicado a ahorrar no puede ir vacio")
+                $("#tabIngEgr").click();
+                $("#IncomeDedicatedToSavings").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#NumberOfPeopleContributeToFamilyEconomy").val() === "") {
+                msgError("No. de personas que aportan a la economía familiar no puede ir vacio")
+                $("#tabIngEgr").click();
+                $("#NumberOfPeopleContributeToFamilyEconomy").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#NumberEconomicDependents").val() === "") {
+                msgError("No. de dependientes económicos no puede ir vacio")
+                $("#tabIngEgr").click();
+                $("#NumberEconomicDependents").attr("style", "border-color:red")
+                return false;
+            }
+
+
+            $("#formIncomeExpenses").submit();
+        });
+
+        //Descripcion de la Casa Habitacion
+        $("#btnDescriptionHouse").click(function() {
+
+            if ($("#NameOwnerOfTheProperty").val() === "") {
+                msgError("Nombre de Propietario no puede ir vacio")
+                $("#tabDescCasHab").click();
+                $("#NameOwnerOfTheProperty").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#NumberOfInhabitants").val() === "") {
+                msgError("Numero de habitantes no puede ir vacio")
+                $("#tabDescCasHab").click();
+                $("#NumberOfInhabitants").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#FloorsInTheProperty").val() === "") {
+                msgError("Numero de pisos no puede ir vacio")
+                $("#tabDescCasHab").click();
+                $("#FloorsInTheProperty").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#NumberOfRooms").val() === "") {
+                msgError("Numero de cuartos no puede ir vacio")
+                $("#tabDescCasHab").click();
+                $("#NumberOfRooms").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#NumberOfBathrooms").val() === "") {
+                msgError("Numero de baños no puede ir vacio")
+                $("#tabDescCasHab").click();
+                $("#NumberOfBathrooms").attr("style", "border-color:red")
+                return false;
+            }
+
+
+            $("#formDescriptionOfTheHouseRoom").submit();
+        });
+
+        //Todos los input que contengan la clase validar
+        // si esta vacio poner borde color rojo, si es llenado ponerlo verde
+        $(".validar").on("focus", function() {
+            //console.log("event focus")
+            if ($(this).val() === "" || $(this).val() === "0") {
+                $(this).attr("style", "border-color:red")
+            } else {
+                if ($(this).val() !== "" || $(this).val() !== "0") {
+                    $(this).attr("style", "border-color:green")
+                }
+                else {
+                    $(this).removeAttr("style")
+                }
+
+            }
+        }).on("change keyup paste", function() {
+            //console.log("event change keyup paste")
+            if ($(this).val() !== "") {
+                $(this).removeAttr("style")
+                $(this).attr("style", "border-color:green")
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////
+        $("#addNeightReference").click(function() {
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("SaveNeighborhoodReference","HomeVisit")",
+                data: $("#formNeightRefernce").serialize(),
+
+                success: function(data) {
+                    //console.log(data)
+                    if (data) {
+                        swal("Se agrego Referencia Vecinal!", "", "success");
+                        setTimeout(function() {
+                            sessionStorage.setItem("referenciaVecinal", "S");
+                            //window.location.href = "@Url.Action("Research","HomeVisit",new{ pto=ViewBag.pto,filter = ViewBag.Filter,stat = ViewBag.Stat})";
+                            window.location.reload();
+                        }, 3000);
+                    } else {
+                        sweetAlert("Oops...", "No se pudieron Guardar los datos !!", "error");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+
+        });
+
+        $(".deleteRef").click(function() {
+            var _id = $(this).attr("id");
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DeleteNeighborhoodReference","HomeVisit")",
+                data: { id: _id },
+
+                success: function(data) {
+                    //console.log(data)
+                    if (data) {
+                        swal("Se Elimino Referencia Vecinal!", "", "success");
+                        setTimeout(function() {
+                            sessionStorage.setItem("referenciaVecinal", "S");
+                            //window.location.href = "@Url.Action("Research","HomeVisit",new{ pto=ViewBag.pto,filter = ViewBag.Filter,stat = ViewBag.Stat})";
+                            window.location.reload();
+                        }, 3000);
+                    } else {
+                        sweetAlert("Oops...", "No se pudieron Guardar los datos !!", "error");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+
+        });
+
+        $(".ModRef").click(function() {
+            var _id = $(this).attr("id");
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetNeighborhoodReference","HomeVisit")",
+                data: { id: _id },
+
+                success: function(data) {
+
+                    var neigh = JSON.parse(data);
+                    $("#idRef").val(neigh.Id)
+                    $("#NeiborhoodName").val(neigh.NeiborhoodName);
+                    $('#HowYouWouldDefineThePerson option[value="' + neigh.HowYouWouldDefineThePerson + '"]').attr("selected", true);
+                    $("#KnowWhatTheCandidateDoes").val(neigh.KnowWhatTheCandidateDoes);
+                    $("#DefinitionOfTheFamily").val(neigh.DefinitionOfTheFamily);
+                    $("#YearsOfGettingToKnowFamily").val(neigh.YearsOfGettingToKnowFamily);
+
+                    $("#UpdNeightReference").removeClass("disabled")
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        });
+
+        $("#UpdNeightReference").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("UpdateNeighborhoodReference","HomeVisit")",
+                data: $("#formNeightRefernce").serialize(),
+
+                success: function(data) {
+                    //console.log(data)
+                    if (data) {
+                        swal("Se agrego Referencia Vecinal!", "", "success");
+                        setTimeout(function() {
+                            sessionStorage.setItem("referenciaVecinal", "S");
+                            window.location.reload();
+                        }, 3000);
+                    } else {
+                        sweetAlert("Oops...", "No se pudieron Guardar los datos !!", "error");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+
+        });
+
+
+        $(".modIncomeDistribution").click(function() {
+            var id = $(this).attr("id");
+            swal(
+                {
+                    title: "Agregar Cantidad!!",
+                    text: "Ingresa la cantidad que gasta",
+                    type: "input",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Cantidad $$",
+                },
+                function(inputValue) {
+                    if (inputValue === false) {
+
+                        return false;
+
+                    }
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresar Cantidad!");
+                        return false;
+                    }
+
+                    $("#MonthlyIncomeDistributions_" + id + "__Quantity").attr("value", inputValue);
+                    swal("Felicidades!!", "Modificado Correctamente", "success");
+                }
+            );
+        });
+
+
+
+
+
+    </script>
+}
+    @* $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectState","Recruiter")",
+                data: $("#").serialize(),
+
+                success: function(data) {
+                    //console.log(data)
+
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });*@

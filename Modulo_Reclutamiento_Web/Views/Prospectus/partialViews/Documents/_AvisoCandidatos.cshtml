@@ -1,0 +1,125 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Leaflet_Information
+<div class="card">
+    <div class="card-body">
+
+        <div class=" row" id="doc1">
+
+            <div class="col-12">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" title="encabezado" />
+                <h6 class="left-tittle">AVISO DE PRIVACIDAD PARA CANDIDATOS</h6>
+            </div>
+
+        </div>
+
+        <div class="marcaAguaSissa row">
+            <div class="row">
+                <p style="text-align:justify">
+                    <strong>Servicio Integral de Seguridad, S.A. de C.V.</strong> es una empresa legalmente constituida de conformidad con las leyes mexicanas, con
+                    domicilio en <strong>Juan Álvarez #209, Col. Centro, Monterrey C.P. 64000</strong> representada por C. Enrique Villanueva Hernández, en su carácter
+                    de Apoderada Legal de la sociedad y como responsable de sus datos personales,<u>hace de su conocimiento</u> que la información de nuestro
+                    personal es tratada de forma estrictamente confidencial <u>por lo que al proporcionar sus datos personales</u>,éstos serán utilizados única y
+                    exclusivamente para los siguientes fines:
+                </p>
+            </div>
+            <div class=" row">
+                <ol start="1" style="list-style-type:none; text-align:left ;padding-left:5%">
+                    <li><p>a) Identificarlo y contactarlo.</p></li>
+                    <li><p>b) Integrar su expediente como solicitante de empleo.</p></li>
+                    <li><p>c) Evaluar su solicitud de empleo de acuerdo con nuestro proceso de selecci&oacute;n y/o reclutamiento.</p></li>
+                    <li><p>d) Verificar la informaci&oacute;n proporcionada por usted.</p></li>
+                    <li><p>e) Mantenernos en contacto con usted durante el proceso de reclutamiento y selecci&oacute;n por diversos medios de comunicaci&oacute;n electr&oacute;nica y/o f&iacute;sica como correo electr&oacute;nico, tel&eacute;fono, servicios de mensajer&iacute;a, etc. &nbsp;</p></li>
+                    <li><p>f) Realizar evaluaciones&nbsp;</p></li>
+                    <li><p>g) Transferir a Terceros sus Datos Personales, para el proceso de reclutamiento y contrataci&oacute;n de empresas que solicitan la vacante de trabajo y con la que pudiera ser registrado como empleado (aplicable a todos los incisos anteriores).</p></li>
+                    <li><p>h) Cumplir con las obligaciones legales y requerimientos de autoridades competentes</p></li>
+                </ol>
+            </div>
+            <div class=" row">
+                <p style="text-align:justify">Adicionalmente su información será utilizada y almacenada con la siguiente finalidad:</p>
+            </div>
+            <div class="row">
+                <ul style="list-style:none">
+                    <li>
+                        <p style="text-align:justify; padding-left:5%">•	En caso de no ser seleccionado, su información será resguardada dentro de nuestra base de datos por un periodo permanente, con la finalidad de considerarle a futuro en caso de existir vacantes acorde a su perfil profesional. Si usted no desea que sus datos personales sean tratados para la finalidad señalada anteriormente, puede oponer su consentimiento por escrito en el presente aviso de privacidad. Su negativa en este sentido no será motivo para dejar de dar trámite a su solicitud de empleo.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class=" row">
+                <p style="text-align:justify">
+                    Datos personales que se recabarán para llevar a cabo las finalidades descritas en el presente aviso de privacidad: (I) IDENTIFICACIÓN Y CONTACTO, (II) ACADÉMICOS, (III) LABORALES, (IV) PATRIMONIALES Y (IV) SENSIBLES.
+                </p>
+            </div>
+            <div class=" row">
+                <p style="text-align:justify">Para prevenir el acceso no autorizado a sus datos personales y con el fin de asegurar que la información sea utilizada para los fines establecidos en este aviso de privacidad, hemos determinado diversos mecanismos con la finalidad de evitar el uso o divulgación de sus datos, permitiéndonos tratarlos debidamente.</p>
+            </div>
+            <div class=" row">
+                <p style="text-align:justify">
+                    Todos sus datos personales son tratados de acuerdo a la legislación aplicable y vigente en el país, por ello le informamos que usted puede ejercer sus derechos ARCO: Acceder, Rectificar, Cancelar u Oponerse al tratamiento que le damos a sus datos personales, derecho que podrá hacer valer a través del área de Sistemas de Gestión, encargado de la seguridad de datos personales con mismo domicilio en, el teléfono (81) 8047 4545 o por medio del correo electrónico sistemagestion@sissaseguridad.com
+                    A través de estos canales usted podrá actualizar sus datos y especificar el medio por el cual desea recibir información, ya que, en caso de no contar con esta especificación de su parte, Servicio Integral de Seguridad, S.A. de C.V. establecerá el canal pertinente para enviarle la información.
+                </p>
+            </div>
+            <div class=" row">
+                <p style="text-align:justify">Este aviso de privacidad podrá ser modificado por Servicio Integral de Seguridad, S.A. de C.V., dichas modificaciones serán oportunamente informadas a través de nuestra página de internet https://www.sissaseguridad.com/ o cualquier otro medio de comunicación que Servicio Integral de Seguridad, S.A. de C.V. determine para tal efecto.</p>
+            </div>
+            <div class=" row">
+                <p style="text-align:justify">Asimismo, se le informa, que para dar cabal cumplimiento de las funciones que Servicio Integral de Seguridad, S.A. de C.V. requiere de su personal, será necesaria la transmisión de sus datos personales a terceros, así como la difusión de los mismos, motivo por el cual se solicita su consentimiento. </p>
+            </div>
+            <div class=" row">
+                <p style="text-align:justify">
+                    Para más información, comunicarse con el contacto mencionado. <br />
+                    Consiento el tratamiento de mis datos personales, en los términos del presente aviso de privacidad.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row text-center">
+
+            @if (Model.Document_Status == "Y")
+            {
+                <div class="col-12 ">
+                    <img id="fingerLeft"  src="@Model.FingerPrints.FingerPrintLeft" width="60px" class="visually-hidden imgLeft" height="80px" />
+                    <img id="firma_AvisoCandidato" src="@Model.Signature" width="175px" height="80px" title="firma" />
+                    <img id="fingerRight" src="@Model.FingerPrints.FingerPrintRight" width="60px" class="visually-hidden imgRight" height="80px" />
+                </div>
+                <div class="col-12 ">
+                    <p class="text-center" id="AvNombre_Prospecto">@Model.Name</p>
+                </div>
+            }
+            else
+            {
+                 <div class="col-12">
+                        <p>Firmar a continuación:</p>
+                        <div class='js-signature'></div>
+                        @*<canvas id="mycanvas"></canvas>
+                    <br>
+                    <button id="btnLimpiar">Limpiar</button>
+                    <button id="btnDescargar">Descargar</button>
+                    <button id="btnGenerarDocumento">Pasar a documento</button>*@
+                        <button id="btnLimpiar" class="btn">Limpiar</button>
+                        <br>
+                    </div>
+                    <div class="col-12 ">
+                        <button type="button" id="btn_avisoPrivacidad" class="btn btn-primary">Aceptar</button>
+                    </div>
+            }
+
+
+
+        </div>
+        <div class=" row">
+            <div class="col-12">
+                <img src="../images/pie_avisocandidato.png" width="100%" height="45px" title="pie" />
+
+            </div>
+        </div>
+
+
+
+
+
+        <!--fin card body-->
+    </div>
+</div>

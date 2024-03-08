@@ -1,0 +1,207 @@
+﻿@using Modulo_Reclutamiento_Web.Models.Exams;
+@using Modulo_Reclutamiento_Web.Models;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ICollection<Exam>
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Prospectus",new{ pto = ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Examen Barsit</li>
+            @*<li class="breadcrumb-item active">Investigacion</li>*@
+        </ol>
+    </div>
+</div>
+
+<div class="col-lg-12">
+
+    <div class="card">
+        <div class="card-title">
+            <h4>Examen Barsit : Medición Rapida de Habilidad Intelectual </h4>
+        </div>
+
+        <div class="card-body">
+
+
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <label asp-for="@item.Question" class="card-title">@item.Id - @item.Question</label>
+                         <hr class="hr">
+                        @foreach (var question in item.Options)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" id="@item.Id" name="@item.Id" asp-for="@item.ChosenAnswer" type="radio" value="@question.Answer">
+                                <label id="@item.Id" class="form-check-label" for="@item.Id">
+                                    @question.Answer
+                                </label>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            }
+
+            @if (User_Persistent_Data.StageExam == 7)
+            {
+                <div class="login-form-bg h-100">
+                    <div class="container h-100">
+                        <div class="row justify-content-center h-100">
+                            <div class="col-xl-6">
+                                <div class="error-content">
+                                    <div class="card mb-0">
+                                        <div class="card-body text-center">
+                                            <a class="w-auto pl-0" href="/Home/Index">
+                                                <img src="/images/_logo.png" alt="Mono">
+                                            </a>
+
+                                            <h4 class="mt-4">Felicidades completaste el Examen!<h1 class="error-text text-primary"><i class="ti-thumb-up text-success"></i></h1></h4>
+                                            <p>Pasa el Dispositivo <i class="ti-tablet"></i> al Reclutador para seguir con tu proceso.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else if(User_Persistent_Data.StageExam == 6)
+            {
+                <div class="text-center">
+                     <input type="button" id="examResult" class="btn btn-sissa-green-light" value="Finalizar" />
+                </div>
+
+            }
+            else
+            {
+                <div class="text-right">
+                     <input type="button" id="examResult" class="btn btn-sissa-green-light" value="Siguiente" />
+                </div>
+            }
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+
+
+
+        $(document).ready(function() {
+            sessionStorage.clear();
+            if ("@ViewBag.MSG" === "0") {
+                sweetAlert("Oops...", "No ha respondido todas las preguntas !!", "error");
+            }
+        });
+
+
+        $("input[type=radio]").on("change", function() {
+            //console.log($(this).val());
+            //console.log($(this).attr('id'));
+          
+            var _id = $(this).attr('id');
+            var _val = $(this).val();
+
+            var question = {};
+            question.Id = _id;
+            question.ChosenAnswer = _val;
+
+            if (!sessionStorage.getItem(_id)) {
+
+                sessionStorage.setItem(_id, JSON.stringify(question))
+            } else {
+                sessionStorage.setItem(_id, JSON.stringify(question))
+            }
+
+
+        });
+
+        //funcion que guarda las preguntas del examen
+        $("#examResult").click(function() {
+            //array donde se almacenaran las preguntas contestadas
+            let _questions = new Array();
+            //contador
+            var count = 0;
+            //dependiendo del StageExam se asignara un valor al contador
+            if ('@User_Persistent_Data.StageExam' === '1') { count = 1 }
+            if ('@User_Persistent_Data.StageExam' === '2') { count = 11 }
+            if ('@User_Persistent_Data.StageExam' === '3') { count = 21 }
+            if ('@User_Persistent_Data.StageExam' === '4') { count = 31 }
+            if ('@User_Persistent_Data.StageExam' === '5') { count = 41 }
+            if ('@User_Persistent_Data.StageExam' === '6') { count = 51 }
+            //ciclo para recorrer el sessionStorage
+            for (var i = 1; i <= sessionStorage.length; i++) {
+                //agregar el item correspondiente a una pregunta guardado en sessionstorage al array
+                _questions.push(JSON.parse(sessionStorage.getItem(count)))
+                //aumentar el contador
+                count++;
+            }
+          
+            console.log(JSON.stringify(_questions))
+            //var _q = JSON.stringify(_questions)
+
+            if (_questions.length < 10) {
+                sweetAlert("Oops...", "No ha respondido todas las preguntas !!", "error");
+                return false;
+            }
+            SaveQuestions(_questions)
+        });
+
+        //funcion que manda por ajax las preguntas
+        function SaveQuestions(_questions) {
+
+
+            $.ajax({
+                contentType: "application/json; charset=utf-8",
+                //dataType: 'json',
+                type: "POST",
+                url: "@Url.Action("SaveQuestions","Exams")",
+                data: JSON.stringify(_questions),
+                success: function(data) {
+
+                    if (data) {
+                        window.location.href = '@Url.Action("Index","Exams", new { pto= ViewBag.pto,MSG =1})'
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+
+
+        }
+
+
+
+    </script>
+
+    }

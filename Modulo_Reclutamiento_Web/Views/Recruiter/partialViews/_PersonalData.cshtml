@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProspectusData
+<div class="card">
+
+    <div class="card-body">
+        <div class="basic-form">
+             <h4 class="card-title text-center">Datos Generales</h4>
+             <hr class="hr" />
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.FirstName" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.PersonalData.FirstName" class="form-control input-rounded has-error validar" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.PaternalName" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.PersonalData.PaternalName" class="form-control input-rounded validar" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.MaternalName" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.PersonalData.MaternalName" class="form-control input-rounded validar" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.Gender" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control input-rounded" asp-for="@Model.PersonalData.Gender" asp-items="@(new SelectList(Model.PersonalData.Genders, "Value","Text",Model.PersonalData.Gender))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.MaritalStatus" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control input-rounded" asp-for="@Model.PersonalData.MaritalStatus" asp-items="@(new SelectList(Model.PersonalData.MaritalStatusOp, "Value","Text",Model.PersonalData.MaritalStatus))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.LiveWithFamily" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control input-rounded" asp-for="@Model.PersonalData.LiveWithFamily" asp-items="@(new SelectList(Model.PersonalData.LiveWithFamilyOp, "Value","Text",Model.PersonalData.LiveWithFamily))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.NumberOfChildren" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.PersonalData.NumberOfChildren" class="form-control input-rounded" value="0" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.DateOfBirth" class="text-muted m-b-15 f-s-12"></label>
+                <input type="date" asp-for="@Model.PersonalData.DateOfBirth" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.Age" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.PersonalData.Age" class=" validar form-control input-rounded" disabled placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.Country" class="text-muted m-b-15 f-s-12"></label>
+                <select id="country" class="form-control input-rounded" asp-for="@Model.PersonalData.Country" asp-items="@(new SelectList(Model.PersonalData.CountriesOp, "Value","Text",Model.PersonalData.Country))"></select>
+            </div>
+            <div class="form-group" id="stateofcountry">
+                <label asp-for="@Model.PersonalData.State" class="text-muted m-b-15 f-s-12"></label>
+                <select id="state" class="form-control input-rounded" asp-for="@Model.PersonalData.State" asp-items="@(new SelectList(Model.PersonalData.StatesOp, "Value","Text",Model.PersonalData.State))"></select>
+            </div>
+            <div class="form-group" id="citiesofstate">
+                <label asp-for="@Model.PersonalData.CityOfState" class="text-muted m-b-15 f-s-12"></label>
+                <select id="city" class="form-control input-rounded" asp-for="@Model.PersonalData.CityOfState" asp-items="@(new SelectList(Model.PersonalData.CityOfStateOp, "Value","Text",Model.PersonalData.CityOfState))"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.PersonalData.NationalityMode" class="text-muted m-b-15 f-s-12"></label>
+                <select disabled  class="form-control input-rounded" asp-for="@Model.PersonalData.NationalityMode" asp-items="@(new SelectList(Model.PersonalData.NationalityModeOp, "Value","Text",Model.PersonalData.NationalityMode))"></select>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Modulo_Reclutamiento_Web.Models.Exams;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ICollection<Exam>
+@{
+    int id = 1;
+}
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Prospectus",new{ pto = ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Examen Barsit(Ejemplo)</li>
+            @*<li class="breadcrumb-item active">Investigacion</li>*@
+        </ol>
+    </div>
+</div>
+
+<div class="col-lg-12">
+
+    <div class="card">
+        <div class="card-title">
+            <h3>Examen Barsit : Ejemplo</h3>
+            <h4 style="color:black"><strong>LEA ESTO CON MUCHA ATENCIÓN</strong></h4>
+            <h4 style="color:black">
+                <strong>
+                    Usted tendrá que ir resolviendo cuestiones parecidas a éstas.
+                    En el examen real solo seleccione la palabra o numeros que cree que son correctos.
+                    Las respestas a este ejemplo ya estan seleccionadas correctamente y coloreadas en verde;
+
+                </strong>
+
+            </h4>
+        </div>
+
+        <div class="card-body">
+
+
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <label asp-for="@item.Question" class="card-title">@id - @item.Question</label>
+                        <hr class="hr">
+                        @foreach (var question in item.Options)
+                        {
+                            <div class="form-check">
+                                @if (question.Answer == item.CorrectAnswer)
+                                {
+                                    <input class="form-check-input" id="@item.Id" name="@item.Id" asp-for="@item.ChosenAnswer" checked type="radio" value="@question.Answer">
+                                    <input class="form-check-input" asp-for="@item.CorrectAnswer" type="hidden" value="@item.CorrectAnswer">
+                                    <label class="form-check-label bg-resp-green" for="@item.Id">
+                                        @question.Answer
+                                    </label>
+                                }
+                                else
+                                {
+                                    <input class="form-check-input" id="@item.Id" name="@item.Id" asp-for="@item.ChosenAnswer" disabled type="radio" value="@question.Answer">
+                                    <input class="form-check-input" asp-for="@item.CorrectAnswer" type="hidden" value="@item.CorrectAnswer">
+                                    <label class="form-check-label" for="@item.Id">
+                                        @question.Answer
+                                    </label>
+                                }
+
+
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+
+                id++;
+
+            }
+
+            <div class="text-center">
+                <a href="@Url.Action("Index","Exams",new{ pto = ViewBag.pto})" class="btn btn-sissa-green-light center-align">Iniciar Examen</a>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+
+
+
+        $(document).ready(function() {
+
+        });
+
+
+
+
+    </script>
+
+    }

@@ -1,0 +1,81 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Leaflet_Information
+
+<div class="card">
+    <div class="card-body">
+
+        <div class="row" id="doc6">
+
+            <div class="col-12 ">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" />
+            </div>
+
+        </div>
+        <div class="col-12 text-center">
+            <h2><u>CARTA DE CONSENTIMIENTOS</u></h2>
+            <h6 class="text-left">FECHA:  @DateTime.Today.ToString("dd MMM yyyy")</h6>
+        </div>
+
+        <div class="marcaAguaSissa row">
+            <div class="row">
+                <p class="text-justify">
+                    Yo, <strong><span id="nombre_Concentimiento"></span></strong> estoy enterado que la empresa realiza nuestro registro ante la Secretaria de Seguridad Pública por ser una empresa registrada y la cuota de registro
+                    es de <strong><u>$490</u> pesos</strong>. Si decido retirarme de la empresa en un tiempo menor a 12 meses a partir de mi fecha de ingreso, autorizo que esta cuota se me descuente de mi finiquito;
+                    en el caso que cumpla 12 meses o más, no se me descontará nada referente a este concepto.
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    Declaro también estar enterado de que existe un descuento por nómina denominado <strong>apoyo por defunción</strong> de <strong><u>$20</u> pesos</strong>. Este descuento se aplica a todos los empleados y se acumula para ser
+                    entregado al empleado que ha sufrido el fallecimiento de un familiar cercano (Padres, Hijos y Esposo(a)).
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    Por otra parte, estoy enterado(a) de la realización de la prueba de antidoping en muestra de orina por razones de procedimiento de selección, bajo sospecha y aleatoriamente;
+                    y doy mi consentimiento de dicho examen, autorizando al personal de recursos humanos manejen la muestra debidamente etiquetada y sellada.
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    Declaro haber leído, conocer y comprender los documentos internos de la empresa siendo La Carta de Confidencialidad, Aviso de Privacidad, Contrato Laboral,
+                    Descripción de Puesto, Propuesta Laboral, Política de Seguridad, Reglamento Interior de Trabajo, y Política de Uso de las Instalaciones e Inducción a la Empresa.
+                </p>
+            </div>
+        </div>
+
+        <div class=" row text-center">
+            @if (Model.Document_Status == "Y")
+            {
+                <div class="col-12">
+                    <img id="fingerLeft" src="@Model.FingerPrints.FingerPrintLeft" width="60px" class="visually-hidden imgLeft" height="80px" />
+                    <img id="firmaConcentimiento" src="@Model.Signature" width="175px" height="80px" class="visually-hidden" />
+                     <img id="fingerRight" src="@Model.FingerPrints.FingerPrintRight" width="60px" class="visually-hidden imgRight" height="80px" />
+
+                </div>
+                <div class="col-12">
+                    <p id="nombre_Concentimientos">@Model.Name</p>
+                </div>
+            }
+            else
+            {
+                <div class="col-12">
+                    <button id="btn_Concentimientos" class="btn btn-primary btn-lg ">Firmar</button>
+                </div>
+            }
+
+
+        </div>
+        <div class=" row">
+            <div class="col-12">
+                <img src="../images/pie_avisocandidato.png" width="100%" height="45px" />
+
+            </div>
+        </div>
+
+
+        <!--fin card-body-->
+            </div>
+        </div>

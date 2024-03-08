@@ -1,0 +1,6 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProspectusData
+<label asp-for="@Model.DomicileData.Colony" class="text-muted m-b-15 f-s-12"></label>
+<select class="form-control input-rounded" asp-for="@Model.DomicileData.Colony" asp-items="@(new SelectList(Model.DomicileData.Colonies, "Value","Text",Model.DomicileData.Colony))"></select>

@@ -1,0 +1,222 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Modulo_Reclutamiento_Web.Models.MedicalQuestionData
+@model MedicalQuestion
+
+<div class="card">
+    <div class="card-body">
+        <div class="basic-form">
+            <input type="hidden" id="medicalId" asp-for="@Model.Id" />
+            <input type="hidden" asp-for="@Model.ProspectusId" />
+            <input type="hidden" asp-for="@Model.EmployeerId" />
+            <input type="hidden" asp-for="@Model.filter" value="@ViewBag.Filter" />
+            <input type="hidden" asp-for="@Model.stat" value="@ViewBag.stat" />
+            <input type="hidden" asp-for="@Model.personalMedicalHistoryId" />
+            <input type="hidden" asp-for="@Model.gynecologicalAntecentoId" />
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="@Model.Date" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="date" asp-for="@Model.Date" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.Position" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.Position" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <hr class="hr" />
+            <div class="form-group">
+                <label asp-for="@Model.MedicalQuestionPerson.Name" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.MedicalQuestionPerson.Name" disabled class="form-control input-rounded validar" placeholder="">
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.DateOfBirth" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="date" asp-for="@Model.MedicalQuestionPerson.DateOfBirth" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.Gender" class="text-muted m-b-15 f-s-12"></label>
+                        <select class="form-control input-rounded" disabled asp-for="@Model.MedicalQuestionPerson.Gender" asp-items="@(new SelectList(Model.MedicalQuestionPerson.GenderOp, "Value","Text",Model.MedicalQuestionPerson.Gender))"></select>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.MaritalStatus" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.MaritalStatus" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.PlaceOfBirth" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.PlaceOfBirth" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.State" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.State" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <hr class="hr" />
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.StreetOfDomicilie" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.StreetOfDomicilie" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.StreetNumberOfDomicilie" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.StreetNumberOfDomicilie" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.CityOfDomicilie" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.CityOfDomicilie" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.ColonyOfDomicilie" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.ColonyOfDomicilie" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.StateOfDomicilie" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.StateOfDomicilie" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalQuestionPerson.PostalCodeOfDomicilie" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalQuestionPerson.PostalCodeOfDomicilie" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <hr class="hr" />
+            <div class="form-group">
+                <label asp-for="@Model.MedicalQuestionPerson.Complexion" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control input-rounded" disabled asp-for="@Model.MedicalQuestionPerson.Complexion" asp-items="@(new SelectList(Model.MedicalQuestionPerson.ComplexionOp, "Value","Text",Model.MedicalQuestionPerson.Complexion))"></select>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.Weight" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.Weight" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.height" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.height" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.personalMedicalHistory.BloodPressure" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.personalMedicalHistory.BloodPressure" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="hr" />
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="@Model.personalMedicalHistory.Glucose" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.personalMedicalHistory.Glucose" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label asp-for="@Model.personalMedicalHistory.IMC" class="text-muted m-b-15 f-s-12"></label>
+                        <select id="IMC" class="form-control input-rounded" disabled asp-for="@Model.personalMedicalHistory.IMC" asp-items="@(new SelectList(Model.personalMedicalHistory.IMCAnswers, "Value","Text",Model.personalMedicalHistory.IMC))"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.personalMedicalHistory.Remarks" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.personalMedicalHistory.Remarks" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label asp-for="@Model.Antidoping" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="text" asp-for="@Model.Antidoping" disabled class="form-control input-rounded validar" placeholder="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label class="lbl-12">
+                        1) DECLARO HABER CONSTESTADO CON HONESTIDAD Y VERDAD A LAS PREGUNTAS EFECTUADAS Y NO OCULTAR
+                        NINGUNA ENFERMEDAD O ALTERACION FISICA O MENTAL QUE HUBIERA PADECIDO O PADECIESE EN LA ACTUALIDAD
+                    </label>
+                    <br />
+                    <label class="lbl-12">
+                        2) MANIFIESTO ADEMAS, NO CONSUMIR ALGUN TIPO DE DROGA Y/O ENERVANTE
+                    </label>
+                    <br />
+                    <label class="lbl-12">
+                        3) AUTORIZO A LA EMPRESA  Y ESTOY EN ACUERDO , REALIZARME CUALQUIER TIPO DE EXAMEN MEDICO, DE GABINETE Y DE LABORATORIO,
+                        QUE SEA NECESARIO PARA EL CUMPLIMIENTO DE REGLAMENTOS Y POLITICAS CUANDO ASI SE REQUIERA
+                    </label>
+                    <br />
+                    <label class="lbl-12">
+                        4) ACEPTO QUE, EN CASO DE OMISIÓN O NEGACIÓN DE INFORMACIÓN  SOBRE MI PERSONA, ES MOTIVO DE TERMINACION INMEDIATA DE CONTRATO LABORAL
+                        O DESVINCULACIÓN DE LA EMPRESA
+                    </label>
+                </div>
+            </div>
+            @if (ViewBag.CuestionnaireSigned)
+            {
+
+                <div class="row text-center">
+                    <div class="col-12">
+                        <img id="" src="@Model.Signature" width="175px" class="visually-hidden" height="80px" />
+                    </div>
+                    <div class="col-12">
+                        <p id="" class="">@Model.MedicalQuestionPerson.Name</p>
+                    </div>
+
+                </div>
+            }
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalServices" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.MedicalServices" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.MedicalServiceApproval" class="text-muted m-b-15 f-s-12"></label>
+                        <select id="MedicalServiceApproval" class="form-control input-rounded" disabled  asp-for="@Model.MedicalServiceApproval" asp-items="@(new SelectList(Model.MedicalServiceApprovalOp, "Value","Text",Model.MedicalServiceApproval))"></select>
+
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.Remarks" class="text-muted m-b-15 f-s-12"></label>
+                        <input type="text" asp-for="@Model.Remarks" disabled class="form-control input-rounded validar" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

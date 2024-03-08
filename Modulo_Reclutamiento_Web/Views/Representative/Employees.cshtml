@@ -1,0 +1,256 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Mvc.Rendering;
+@model List<Documents>
+
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            @*<li class="breadcrumb-item"><a href="#"><i class="ti-arrow-left"></i> Regresar</a></li>*@
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reprecentante</a></li>
+            <li class="breadcrumb-item active">Empleado</li>
+            @*<li class="breadcrumb-item active">Documentos</li>*@
+        </ol>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="card">
+
+        <div class="card-title">
+            <h4>Documentos </h4>
+            <h6>Nombre:@ViewBag.Name</h6>
+            @if (ViewBag.PropValidado)
+            {
+                @if (ViewBag.IsEmployee)
+                {
+                     <h6 style="color:green"> Estatus: Empleado </h6>
+                }
+                else
+                {
+                    <h6 style="color:green">Estatus: Prospecto Validado </h6>
+                    <a id="DesValidarPto" class="btn btn-danger btn-rounded" style="float:right;color:white"><i class="ti-close"></i> Cancelar </a>
+                }
+
+            }
+            else
+            {
+                <a id="ValidarPto" class="btn btn-sissa-blue-light btn-rounded" style="float:right;color:white">Aprobar Prospecto </a>
+
+            }
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Fecha</th>
+                            <th>Documento</th>
+                            <th>Firmado</th>
+                            <th>Acciones</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 1; i <= Model.Count; i++)
+                        {
+                            <tr>
+                                <th>@i</th>
+                                <th>@Model[i-1].Date</th>
+                                <th>@Model[i-1].Name</th>
+
+
+
+                                @if (Model[i - 1].Sign == "SI")
+                                {
+                                    <th>
+                                        <span class="badge badge-success">@Model[i-1].Sign</span>
+                                    </th>
+
+                                    <th class="text-right">
+                                        <a style="color:#fff" class="btn btn-success" href="@Url.Action("Documents","Representative",new{ pto=ViewBag.pto ,doc =@i,status ="Y"})">Ver <i class="ti-eye"></i></a>
+                                        @*<a style="color:#fff" class="btn btn-primary btn-rounded disabled">Firmar <i class="ti-brush"></i></a>*@
+                                    </th>
+                                }
+                                else
+                                {
+                                    <th>
+                                        <span class="badge badge-warning">@Model[i-1].Sign</span>
+                                    </th>
+                                    <th class="text-right">
+                                        <span class="badge badge-primary">No Disponible</span>
+                                    </th>
+
+                                }
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+
+        });
+
+        $("#ValidarPto").click(function() {
+
+            swal(
+                {
+                    title: "Aprobar Prospecto",
+                    text: "Para Aprobar Prospecto, Ingresar la Clave de Representante",
+                    type: "input",
+                    inputType: "password",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave Representante",
+                },
+                function(inputValue) {
+                    if (!inputValue) return false;
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresa Clave!");
+                        return false;
+                    }
+                    ValidarProspecto(inputValue, '@ViewBag.pto')
+
+                }
+            );
+
+
+        });
+
+        function ValidarProspecto(_password, _pto) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("ConfirmProspectus","Representative")",
+                data: { password: _password, pto: _pto },
+
+                success: function(data) {
+                    if (data) {
+                        //alert("Proceso Reiniciado")
+                        swal("Prospecto Validado !!", "");
+
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 3000);
+                    }
+                    else {
+                        //alert("Contraseña Incorrecta")
+                        swal("Clave Incorrecta !!", "Favor de Ingresar la Clave Correcta");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    return false;
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+
+        $("#DesValidarPto").click(function() {
+
+            swal(
+                {
+                    title: "Cancelar Aprobacion de Prospecto",
+                    text: "Para Cancelar Aprobacion de Prospecto, Ingresar la Clave de Representante",
+                    type: "input",
+                    inputType: "password",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave Reclutador",
+                },
+                function(inputValue) {
+                    if (!inputValue) return false;
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresa Clave!");
+                        return false;
+                    }
+                    DesValidarProspecto(inputValue, '@ViewBag.pto')
+
+                }
+            );
+
+        });
+
+        function DesValidarProspecto(_password, _pto) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DesConfirmProspectus","Representative")",
+                data: { password: _password, pto: _pto },
+
+                success: function(data) {
+                    if (data) {
+                        //alert("Proceso Reiniciado")
+                        swal("Prospecto Des-Validado !!", "");
+
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 3000);
+                    }
+                    else {
+                        //alert("Contraseña Incorrecta")
+                        swal("Clave Incorrecta !!", "Favor de Ingresar la Clave Correcta");
+                    }
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    return false;
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+
+    </script>
+}

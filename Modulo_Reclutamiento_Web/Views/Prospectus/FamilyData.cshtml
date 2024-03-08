@@ -1,0 +1,190 @@
+﻿@using Modulo_Reclutamiento_Web.Models.GeneralData
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model FamilyData
+@{
+}
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("AdditionalInformation","Prospectus",new{ pto = ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Procesos</li>
+            <li class="breadcrumb-item active">Informacion Adicional</li>
+            <li class="breadcrumb-item active">Familiares</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-title">
+        <h4>Datos de Familiar</h4>
+    </div>
+    <div class="card-body">
+        <div class="basic-form">
+            <form id="frmFamily" asp-action="SaveFamilyData" asp-controller="Prospectus" method="post">
+                <input type="hidden" asp-for="@Model.Id" value="@ViewBag.pto" />
+                <div class="form-group">
+                    <label asp-for="@Model.FullName" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="text" asp-for="@Model.FullName" class=" validarAcad form-control input-rounded" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Kinship" class="text-muted m-b-15 f-s-12"></label>
+                    <select class="form-control input-rounded" asp-for="@Model.Kinship" asp-items="@(new SelectList(Model.KinshipOp, "Value","Text",Model.Kinship))"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.BirthDate" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="date" asp-for="@Model.BirthDate" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.LiveIntheSameAddress" class="text-muted m-b-15 f-s-12"></label>
+                    <select class="form-control input-rounded" asp-for="@Model.LiveIntheSameAddress" asp-items="@(new SelectList(Model.LiveIntheSameAddressOp, "Value","Text",Model.LiveIntheSameAddress))"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Domicile" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="text" asp-for="@Model.Domicile" class=" validarAcad form-control input-rounded" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.City" class="text-muted m-b-15 f-s-12"></label>
+                    <select class="form-control input-rounded" asp-for="@Model.City" asp-items="@(new SelectList(Model.CitiesOp, "Value","Text",Model.City))"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Phone" class="text-muted m-b-15 f-s-12"></label>
+                    <input type="tel" asp-for="@Model.Phone" class=" validarAcad form-control input-rounded" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Lives" class="text-muted m-b-15 f-s-12"></label>
+                    <select class="form-control input-rounded" asp-for="@Model.Lives" asp-items="@(new SelectList(Model.LivesOp, "Value","Text",Model.Lives))"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.EconomicDependent" class="text-muted m-b-15 f-s-12"></label>
+                    <select class="form-control input-rounded" asp-for="@Model.EconomicDependent" asp-items="@(new SelectList(Model.EconomicDependentOp, "Value","Text",Model.EconomicDependent))"></select>
+                </div>
+                <div class="form-group">
+                    <input id="btn_family" type="submit" class="btn btn-success input-rounded" value="Agregar" />
+                </div>
+            </form>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="hidden">#</th>
+                        <th>Nombre</th>
+                        <th>Parentesco</th>
+                        <th>Vive</th>
+                        <th>Dependiente Economico</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.FamilyList.Count > 0)
+                    {
+                        @foreach (var item in Model.FamilyList)
+                        {
+                            <tr>
+                                <th scope="row" class="hidden">@item.Id</th>
+                                <td>@item.FullName</td>
+                                <td>@item.Kinship</td>
+                                <td>@item.Lives</td>
+                                <td>@item.EconomicDependent</td>
+                                <td>
+                                    <a id="@item.Id" class="delfamilymem btn btn-danger btn-rounded" style="color:#fff"><i class="ti-trash"></i> Eliminar </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <th scope="row" class="hidden"></th>
+                            <td>No Data</td>
+                            <td>No Data</td>
+                            <td>No Data</td>
+                            <td>No Data</td>
+                            <td>No Data</td>
+
+                        </tr>
+
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if ('@ViewBag.MSG' === '0') {
+                sweetAlert("Oops...", "No se pudo Agregar el Dato Escolar !!", "error");
+            }
+            if ('@ViewBag.MSG' === '1') {
+                swal("Datos Familiares Agregados!", "", "success");
+
+            }
+
+        });
+
+        $(".delfamilymem").click(function() {
+            var _id = $(this).attr("id");
+            DeleteFamiilyMember(_id);
+        });
+
+        function DeleteFamiilyMember(_id) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DeleteFamilyData","Prospectus")",
+                data: { id: _id },
+
+                success: function(data) {
+                    console.log(data)
+
+                    if (data) {
+                        swal("Eliminado correctamente!", "", "success");
+
+
+                    }
+                    else {
+                        sweetAlert("Oops...", "No se pudo Eliminar!!", "error");
+
+                    }
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 3000);
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+    </script>
+}

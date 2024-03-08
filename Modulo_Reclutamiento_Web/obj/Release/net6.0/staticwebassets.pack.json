@@ -1,0 +1,1569 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\Modulo_Reclutamiento_Web.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Modulo_Reclutamiento_Web.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\admin\\assets\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\css\\admin\\assets\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\admin\\assets\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\css\\admin\\assets\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\admin\\assets\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\css\\admin\\assets\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\admin\\assets\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\css\\admin\\assets\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\barRating\\barRating.css",
+      "PackagePath": "staticwebassets\\css\\lib\\barRating\\barRating.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\calendar2\\pignose.calendar.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\calendar2\\pignose.calendar.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\calendar2\\semantic.ui.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\calendar2\\semantic.ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\calendar\\fullcalendar.css",
+      "PackagePath": "staticwebassets\\css\\lib\\calendar\\fullcalendar.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\chartist\\chartist.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\chartist\\chartist.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\data-table\\buttons.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\data-table\\buttons.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\data-table\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\data-table\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\data-table\\dataTables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\data-table\\dataTables.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\datepicker\\bootstrap-datepicker3.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\datepicker\\bootstrap-datepicker3.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\helper.css",
+      "PackagePath": "staticwebassets\\css\\lib\\helper.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\jsgrid\\jsgrid-theme.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\jsgrid\\jsgrid-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\jsgrid\\jsgrid.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\jsgrid\\jsgrid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\line-progress\\jquery.lineProgressbar.css",
+      "PackagePath": "staticwebassets\\css\\lib\\line-progress\\jquery.lineProgressbar.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\lobi-panel\\lobipanel.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\lobi-panel\\lobipanel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\materialize.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\materialize.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\menubar\\sidebar.css",
+      "PackagePath": "staticwebassets\\css\\lib\\menubar\\sidebar.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\metismenu\\menu.css",
+      "PackagePath": "staticwebassets\\css\\lib\\metismenu\\menu.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\mmc-chat.css",
+      "PackagePath": "staticwebassets\\css\\lib\\mmc-chat.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\nestable\\nestable.css",
+      "PackagePath": "staticwebassets\\css\\lib\\nestable\\nestable.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\preloader\\pace.css",
+      "PackagePath": "staticwebassets\\css\\lib\\preloader\\pace.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\rangSlider\\ion.rangeSlider.css",
+      "PackagePath": "staticwebassets\\css\\lib\\rangSlider\\ion.rangeSlider.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\rangSlider\\ion.rangeSlider.skinFlat.css",
+      "PackagePath": "staticwebassets\\css\\lib\\rangSlider\\ion.rangeSlider.skinFlat.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\rangSlider\\ion.rangeSlider.skinHTML5.css",
+      "PackagePath": "staticwebassets\\css\\lib\\rangSlider\\ion.rangeSlider.skinHTML5.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\rangSlider\\ion.rangeSlider.skinModern.css",
+      "PackagePath": "staticwebassets\\css\\lib\\rangSlider\\ion.rangeSlider.skinModern.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\rangSlider\\ion.rangeSlider.skinNice.css",
+      "PackagePath": "staticwebassets\\css\\lib\\rangSlider\\ion.rangeSlider.skinNice.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\rangSlider\\ion.rangeSlider.skinSimple.css",
+      "PackagePath": "staticwebassets\\css\\lib\\rangSlider\\ion.rangeSlider.skinSimple.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\rangSlider\\normalize.css",
+      "PackagePath": "staticwebassets\\css\\lib\\rangSlider\\normalize.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\scrollable\\scrollable.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\scrollable\\scrollable.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\select2\\select2.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\select2\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\sweetalert\\sweetalert.css",
+      "PackagePath": "staticwebassets\\css\\lib\\sweetalert\\sweetalert.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\themify-icons.css",
+      "PackagePath": "staticwebassets\\css\\lib\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\toastr\\toastr.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\toastr\\toastr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\vector-map\\jqvmap.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\vector-map\\jqvmap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\lib\\weather-icons.css",
+      "PackagePath": "staticwebassets\\css\\lib\\weather-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\MontserratLight.eot",
+      "PackagePath": "staticwebassets\\fonts\\MontserratLight.eot"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\MontserratLight.svg",
+      "PackagePath": "staticwebassets\\fonts\\MontserratLight.svg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\MontserratLight.ttf",
+      "PackagePath": "staticwebassets\\fonts\\MontserratLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\MontserratLight.woff",
+      "PackagePath": "staticwebassets\\fonts\\MontserratLight.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\MontserratLight.woff2",
+      "PackagePath": "staticwebassets\\fonts\\MontserratLight.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\fontawesome-webfont_files\\viewsource.css",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont_files\\viewsource.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Bold.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Bold.woff2",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Bold.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Light.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Light.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Light.woff2",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Light.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Medium.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Medium.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Medium.woff2",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Medium.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Thin.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Thin.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\roboto\\Roboto-Thin.woff2",
+      "PackagePath": "staticwebassets\\fonts\\roboto\\Roboto-Thin.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\weathericons-regular-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\weathericons-regular-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\weathericons-regular-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\weathericons-regular-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\weathericons-regular-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\weathericons-regular-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\weathericons-regular-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\weathericons-regular-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\fonts\\weathericons-regular-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\weathericons-regular-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\1.png",
+      "PackagePath": "staticwebassets\\images\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\2.png",
+      "PackagePath": "staticwebassets\\images\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\3.png",
+      "PackagePath": "staticwebassets\\images\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\8.png",
+      "PackagePath": "staticwebassets\\images\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\_logo.png",
+      "PackagePath": "staticwebassets\\images\\_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\avatar.png",
+      "PackagePath": "staticwebassets\\images\\avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\avatar\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\avatar\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\avatar\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\avatar\\usa-flag.png",
+      "PackagePath": "staticwebassets\\images\\avatar\\usa-flag.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\1.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\2.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\3.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\4.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\5.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\6.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\7.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\bookingSystem\\8.png",
+      "PackagePath": "staticwebassets\\images\\bookingSystem\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\c1.jpg",
+      "PackagePath": "staticwebassets\\images\\c1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\c2.jpg",
+      "PackagePath": "staticwebassets\\images\\c2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\c3.jpg",
+      "PackagePath": "staticwebassets\\images\\c3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\chat-person-add.png",
+      "PackagePath": "staticwebassets\\images\\chat-person-add.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\close.png",
+      "PackagePath": "staticwebassets\\images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\encabezado.jpg",
+      "PackagePath": "staticwebassets\\images\\encabezado.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\fjords.jpg",
+      "PackagePath": "staticwebassets\\images\\fjords.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\hand.jpg",
+      "PackagePath": "staticwebassets\\images\\hand.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\img\\_logo.png",
+      "PackagePath": "staticwebassets\\images\\img\\_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\img\\logo.png",
+      "PackagePath": "staticwebassets\\images\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\lights.jpg",
+      "PackagePath": "staticwebassets\\images\\lights.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\marcaAgua.jpg",
+      "PackagePath": "staticwebassets\\images\\marcaAgua.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\maximize.png",
+      "PackagePath": "staticwebassets\\images\\maximize.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\minimize.png",
+      "PackagePath": "staticwebassets\\images\\minimize.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\nature.jpg",
+      "PackagePath": "staticwebassets\\images\\nature.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\newyork.jpg",
+      "PackagePath": "staticwebassets\\images\\newyork.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\paris.jpg",
+      "PackagePath": "staticwebassets\\images\\paris.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\paypal.png",
+      "PackagePath": "staticwebassets\\images\\paypal.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\picture.png",
+      "PackagePath": "staticwebassets\\images\\picture.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\pie_avisocandidato.png",
+      "PackagePath": "staticwebassets\\images\\pie_avisocandidato.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\preview1.png",
+      "PackagePath": "staticwebassets\\images\\preview1.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product-2.jpg",
+      "PackagePath": "staticwebassets\\images\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product.jpg",
+      "PackagePath": "staticwebassets\\images\\product.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\burger.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\burger.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\download.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\image-10.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\image-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\image-8-226x223.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\image-8-226x223.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\image-9.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\image-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\images.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\product_1\\pizza2.jpg",
+      "PackagePath": "staticwebassets\\images\\product_1\\pizza2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\profile-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\profile-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\rangeSliderimg\\sprite-skin-flat.png",
+      "PackagePath": "staticwebassets\\images\\rangeSliderimg\\sprite-skin-flat.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\rangeSliderimg\\sprite-skin-modern.png",
+      "PackagePath": "staticwebassets\\images\\rangeSliderimg\\sprite-skin-modern.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\rangeSliderimg\\sprite-skin-nice.png",
+      "PackagePath": "staticwebassets\\images\\rangeSliderimg\\sprite-skin-nice.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\rangeSliderimg\\sprite-skin-simple.png",
+      "PackagePath": "staticwebassets\\images\\rangeSliderimg\\sprite-skin-simple.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\sanfran.jpg",
+      "PackagePath": "staticwebassets\\images\\sanfran.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\scrollable\\view-1-1200x800.jpg",
+      "PackagePath": "staticwebassets\\images\\scrollable\\view-1-1200x800.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\smile.png",
+      "PackagePath": "staticwebassets\\images\\smile.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\user-1.png",
+      "PackagePath": "staticwebassets\\images\\user-1.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\user-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\user-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\user-female.png",
+      "PackagePath": "staticwebassets\\images\\user-female.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\user-profile.jpg",
+      "PackagePath": "staticwebassets\\images\\user-profile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\user.jpg",
+      "PackagePath": "staticwebassets\\images\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\video-cam.png",
+      "PackagePath": "staticwebassets\\images\\video-cam.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\images\\watch.jpg",
+      "PackagePath": "staticwebassets\\images\\watch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\dashboard1.js",
+      "PackagePath": "staticwebassets\\js\\dashboard1.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\dashboard2.js",
+      "PackagePath": "staticwebassets\\js\\dashboard2.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\jq-signature\\jq-signature.min.js",
+      "PackagePath": "staticwebassets\\js\\jq-signature\\jq-signature.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\jq-signature\\site.js",
+      "PackagePath": "staticwebassets\\js\\jq-signature\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\barRating\\barRating.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\barRating\\barRating.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\barRating\\jquery.barrating.js",
+      "PackagePath": "staticwebassets\\js\\lib\\barRating\\jquery.barrating.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\calendar-2\\moment.latest.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\calendar-2\\moment.latest.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\calendar-2\\pignose.calendar.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\calendar-2\\pignose.calendar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\calendar-2\\pignose.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\calendar-2\\pignose.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\calendar-2\\prism.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\calendar-2\\prism.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\calendar-2\\semantic.ui.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\calendar-2\\semantic.ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\calendar\\fullcalendar-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\calendar\\fullcalendar-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\calendar\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\calendar\\fullcalendar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\chart-js\\Chart.bundle.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chart-js\\Chart.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\chart-js\\chartjs-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chart-js\\chartjs-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\chartist\\chartist-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chartist\\chartist-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\chartist\\chartist-plugin-tooltip.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chartist\\chartist-plugin-tooltip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\chartist\\chartist.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chartist\\chartist.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\chat-widget\\chat-widget-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chat-widget\\chat-widget-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\circle-progress\\circle-progress-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\circle-progress\\circle-progress-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\circle-progress\\circle-progress.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\circle-progress\\circle-progress.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\buttons.colVis.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.colVis.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.flash.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\datatables-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\datatables-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\datatables.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\datatables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\jquery-1.12.4.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\jquery-1.12.4.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\jszip.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\jszip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\pdfmake.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\data-table\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\vfs_fonts.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\datamap\\d3.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\datamap\\d3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\datamap\\datamap-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\datamap\\datamap-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\datamap\\datamaps.world.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\datamap\\datamaps.world.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\datamap\\topojson.js",
+      "PackagePath": "staticwebassets\\js\\lib\\datamap\\topojson.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\datepicker\\bootstrap-datepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\datepicker\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\easing\\jquery.easing.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\easing\\jquery.easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\easing\\stepup-form-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\easing\\stepup-form-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\curvedLines.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\curvedLines.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\excanvas.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\excanvas.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\flot-chart-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\flot-chart-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\flot-tooltip\\jquery.flot.tooltip.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\flot-tooltip\\jquery.flot.tooltip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.categories.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.categories.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.crosshair.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.crosshair.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.pie.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.pie.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.resize.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.resize.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.stack.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.stack.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.threshold.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.threshold.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flot-chart\\jquery.flot.time.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flot-chart\\jquery.flot.time.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\flowtype.js",
+      "PackagePath": "staticwebassets\\js\\lib\\flowtype.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\form-validation\\jquery.validate-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\form-validation\\jquery.validate-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\form-validation\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\form-validation\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\gmap\\gmap.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\gmap\\gmap.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\gmap\\gmapApi.js",
+      "PackagePath": "staticwebassets\\js\\lib\\gmap\\gmapApi.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\gmap\\gmaps.js",
+      "PackagePath": "staticwebassets\\js\\lib\\gmap\\gmaps.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\granim\\granim-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\granim\\granim-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\granim\\granim.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\granim\\granim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\invoice-edit.js",
+      "PackagePath": "staticwebassets\\js\\lib\\invoice-edit.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jquery-ui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jquery-ui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jquery-ui\\jquery.ui.touch-punch.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jquery-ui\\jquery.ui.touch-punch.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jquery.nanoscroller.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jquery.nanoscroller.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\db.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\db.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\fields\\jsgrid.field.checkbox.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\fields\\jsgrid.field.checkbox.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\fields\\jsgrid.field.control.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\fields\\jsgrid.field.control.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\fields\\jsgrid.field.number.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\fields\\jsgrid.field.number.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\fields\\jsgrid.field.select.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\fields\\jsgrid.field.select.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\fields\\jsgrid.field.text.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\fields\\jsgrid.field.text.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\fields\\jsgrid.field.textarea.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\fields\\jsgrid.field.textarea.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\jsgrid-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\jsgrid-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\jsgrid.core.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\jsgrid.core.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\jsgrid.field.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\jsgrid.field.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\jsgrid.load-indicator.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\jsgrid.load-indicator.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\jsgrid.load-strategies.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\jsgrid.load-strategies.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\jsgrid.sort-strategies.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\jsgrid.sort-strategies.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\jsgrid\\jsgrid.validation.js",
+      "PackagePath": "staticwebassets\\js\\lib\\jsgrid\\jsgrid.validation.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\knob\\jquery.knob.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\knob\\jquery.knob.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\knob\\knob.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\knob\\knob.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\line-progress\\jquery.lineProgressbar.js",
+      "PackagePath": "staticwebassets\\js\\lib\\line-progress\\jquery.lineProgressbar.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\line-progress\\line-progress-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\line-progress\\line-progress-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\menubar\\sidebar.js",
+      "PackagePath": "staticwebassets\\js\\lib\\menubar\\sidebar.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\metismenu\\jquery.slimscroll.js",
+      "PackagePath": "staticwebassets\\js\\lib\\metismenu\\jquery.slimscroll.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\metismenu\\metismenu.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\metismenu\\metismenu.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\metismenu\\metismenu.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\metismenu\\metismenu.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\mmc-common.js",
+      "PackagePath": "staticwebassets\\js\\lib\\mmc-common.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\moment\\moment.js",
+      "PackagePath": "staticwebassets\\js\\lib\\moment\\moment.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\morris-chart\\morris-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\morris-chart\\morris-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\morris-chart\\morris.js",
+      "PackagePath": "staticwebassets\\js\\lib\\morris-chart\\morris.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\morris-chart\\raphael-min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\morris-chart\\raphael-min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\nestable\\jquery.nestable.js",
+      "PackagePath": "staticwebassets\\js\\lib\\nestable\\jquery.nestable.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\nestable\\nestable.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\nestable\\nestable.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\owl-carousel\\owl.carousel-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\owl-carousel\\owl.carousel-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\owl-carousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\owl-carousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\peitychart\\jquery.peity.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\peitychart\\jquery.peity.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\peitychart\\peitychart.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\peitychart\\peitychart.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\portlets\\portlets-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\portlets\\portlets-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\portlets\\portlets.js",
+      "PackagePath": "staticwebassets\\js\\lib\\portlets\\portlets.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\preloader\\pace.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\preloader\\pace.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\rangeSlider\\ion.rangeSlider.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\rangeSlider\\ion.rangeSlider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\rangeSlider\\moment-with-locales.js",
+      "PackagePath": "staticwebassets\\js\\lib\\rangeSlider\\moment-with-locales.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\rangeSlider\\moment.js",
+      "PackagePath": "staticwebassets\\js\\lib\\rangeSlider\\moment.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\rangeSlider\\rangeslider.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\rangeSlider\\rangeslider.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\rating1\\jRate.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\rating1\\jRate.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\rating1\\jRate.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\rating1\\jRate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\scrollable\\holder.js",
+      "PackagePath": "staticwebassets\\js\\lib\\scrollable\\holder.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\scrollable\\jquery-asScrollable.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\scrollable\\jquery-asScrollable.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\scrollable\\jquery-asScrollbar.js",
+      "PackagePath": "staticwebassets\\js\\lib\\scrollable\\jquery-asScrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\scrollable\\scrollable.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\scrollable\\scrollable.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\select2\\select2.full.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\select2\\select2.full.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\sparklinechart\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\sparklinechart\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\sparklinechart\\sparkline.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\sparklinechart\\sparkline.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\sweetalert\\sweetalert.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\sweetalert\\sweetalert.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\sweetalert\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\sweetalert\\sweetalert.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\toastr\\toastr.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\toastr\\toastr.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\toastr\\toastr.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\toastr\\toastr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.algeria.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.algeria.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.argentina.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.argentina.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.brazil.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.brazil.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.europe.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.europe.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.france.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.france.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.germany.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.germany.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.greece.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.greece.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.iran.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.iran.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.iraq.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.iraq.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.russia.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.russia.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.tunisia.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.tunisia.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.turkey.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.turkey.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.usa.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.usa.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\country\\jquery.vmap.world.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\country\\jquery.vmap.world.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\jquery.vmap.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\jquery.vmap.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\jquery.vmap.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\jquery.vmap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\jquery.vmap.sampledata.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\jquery.vmap.sampledata.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\vector-map\\vector.init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\vector-map\\vector.init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\weather\\jquery.simpleWeather.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\weather\\jquery.simpleWeather.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\lib\\weather\\weather-init.js",
+      "PackagePath": "staticwebassets\\js\\lib\\weather\\weather-init.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\1.png",
+      "PackagePath": "staticwebassets\\placeholder\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\2.png",
+      "PackagePath": "staticwebassets\\placeholder\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\3.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\3.png",
+      "PackagePath": "staticwebassets\\placeholder\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\4.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\avatar.png",
+      "PackagePath": "staticwebassets\\placeholder\\avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\avatar\\1.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\avatar\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\avatar\\2.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\avatar\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\avatar\\3.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\avatar\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\avatar\\usa-flag.png",
+      "PackagePath": "staticwebassets\\placeholder\\avatar\\usa-flag.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\chat-person-add.png",
+      "PackagePath": "staticwebassets\\placeholder\\chat-person-add.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\close.png",
+      "PackagePath": "staticwebassets\\placeholder\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\fjords.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\fjords.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\hand.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\hand.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\lights.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\lights.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\logo.png",
+      "PackagePath": "staticwebassets\\placeholder\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\maximize.png",
+      "PackagePath": "staticwebassets\\placeholder\\maximize.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\minimize.png",
+      "PackagePath": "staticwebassets\\placeholder\\minimize.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\nature.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\nature.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\newyork.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\newyork.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\paris.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\paris.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\paypal.png",
+      "PackagePath": "staticwebassets\\placeholder\\paypal.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\picture.png",
+      "PackagePath": "staticwebassets\\placeholder\\picture.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\preview1.png",
+      "PackagePath": "staticwebassets\\placeholder\\preview1.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\profile-bg.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\profile-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\rangeSliderimg\\sprite-skin-flat.png",
+      "PackagePath": "staticwebassets\\placeholder\\rangeSliderimg\\sprite-skin-flat.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\rangeSliderimg\\sprite-skin-modern.png",
+      "PackagePath": "staticwebassets\\placeholder\\rangeSliderimg\\sprite-skin-modern.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\rangeSliderimg\\sprite-skin-nice.png",
+      "PackagePath": "staticwebassets\\placeholder\\rangeSliderimg\\sprite-skin-nice.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\rangeSliderimg\\sprite-skin-simple.png",
+      "PackagePath": "staticwebassets\\placeholder\\rangeSliderimg\\sprite-skin-simple.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\sanfran.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\sanfran.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\scrollable\\view-1-1200x800.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\scrollable\\view-1-1200x800.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\smile.png",
+      "PackagePath": "staticwebassets\\placeholder\\smile.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\user-1.png",
+      "PackagePath": "staticwebassets\\placeholder\\user-1.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\user-female.png",
+      "PackagePath": "staticwebassets\\placeholder\\user-female.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\user-profile.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\user-profile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\user.jpg",
+      "PackagePath": "staticwebassets\\placeholder\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jesus.ortega\\Desktop\\Modulo Reclutamiento 2023\\Modulo_Reclutamiento_Web\\Modulo_Reclutamiento_Web\\wwwroot\\placeholder\\video-cam.png",
+      "PackagePath": "staticwebassets\\placeholder\\video-cam.png"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.Modulo_Reclutamiento_Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.Modulo_Reclutamiento_Web.props",
+      "PackagePath": "build\\Modulo_Reclutamiento_Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Modulo_Reclutamiento_Web.props",
+      "PackagePath": "buildMultiTargeting\\Modulo_Reclutamiento_Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.Modulo_Reclutamiento_Web.props",
+      "PackagePath": "buildTransitive\\Modulo_Reclutamiento_Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

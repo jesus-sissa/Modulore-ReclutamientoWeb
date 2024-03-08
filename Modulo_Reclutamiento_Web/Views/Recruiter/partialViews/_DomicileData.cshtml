@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProspectusData
+<div class="card">
+    <div class="card-body">
+        <div class="form-group">
+            <label asp-for="@Model.DomicileData.ZipCode" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.DomicileData.ZipCode" class="validar form-control input-rounded" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="@Model.DomicileData.City" class="text-muted m-b-15 f-s-12"></label>
+            <select id="cityofdom" class="form-control input-rounded" asp-for="@Model.DomicileData.City" asp-items="@(new SelectList(Model.DomicileData.Cities, "Value","Text",Model.DomicileData.City))"></select>
+        </div>
+        <div id="coloniesofdom" class="form-group">
+            <label asp-for="@Model.DomicileData.Colony" class="text-muted m-b-15 f-s-12"></label>
+            <select class="form-control input-rounded" asp-for="@Model.DomicileData.Colony" asp-items="@(new SelectList(Model.DomicileData.Colonies, "Value","Text",Model.DomicileData.Colony))"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.DomicileData.Street" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.DomicileData.Street" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.DomicileData.BetweenStreet1" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.DomicileData.BetweenStreet1" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.DomicileData.BetweenStreet2" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.DomicileData.BetweenStreet2" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.DomicileData.ExteriorNumber" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.DomicileData.ExteriorNumber" class="form-control input-rounded" placeholder="">
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.DomicileData.InteriorNumber" class="text-muted m-b-15 f-s-12"></label>
+            <input type="text" asp-for="@Model.DomicileData.InteriorNumber" class="form-control input-rounded" placeholder="">
+        </div>
+        <div id="zones" class="form-group">
+            <label asp-for="@Model.DomicileData.Zone" class="text-muted m-b-15 f-s-12"></label>
+            <select class="form-control input-rounded" asp-for="@Model.DomicileData.Zone" asp-items="@(new SelectList(Model.DomicileData.Zones, "Value","Text",Model.DomicileData.Zone))"></select>
+        </div>
+    </div>
+
+</div>
+

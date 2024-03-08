@@ -1,0 +1,203 @@
+﻿@using Modulo_Reclutamiento_Web.Models.HomeVisitData
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model HomeVisit
+
+<div class="card">
+    <div class="card-title">
+        <div class="row">
+            <div class="col-12 p-30">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" title="encabezado" />
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="PayrollNumber"></label>
+                    <input type="text" class="form-control" disabled asp-for="PayrollNumber" />
+                </div>
+            </div>
+            <div class="col-8"></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Apellido Paterno</label>
+                    <input type="text" class="form-control" disabled value="@Model.PaternalName" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Apellido Materno</label>
+                    <input type="text" class="form-control" disabled value="@Model.MaternalName" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label>Nombre(s)</label>
+                    <input type="text" class="form-control" disabled value="@Model.FirstName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="Age"></label>
+                    <input type="text" class="form-control" disabled asp-for="Age" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Position"></label>
+                    <input type="text" class="form-control" disabled asp-for="Position" />
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="form-group">
+                    <label asp-for="Department"></label>
+                    <input type="text" class="form-control" disabled asp-for="Department" />
+                </div>
+            </div>
+        </div>
+        <!--Domicilio Actual (calle y número) Colonia Delegación o Municipi-->
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Domicile"></label>
+                    <input type="text" class="form-control" disabled asp-for="Domicile" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Colony"></label>
+                    <input type="text" class="form-control" disabled asp-for="Colony" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="City"></label>
+                    <input type="text" class="form-control" disabled asp-for="City" />
+                </div>
+            </div>
+        </div>
+        <!--Estado Teléfono Fijo Teléfono Celular Antigüedad en la Empresa-->
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="State"></label>
+                    <input type="text" class="form-control" disabled asp-for="State" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="Phone"></label>
+                    <input type="text" class="form-control" disabled asp-for="@Model.Phone" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="CellPhone"></label>
+                    <input type="text" class="form-control" disabled asp-for="CellPhone" />
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label asp-for="Seniority"></label>
+                    <input type="text" class="form-control" disabled asp-for="@Model.Seniority" />
+                </div>
+            </div>
+        </div>
+        <!--Lugar de Nacimiento Fecha de Nacimiento Estado Civil Tiempo de Residenci-->
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="BornLocation"></label>
+                    <input type="text" class="form-control" disabled value="@Model.BornLocation" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="@Model.BornDay"></label>
+                    <input type="date" asp-for="@Model.BornDay" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="MaritalStatus"></label>
+                    <input type="text" class="form-control" disabled asp-for="MaritalStatus" />
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label asp-for="RecidenceTime"></label>
+                    <input type="text" class="form-control" disabled asp-for="RecidenceTime" value="0" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="Spouse"></label>
+                    <input type="text" class="form-control" disabled asp-for="Spouse"  />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="EmergencyPhone"></label>
+                    <input type="text" class="form-control" disabled asp-for="EmergencyPhone" value="0" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="DayOfVisit"></label>
+                    <input type="date" asp-for="DayOfVisit" disabled autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="VisitingTime"></label>
+                    <input type="text" class="form-control" disabled asp-for="VisitingTime" />
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="RecruiterName"></label>
+                    <input type="text" class="form-control" disabled asp-for="RecruiterName" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="RecruiterPosition"></label>
+                    <input type="text" class="form-control" disabled asp-for="RecruiterPosition" />
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+             <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="InterviewSignature"></label>
+                    <img src="@Model.InterviewSignature" />
+                </div>
+            </div>
+
+             <div class="col-6">
+                <div class="form-group">
+                    <label asp-for="RecruiterSignature"></label>
+                    <img src="@Model.RecruiterPosition" />
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

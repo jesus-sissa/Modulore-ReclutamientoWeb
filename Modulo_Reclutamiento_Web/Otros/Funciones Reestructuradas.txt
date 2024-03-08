@@ -1,0 +1,87 @@
+﻿/*
+*	USER SERVICE
+*/
+
+//FUNCION lOGIN
+// antigua funcion login, se cambio por una mas corta
+ [HttpPost]
+        public async Task<IActionResult> Login(User _user)
+        {
+           
+            User_Persistent_Data.Connection = _user.user_Branch;
+            if (_user.user_Key ==null)
+            {
+                _user.user_Key = 0;
+            }
+
+            //bool exist = UserService.Instancia.getUser(_user.user_Key);
+            //if (exist)
+            //{
+            //    if (User_Persistent_Data.Status == "A")
+            //    {
+            //        if (_user.user_Password != null && _user.user_Password != "")
+            //        {
+            //            if (User_Persistent_Data.Password == Tools.EncriptacionSHA1(_user.user_Password).ToUpper())
+            //            {
+            //                 var claims = new List<Claim>()
+            //                 {
+            //                   new Claim(ClaimTypes.Name, User_Persistent_Data.Name) ,
+            //                   new Claim(ClaimTypes.Role, "User") 
+            //                 };
+
+            //                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            //                var principal = new ClaimsPrincipal(identity);
+            //                var properties = new AuthenticationProperties();
+
+            //                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, properties).Wait();
+            //               return  RedirectToAction("Index", "Home");
+            //            }
+            //            else
+            //            {
+            //                ViewBag.DrpDwnLisBranch = listConexion;
+            //                ViewBag.ERR = "ERRPASS";
+            //                return View();
+            //            }
+            //        }
+            //        else 
+            //        {
+            //            ViewBag.DrpDwnLisBranch = listConexion;
+            //            ViewBag.ERR = "ERRPASS";
+            //            return View();
+            //        }
+
+            //    }
+            //    else
+            //    {
+            //        ViewBag.DrpDwnLisBranch = listConexion;
+            //        ViewBag.ERR = "ERRBLOCK";
+            //        return View();
+            //    }
+
+            //}
+            //else
+            //{
+            //    ViewBag.DrpDwnLisBranch = listConexion;
+            //    ViewBag.ERR = "ERRINEX";
+            //    return View();
+            //}
+          
+        }
+
+  //FUNCION lOGIN
+// En case de querer agregar politicas
+
+         /* Actualmente se manejan roles (User) para todos los usuarios y se tiene la siguiente anotacion siguiente para reestringir 
+                 * el acceso a las vistas
+                 *  [Authorize(Roles = "User")]
+                 *  En caso de agregar politicas se tendra que agregar el Claim ó Claims correspondientes
+                 *  Ejemplo
+                 *      var claims = new List<Claim>()
+                 *           {
+                 *              new Claim("Restart","Y")
+                 *            };
+                 *  para que se cimpla la polica que queresmo que se cumpla.
+                 *  agregar funcion para que se haga dinamicamante.
+                 *  agregar la anotacion siguiente en las funciones del contralador que queremos restringuir segun la/s politicas que tengamos
+                 *  [Authorize(Roles = "User", Policy = "RestarProcess")]
+                 *  En case de dudas revisar : https://www.youtube.com/watch?v=GbNhnksUS0k para orientacion de la implementacion

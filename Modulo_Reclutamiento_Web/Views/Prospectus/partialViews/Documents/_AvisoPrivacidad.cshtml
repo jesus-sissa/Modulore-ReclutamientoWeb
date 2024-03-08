@@ -1,0 +1,110 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Leaflet_Information
+<div class="card">
+    <div class="card-body">
+
+        <div class="row" id="doc3">
+
+            <div class="col-12 ">
+                <img src="../images/encabezado.jpg" width="100%" height="55px" />
+            </div>
+
+        </div>
+        <div class="col-12">
+            <h5><strong>AVISO DE PRIVACIDAD PARA EMPLEADOS</strong></h5>
+            <h6 class="text-right">Monterrey, N.L. a  @DateTime.Today.ToString("dd MMM yyyy")</h6>
+        </div>
+
+        <div class="marcaAguaSissa row">
+            <di class="row">
+                <p class="text-justify">
+                    <strong>Servicio Integral de Seguridad, S.A. de C.V.</strong>, es una empresa legalmente constituida de conformidad con las leyes mexicanas, con domicilio en <strong>Juan Álvarez #209, Col. Centro, Monterrey C.P. 64000</strong>,
+                    representada por el C. Enrique Villanueva Hernández, en su carácter de Apoderado Legal de la sociedad y como responsable de sus datos personales, hace de su conocimiento que la información de
+                    nuestro personal es tratada de forma estrictamente confidencial por lo que al proporcionar sus datos personales, éstos serán utilizados única y exclusivamente para los siguientes fines:
+                </p>
+            </di>
+
+            <div class="row">
+                <ul style="list-style:none" class="text-left">
+                    <li><p>a)	Integrar su expediente.</p></li>
+                    <li><p>b)	Elaborar su contrato respectivo.</p></li>
+                    <li><p>c)	Avisos de afiliación al IMSS, INFONAVIT, SAT.</p></li>
+                    <li><p>d)	Solicitud de cuenta de nómina.</p></li>
+                    <li><p>e)	Requerimiento de la autoridad competente.</p></li>
+                    <li><p>f)	Estudio socioeconómico.</p></li>
+                    <li><p>g)	Llevar a cabo algún fin análogo o con el objeto social de <strong>Servicio Integral de Seguridad, S.A. de C.V.</strong></p></li>
+                    <li><p>h)	Transferir a Terceros sus datos personales, con fines de solicitar Referencia Laboral del titular.</p> </li>
+                    <li><p>i)	Evaluaciones Psicométricas y de cualquier índole para el en área de Recursos Humanos, como PPP (Personal Proficiency Profile).</p></li>
+                </ul>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    Para prevenir el acceso no autorizado a sus datos personales y con el fin de asegurar que la información sea utilizada para los fines establecidos en este aviso de privacidad,
+                    hemos establecidos diversos procedimientos con la finalidad de evitar el uso o divulgación de sus datos permitiéndonos tratarlos debidamente.
+                </p>
+            </div>
+            <div class="row text-justify">
+                <p>
+                    <span style="color:green">En todo momento usted podrá limitar el uso o divulgación de</span> sus datos personales <span style="color:green">mediante el ejercicio de</span> los derechos (ARCO) de acceder, rectificar, cancelar u oponerse al tratamiento que le damos a
+                    sus datos personales, derecho que podrá hacer valer a través del correo electrónico sistemagestion@sissaseguridad.com
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    A través de este canal usted podrá actualizar sus datos y especificar el medio por el cual desea recibir información, ya que en caso de no contar con esta especificación de su parte,
+                    <strong>Servicio Integral de Seguridad, S.A. de C.V.</strong>, establecerá el canal pertinente para enviarle la información.
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    Este aviso de privacidad podrá ser modificado por <strong>“Servicio Integral de Seguridad, S.A. de C.V.”</strong>, dichas modificaciones  serán oportunamente  informadas a través de nuestra página de internet
+                    <span style="color:green">https://www.sissaseguridad.com</span> o cualquier otro medio de comunicación que <strong>“Servicio Integral de Seguridad, S.A. de C.V.”</strong>, determine para tal efecto.
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify">
+                    Asi mismo, se le informa, que para dar cabal cumplimiento de las funciones que <strong>Servicio Integral de Seguridad, S.A. de C.V.</strong> requiere de su personal, será necesaria la transmisión de sus datos personales a terceros,
+                    así como la difusión de los mismos, motivo por el cual se solicita su consentimiento.
+                </p>
+            </div>
+            <div class="row">
+                <p class="text-justify" ">
+                    Para mayor información, comunicarse con el contacto mencionado. Consiento el tratamiento de mis datos personales, en los términos del presente aviso de privacidad.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row text-center">
+            @if (Model.Document_Status == "Y")
+            {
+            <div class="col-12">
+                
+                <img id="fingerLeft" src="@Model.FingerPrints.FingerPrintLeft" width="60px" class="visually-hidden imgLeft" height="80px" />
+                <img id="firmaAvisoPrivacidad" src="@Model.Signature" width="175px" class="visually-hidden" height="80px" />
+                <img id="fingerRight" src="@Model.FingerPrints.FingerPrintRight" width="60px" class="visually-hidden imgRight" height="80px" />
+            </div>
+            <div class="col-12">
+                <p id="nombre_AvisoPrivacidad" class="">@Model.Name</p>
+            </div>
+            }else{
+
+            <div class="col-12">
+                <button id="btn_Av_Privacidad" class="btn btn-primary btn-lg ">Firmar</button>
+            </div>
+            }
+
+        </div>
+        <div class=" row">
+            <div class="col-12">
+                <img src="../images/pie_avisocandidato.png" width="100%" height="45px" />
+            </div>
+        </div>
+
+
+        <!--fin card body-->
+    </div>
+</div>
+

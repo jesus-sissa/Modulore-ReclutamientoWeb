@@ -1,0 +1,540 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Leaflet_Information
+
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+            <li class="breadcrumb-item"><a href="@Url.Action("Agreements","Prospectus",new{ pto =ViewBag.pto})"><i class="ti-arrow-left"></i> Regresar</a></li>
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Documentos</li>
+            <li id="doc" class="breadcrumb-item active"></li>
+        </ol>
+    </div>
+</div>
+
+@switch (Model.Document)
+{
+
+    case 1:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_AvisoCandidatos" model="@Model" />
+            break;
+        }
+    case 2:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_ContratoLaboral" model="@Model" />
+            break;
+        }
+    case 3:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_AvisoPrivacidad" model="@Model" />
+            break;
+        }
+    case 4:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_CartaConfidencialidad" model="@Model" />
+            break;
+        }
+    case 5:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_ConvenioConfidencialidad" model="@Model" />
+            break;
+        }
+    case 6:
+        {
+            <partial name="../Prospectus/partialViews/Documents/_Concentimientos" model="@Model" />
+
+            break;
+        }
+    case 7:
+        {
+             <partial name="../Prospectus/partialViews/Documents/_ComprobanteCapacitacion" model="@Model" />
+
+            break;
+
+        }
+
+}
+
+
+
+
+@section Scripts{
+
+    <script type="text/javascript">
+        const valFirma = "data:image/png;base64,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";
+        var _documento = 0;
+        var arrBeneficiarios = []
+        $(document).ready(function() {
+
+            switch (@Model.Document) {
+
+                case 1:
+                    {
+                        $("#doc").html("AVISO DE PRIVACIDAD PARA CANDIDATOS");
+                        break
+                    }
+                case 2:
+                    {
+                        $("#doc").html("CONTRATO INDIVIDUAL DE TRABAJO");
+                        break
+                    }
+                case 3:
+                    {
+                        $("#doc").html("AVISO DE PRIVACIDAD PARA EMPLEADOS");
+                        break
+                    }
+                case 4:
+                    {
+                        $("#doc").html("CARTA DE CONFIDENCIALIDAD");
+                        break
+                    }
+                case 5:
+                    {
+                        $("#doc").html("CONVENIO DE CONFIDENCIALIDAD PARA EMPLEADOS");
+                        break
+                    }
+                case 6:
+                    {
+                        $("#doc").html("CARTA DE CONCENTIMIENTOS");
+                        break
+                    }
+            }
+
+        });
+
+
+        $('.js-signature').jqSignature({ width: 400, height: 200, lineColor: '#000' ,background :'#FFF'});
+        $('#btnLimpiar').click(function() {
+            $('.js-signature').jqSignature('clearCanvas');
+        });
+
+
+        $("#btn_avisoPrivacidad").click(function() {
+            $("#btn_avisoPrivacidad").attr('disabled', 'disabled');
+            var _signature = $('.js-signature').jqSignature('getDataURL');
+            if (_signature === valFirma) {
+                alert("Aviso de Privacidad,No tiene Firma");
+                
+                $("#btn_avisoPrivacidad").removeAttr("disabled")
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("ProspectusSignature","Prospectus")",
+                data: { signature: _signature, pto: @ViewBag.pto},
+
+                success: function(data) {
+                    if (data) {
+                        swal("Felicidades!!", "Firmado Correctamente", "success");
+                    }
+                    else 
+                    {
+                         swal("Oopsss !!", "Parece ocurrio un problema vuelve a intentarlo!!", "error");
+                    }
+                     setTimeout(function() {
+                        window.location.href = "@Url.Action("Agreements","Prospectus",new{ pto = ViewBag.pto})"
+                    }, 2000);
+                },
+                error: function(error) {
+                    console.log(error)
+                    alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function() { }
+            });
+
+            $("#btn_avisoPrivacidad").removeAttr("disabled")
+
+        });
+
+
+        //botones firmar de cada documento
+
+
+
+        $("#btn-ContratoLaboral").click(function() {
+            //$("#btn_Av_Candidato").attr('disabled', 'disabled');
+            var storedArray = JSON.parse(JSON.stringify(arrBeneficiarios));
+            if (storedArray.length < 1) {
+                alert("Agrega al menos un Beneficiario")
+
+                return false;
+            } else {
+                var porcentajefinal = 0;
+                for (var i = 0; i < storedArray.length; i++) {
+                    porcentajefinal += parseInt(storedArray[i][2]);
+                }
+                if (porcentajefinal > 100) {
+                    alert("porcentaje de los bneficiarios supero el 100%");
+                    return false;
+                }
+
+            }
+            _documento = 2;
+            //$("#ModalConfirmacion").modal('show');
+            ConfirmDialog();
+        });
+
+        $("#btn_Av_Privacidad").click(function() {
+            //$("#btn_Av_Candidato").attr('disabled', 'disabled');
+            _documento = 3;
+            //$("#ModalConfirmacion").modal('show');
+            ConfirmDialog();
+        });
+
+        $("#btn_Carta_Confidencialidad").click(function() {
+            //$("#btn_Av_Candidato").attr('disabled', 'disabled');
+            _documento = 4;
+            //$("#ModalConfirmacion").modal('show');
+            ConfirmDialog();
+        });
+
+        $("#btn_Convenio_Conf").click(function() {
+            //$("#btn_Av_Candidato").attr('disabled', 'disabled');
+            _documento = 5;
+            //$("#ModalConfirmacion").modal('show');
+            ConfirmDialog();
+        });
+
+        $("#btn_Concentimientos").click(function() {
+            //$("#btn_Av_Candidato").attr('disabled', 'disabled');
+            _documento = 6;
+            //$("#ModalConfirmacion").modal('show');
+            ConfirmDialog();
+        });
+
+        //confirmar firma de documento
+
+        //$("#btn_Confirm").click(function() {
+        //    if ('ViewBag.prosp' === $("#clave_confirmacion").val()) {
+        //        $.ajax({
+        //            type: "POST",
+        //            url: "Url.Action("ConfirmDocument","Prospectus")",
+        //            data: { doc: _documento, beneficiario: JSON.stringify(arrBeneficiarios), prosp: ViewBag.prosp },
+
+        //            success: function(data) {
+        //                window.location.href = "Url.Action("Agreements","Prospectus",new{ prosp = ViewBag.prosp})"
+
+        //            },
+        //            error: function(error) {
+        //                console.log(error)
+        //                alert("Error al firmar")
+        //                //window.location.href ="/cajerosinteligentesQA/Home/Index"
+        //            },
+        //            complete: function() { }
+        //        });
+        //    }
+        //    else {
+        //        alert("Clave Incorrecta");
+        //    }
+        //});
+
+        //acciones de documento Contrato laboral
+        //agregar beneficiarios
+        //$("#addBeneficiario").click(function() {
+
+        //    if (arrBeneficiarios.length < 4) {
+        //        let nombre_beneficiario = prompt("Nombre de Beneficiario");
+        //        if (valNombre(nombre_beneficiario)) {
+        //            let parentesco_beneficiario = prompt("Parentesco")
+        //            if (valParentesco(parentesco_beneficiario)) {
+        //                let porcentaje_beneficiario = prompt("Porcentaje")
+        //                if (valPorcentaje(porcentaje_beneficiario)) {
+
+        //                    arrBeneficiarios.push([nombre_beneficiario, parentesco_beneficiario, porcentaje_beneficiario]);
+
+        //                }
+        //            }
+        //        }
+        //    }
+
+
+        //    add_Beneficiarios();
+        //});
+
+
+        function ConfirmDialog() {
+            swal(
+                {
+                    title: "Confirmar Clave Prospecto!!",
+                    text: "Ingresa la clave que te proporcionaron",
+                    type: "input",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Clave",
+                },
+                function(inputValue) {
+                    if (inputValue === false) {
+
+                        return false;
+
+                    }
+                    if (inputValue === "") {
+                        swal.showInputError("Ingresar Clave!");
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+                    }
+                    if ('@ViewBag.pto' === inputValue) {
+                        ConfirmDocument();
+                    } else
+                    {
+                        swal.showInputError("Clave Erronea!");
+                         return false;
+                    }
+
+                }
+            );
+        }
+
+        function ConfirmDocument() {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("ConfirmDocument","Prospectus")",
+                data: { doc: _documento, beneficiarios: JSON.stringify(arrBeneficiarios), pto: @ViewBag.pto },
+
+                success: function(data) {
+                    if (data) {
+                        swal("Felicidades!!", "Firmado Correctamente", "success");
+                    }
+                    else {
+                        swal("Oopsss !!", "Parece ocurrio un problema vuelve a intentarlo!!", "error");
+                    }
+
+                    setTimeout(function() {
+                        window.location.href = "@Url.Action("Agreements","Prospectus",new{ pto = ViewBag.pto})"
+                    }, 2000);
+
+
+                },
+                error: function(error) {
+                    console.log(error)
+                    alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function() { }
+            });
+        }
+
+        $("#addBeneficiario").click(function() {
+            var _nombreBeneficiario = "";
+            var _parentesco = "";
+            var _porcentaje = 0;
+
+
+            NombreBeneficiario();
+
+        });
+
+        function NombreBeneficiario() {
+            swal(
+                {
+                    title: "Nombre de Beneficiario",
+                    text: "Escribir Nombre Completo de Beneficiario",
+                    type: "input",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Nombre",
+                },
+                function(inputValue) {
+                    if (inputValue === false) {
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+
+                    }
+                    if (inputValue === "") {
+                        swal.showInputError("Escribe Nombre de Beneficiario!");
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+                    }
+                    _nombreBeneficiario = inputValue;
+                    console.log(_nombreBeneficiario)
+                    if (valNombre(_nombreBeneficiario)) {
+                        console.log("se agrego nombre de beneficiario")
+                        //arrBeneficiarios.push([_nombreBeneficiario, "padre", "100"]);
+                        //console.log(arrBeneficiarios)
+                        ParentescoBeneficiario()
+                    }
+
+                }
+            );
+
+        }
+
+        function ParentescoBeneficiario() {
+            swal(
+                {
+                    title: "Parentesco de Beneficiario!!",
+                    text: "Ejemplo:Padre, Madre, Hijo, Hermano, etc.",
+                    type: "input",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Parentesco",
+                },
+                function(inputValue) {
+                    if (inputValue === false) {
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+
+                    }
+                    if (inputValue === "") {
+                        swal.showInputError("Escribo el parentesco del Beneficiario!");
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+                    }
+                    _parentesco = inputValue;
+                    console.log(_nombreBeneficiario)
+                    if (valParentesco(_parentesco)) {
+                        console.log("se agrego parentesco de beneficiario")
+                        PorcentajeBeneficiario()
+                    }
+
+                }
+            );
+
+        }
+
+        function PorcentajeBeneficiario() {
+            swal(
+                {
+                    title: "Porcentaje de Beneficiario!!",
+                    text: "Ejemplo:100,90,80,20,10",
+                    type: "input",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: "Porcentaje",
+                },
+                function(inputValue) {
+                    if (inputValue === false) {
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+
+                    }
+                    if (inputValue === "") {
+                        swal.showInputError("Agregua el Porcentaje del Beneficiario!");
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                        return false;
+                    }
+                    _porcentaje = inputValue;
+                    console.log(_porcentaje)
+                    if (valPorcentaje(_porcentaje)) {
+                        console.log("se agrego porcentaje de beneficiario")
+                        arrBeneficiarios.push([_nombreBeneficiario, _parentesco, _porcentaje]);
+                        add_Beneficiarios();
+                        swal("Agregaste Beneficiario!!", _nombreBeneficiario, "success");
+                        _nombreBeneficiario = "";
+                        _parentesco = "";
+                        _porcentaje = 0;
+                    }
+                }
+
+            );
+        }
+
+
+        //valida beneficiario
+        function valNombre(nombre) {
+            if (nombre === null || nombre === '') {
+                alert("agregar nombre completo")
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function valParentesco(parentesco) {
+            if (parentesco === null || parentesco === '') {
+                alert("agregar parentesco")
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function valPorcentaje(porcentaje) {
+            if (!isNaN(porcentaje)) {
+                if (porcentaje > 100) {
+                    alert("porcentaje no debe ser mayor a 100%")
+                    return false
+                } else {
+                    return true;
+                }
+
+            } else {
+                alert("agregar porcentaje")
+                return false;
+            }
+        }
+
+        ///llenar beneficiarios
+
+        function add_Beneficiarios() {
+            $("#beneficiarios tr").remove();
+            //var storedArray = JSON.parse(sessionStorage.getItem("arrBeneficiarios"));
+            var storedArray = JSON.parse(JSON.stringify(arrBeneficiarios));
+            var i;
+            for (i = 0; i < storedArray.length; i++) {
+                console.log(storedArray[i][0]);
+                var tr = $("<tr>");
+                tr.attr("id", i)
+                var thnombre = $("<th>");
+                var spnombre = $("<p>");
+                spnombre.text(storedArray[i][0]);
+                thnombre.append(spnombre);
+                tr.append(thnombre);
+                var thparentesco = $("<th>");
+                var spparentesco = $("<p>");
+                spparentesco.text(storedArray[i][1]);
+                thparentesco.append(spparentesco);
+                tr.append(thparentesco);
+                var thporcentaje = $("<th>");
+                var spporcentaje = $("<p>");
+                spporcentaje.text(storedArray[i][2] + "%");
+                thporcentaje.append(spporcentaje);
+                tr.append(thporcentaje);
+
+                var thaccion = $("<th>");
+                var btn = $("<button>");
+                btn.attr("id", i);
+                btn.addClass("btn btn-danger");
+                btn.html("Eliminar")
+                btn.click(function() {
+                    $("#beneficiarios tr#" + $(this).attr("id")).remove();
+                    arrBeneficiarios.splice($(this).attr("id"), 1);
+                    add_Beneficiarios()
+                });
+                thaccion.append(btn);
+
+                tr.append(thaccion);
+
+
+                $("#beneficiarios").append(tr);
+            }
+        }
+
+
+    </script>
+}
+

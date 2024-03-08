@@ -1,0 +1,522 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProspectusData
+<div class="page-header">
+    <div class="page-title">
+        <ol class="breadcrumb" style="float:left">
+        </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reclutador</a></li>
+            <li class="breadcrumb-item active">Prospectos</li>
+            <li class="breadcrumb-item active">Nuevo</li>
+        </ol>
+    </div>
+</div>
+<div class="card">
+    <div class="card-title">
+    </div>
+    <div class="card-body p-b-0">
+        <h4 class="card-title text-center">Datos del Solicitante</h4>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs customtab2" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" id="tabPuest" href="#datPuest" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-layout-media-overlay"></i></span>
+                    <span class="hidden-xs-down">Datos de Puesto</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#datPer" id="tabPer" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span>
+                    <span class="hidden-xs-down">Datos Personales</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#datDom" id="tabDom" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-home"></i></span>
+                    <span class="hidden-xs-down">Datos de Domicilio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#datCont" role="tab" aria-selected="true">
+                    <span class="hidden-sm-up"><i class="ti-headphone-alt"></i></span>
+                    <span class="hidden-xs-down">Datos de Contacto</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#datIndPer" role="tabIndPer" aria-selected="false">
+                    <span class="hidden-sm-up"><i class="ti-id-badge"></i></span>
+                    <span class="hidden-xs-down">Datos de Identificación Oficial</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#datCredInf" id="tabCredInf" role="tab" aria-selected="false">
+                    <span class="hidden-sm-up"><i class="ti-money"></i></span>
+                    <span class="hidden-xs-down">Datos Credito Infonavit</span>
+                </a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        @*<partial name="../Recruiter/partialViews/_GeneralData.cshtml" model="@Model" />*@
+        <form asp-action="NewProspectus" id="frmprosp" asp-controller="Recruiter" method="post">
+            <div class="tab-content">
+                <div class="tab-pane active show" id="datPuest" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Recruiter/partialViews/_PositionData.cshtml" model="@Model" />
+                    </div>
+                </div>
+                <div class="tab-pane p-20" id="datPer" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Recruiter/partialViews/_PersonalData.cshtml" model="@Model" />
+                    </div>
+                </div>
+                <div class="tab-pane p-20" id="datDom" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Recruiter/partialViews/_DomicileData.cshtml" model="@Model" />
+                    </div>
+                </div>
+                <div class="tab-pane p-20" id="datCont" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Recruiter/partialViews/_ContactData.cshtml" model="@Model" />
+                    </div>
+                </div>
+                <div class="tab-pane p-20" id="datIndPer" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Recruiter/partialViews/_PersonalIdentificationData.cshtml" model="@Model" />
+                    </div>
+                </div>
+                <div class="tab-pane p-20" id="datCredInf" role="tabpanel">
+                    <div class="p-20">
+                        <partial name="../Recruiter/partialViews/_InfonavitCreditData.cshtml" model="@Model" />
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-4 col-xl-4" style="float:right">
+                 <div class="form-group">
+                      <input type="button" id="btn_prosp" class="btn btn-success form-control" value="Guardar" />
+                 </div>
+             </div>
+           
+
+        </form>
+
+
+    </div>
+</div>
+
+
+@section Scripts
+    {
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            if ("@ViewBag.MSG" === "1") {
+                swal("Felicidades Datos Guardados!", "", "success");
+                setTimeout(function() {
+                    window.location.href = "@Url.Action("Message","Recruiter")";
+                }, 3000);
+            }
+            if ("@ViewBag.MSG" === "0") {
+                sweetAlert("Oops...", "No se pudieron Guardar los datos !!", "error");
+            }
+        });
+        //Todos los input que contengan la clase validar
+        // si esta vacio poner borde color rojo, si es llenado ponerlo verde
+        $(".validar").on("focus", function() {
+            //console.log("event focus")
+            if ($(this).val() === "" || $(this).val() === "0") {
+                $(this).attr("style", "border-color:red")
+            } else {
+                if ($(this).val() !== "" || $(this).val() !== "0") {
+                    $(this).attr("style", "border-color:green")
+                }
+                else {
+                    $(this).removeAttr("style")
+                }
+
+            }
+        }).on("change keyup paste", function() {
+            //console.log("event change keyup paste")
+            if ($(this).val() !== "") {
+                $(this).removeAttr("style")
+                $(this).attr("style", "border-color:green")
+            }
+        });
+
+        //agregar edad despues de escojer fecha de nacimiento
+        $("#PersonalData_DateOfBirth").change(function() {
+            var val = $(this).val()
+            var fechaNac = new Date(val)
+            const fechaactual = new Date();
+            var edad = fechaactual.getFullYear() - fechaNac.getFullYear();
+            $(this).removeAttr("style")
+            $("#PersonalData_Age").val(edad);
+            if (edad !== 0) {
+                $(this).removeAttr("style")
+                $(this).attr("style", "border-color:green");
+                $("#PersonalData_Age").attr("value", edad);
+                $("#PersonalData_Age").removeAttr("style")
+                $("#PersonalData_Age").attr("style", "border-color:green");
+            }
+
+        });
+
+        //validaciones del envio de solicitud de prospecto
+        $("#btn_prosp").click(function() {
+            event.preventDefault();
+
+            if ($("#PersonalData_FirstName").val() === "") {
+                msgError("Nombre no puede ir vacio")
+                $("#tabPer").click();
+                $("#PersonalData_FirstName").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#PersonalData_PaternalName").val() === "") {
+                msgError("Apellido Paterno no puede ir vacio")
+                $("#tabPer").click();
+                $("#PersonalData_PaternalName").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#PersonalData_MaternalName").val() === "") {
+                msgError("Apellido Materno no puede ir vacio")
+                $("#tabPer").click();
+                $("#PersonalData_MaternalName").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#PersonalData_Age").val() === "0") {
+                msgError("Edad no puede ser 0 ,seleccionar una fecha de nacimiento")
+                $("#tabPer").click();
+                $("#PersonalData_DateOfBirth").attr("style", "border-color:blue")
+                $("#PersonalData_Age").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#DomicileData_ZipCode").val() === "0") {
+                msgError("Codigo Postal no puede estar vacio")
+                $("#tabDom").click();
+                $("#DomicileData_ZipCode").attr("style", "border-color:red")
+                return false;
+            }
+            if ($("#OfIdentificationData_IMSS").val() === "") {
+                msgError("Numero del IMSS no puede estar vacio")
+                $("#tabIndPer").click();
+                $("#OfIdentificationData_IMSS").attr("style", "border-color:red")
+                return false;
+            }
+
+
+            //se hace el post del formulario
+            $("#frmprosp").submit();
+
+        });
+        //cada que cambia el departemento carga los puestos correspondientes
+        $("#department").change(function() {
+            var _department = $(this).val(); 
+                console.log("departamento:" + _department)
+            UpdatePosition(_department);
+
+        });
+        //cada que el pais cambie cargara los estados correspondientes
+        $("#country").change(function() {
+            var _country = $(this).val()
+            console.log("pais:" + _country);
+            UpdateStates(_country);
+        });
+        //cada que el estado cambie cargara los municipios correspondientes
+        $("#state").change(function() {
+            var _country = $("#country option:selected").val();
+            var _state = $(this).val()
+            console.log("country:" + _country)
+            console.log("state:" + _state)
+            UpdateCities(_country, _state);
+        });
+
+        $("#cityofdom").change(function() {
+            var _city = $(this).val()
+            console.log("cityofdom:" + _city)
+            UpdateColonies(_city);
+        });
+        //modo contacto
+        $("#contMoD").change(function() {
+            var _contactMode = $(this).val()
+            console.log("contactmode:" + _contactMode)
+            UpdateContactD(_contactMode);
+
+        });
+
+        $("#credInfOp").change(function() {
+            var val = $(this).val()
+            if (val === "S") {
+                $("#credInfCredNum").removeAttr("disabled")
+                $("#credInfDisTyp").removeAttr("disabled")
+                $("#credInfDisAm").removeAttr("disabled")
+            } else {
+                $("#credInfCredNum").attr("disabled", "disabled")
+                $("#credInfDisTyp").attr("disabled", "disabled")
+                $("#credInfDisAm").attr("disabled", "disabled")
+            }
+
+        });
+
+        /**
+         * funciones de actualizacion de los selects
+         */
+
+        //actualiza el combo de estados y ciudades, asocia la funcion change al combo de estados
+        function UpdateStates(_country) {
+            $("#stateofcountry").empty();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectState","Recruiter")",
+                data: { country: _country },
+
+                success: function(data) {
+                    //console.log(data)
+                    $("#stateofcountry").html(data);
+                    $("#state").on("change", function() {
+                        var _country = $("#country option:selected").val();
+                        //console.log("pais:" + _country);
+                        var _state = $(this).val()
+                        //console.log("estado:" + _state)
+                        UpdateCities(_country, _state);
+                    });
+
+                    var _state = $("#state option:selected").val();
+                    //console.log("estado:" + _state)
+                    UpdateCities(_country, _state);
+                    //if (data) {
+                    //    alert("Proceso Reiniciado")
+                    //}
+                    //else {
+                    //    alert("Contraseña Incorrecta")
+                    //}
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function UpdateCities(_country, _state) {
+            $("#citiesofstate").empty();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectCity","Recruiter")",
+                data: { country: _country, state: _state },
+
+                success: function(data) {
+                    //console.log(data)
+
+                    $("#citiesofstate").html(data);
+                    //if (data) {
+                    //    alert("Proceso Reiniciado")
+                    //}
+                    //else {
+                    //    alert("Contraseña Incorrecta")
+                    //}
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function UpdateColonies(_city) {
+            $("#coloniesofdom").empty();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectColonies","Recruiter")",
+                data: { city: _city },
+
+                success: function(data) {
+                    console.log(data)
+
+                    $("#coloniesofdom").html(data);
+                    UpdateZones(_city);
+                    //if (data) {
+                    //    alert("Proceso Reiniciado")
+                    //}
+                    //else {
+                    //    alert("Contraseña Incorrecta")
+                    //}
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function UpdateZones(_city) {
+            $("#zones").empty();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectZones","Recruiter")",
+                data: { city: _city },
+
+                success: function(data) {
+                    console.log(data)
+
+                    $("#zones").html(data);
+                    //if (data) {
+                    //    alert("Proceso Reiniciado")
+                    //}
+                    //else {
+                    //    alert("Contraseña Incorrecta")
+                    //}
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function UpdatePosition(_department) {
+            $("#positions").empty();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectPosition","Recruiter")",
+                data: { department: _department },
+
+                success: function(data) {
+                    console.log(data)
+
+                    $("#positions").html(data);
+                    //if (data) {
+                    //    alert("Proceso Reiniciado")
+                    //}
+                    //else {
+                    //    alert("Contraseña Incorrecta")
+                    //}
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+        function UpdateContactD(_contactMode) {
+            $("#contactmodeD").empty();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("selectContactD","Recruiter")",
+                data: { contactMode: _contactMode },
+
+                success: function(data) {
+                    console.log(data)
+
+                    $("#contactmodeD").html(data);
+                    //if (data) {
+                    //    alert("Proceso Reiniciado")
+                    //}
+                    //else {
+                    //    alert("Contraseña Incorrecta")
+                    //}
+                    //$("#ModalConfirmacionReset").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+        }
+
+
+
+    </script>
+}

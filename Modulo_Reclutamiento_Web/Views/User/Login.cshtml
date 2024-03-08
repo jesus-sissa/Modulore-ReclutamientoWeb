@@ -1,0 +1,125 @@
+﻿@model User
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*@model Usuario*@
+@{
+    Layout = "/Views/Shared/_layoutLogin.cshtml";
+}
+
+
+<div class="login-form-bg h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-xl-6">
+                <div class="form-input-content">
+                    <div class="card login-form mb-0">
+
+                        <div class="card-body pt-2">
+                            <div class="app-brand w-100 d-flex justify-content-center border-bottom-0">
+                                <a class="w-auto pl-0" href=>
+                                    <img src="~/images/_logo.png" alt="Mono">
+                                </a>
+
+                            </div>
+                            @* <a class="text-center" href="index.html"> <h4>Cajeros Inteligentes</h4></a>*@
+
+                            <form class="mt-5 mb-5 login-input" asp-controller="User" asp-action="Login" method="post">
+                                <div class="form-group">
+                                    <select class="form-control" asp-for="user_Branch" asp-items="@(new SelectList(ViewBag.DrpDwnLisBranch, nameof(ViewBag.DrpDwnLisBranch.Value), nameof(ViewBag.DrpDwnLisBranch.Text)))"></select>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="text" asp-for="user_Key" class="form-control" placeholder="Usuario">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" asp-for="user_Password" class="form-control" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-sissa btn-flat m-b-30 m-t-30">Ingresar</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if ("@ViewBag.ERR" === "ERRPASS") {
+
+                toastr.error("Contraseña Faltante o Incorrecta", 'Error al Iniciar Session', {
+                    "positionClass": "toast-bottom-full-width",
+                    timeOut: 5000,
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut",
+                    "tapToDismiss": false
+
+                });
+            }
+            if ("@ViewBag.ERR" === "ERRBLOCK") {
+
+                toastr.error("Usuario Bloqueado, Contactar al Administrador", 'Error al Iniciar Session', {
+                    "positionClass": "toast-bottom-full-width",
+                    timeOut: 5000,
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut",
+                    "tapToDismiss": false
+
+                });
+            }
+
+            if ("@ViewBag.ERR" === "ERRINEX") {
+
+                toastr.error("Usuario No Encontrado", 'Error al Iniciar Session', {
+                    "positionClass": "toast-bottom-full-width",
+                    timeOut: 5000,
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut",
+                    "tapToDismiss": false
+
+                });
+            }
+
+           
+
+        });
+    </script>
+}

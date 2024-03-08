@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ProspectusData
+<div class="card">
+    <div class="card-body">
+        <div class="basic-form">
+            <h4 class="card-title text-center">Identificacion/es Oficial/es</h4>
+            <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.VoterKey" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.OfIdentificationData.VoterKey" class="form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.RFC" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.OfIdentificationData.RFC" class="form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.CURP" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.OfIdentificationData.CURP" class="form-control input-rounded" placeholder="">
+            </div>
+            <br />
+             <h4 class="card-title text-center">Licencia de Conducir</h4>
+             <hr class="hr" />
+            <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.LicenseNumber" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.OfIdentificationData.LicenseNumber" class="form-control input-rounded" placeholder="">
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.LicenseType" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control input-rounded" asp-for="@Model.OfIdentificationData.LicenseType" asp-items="@(new SelectList(Model.OfIdentificationData.LicenseTypeOp, "Value","Text",Model.OfIdentificationData.LicenseType))"></select>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.LincenseExpirationDate" class="text-muted m-b-15 f-s-12"></label>
+                <input type="date" asp-for="@Model.OfIdentificationData.LincenseExpirationDate" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.FederalLicenseNumber" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control input-rounded" asp-for="@Model.OfIdentificationData.FederalLicenseNumber" asp-items="@(new SelectList(Model.OfIdentificationData.LicenseTypeOp, "Value","Text",Model.OfIdentificationData.LicenseType))"></select>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.FederalLicenseExpirationDate" class="text-muted m-b-15 f-s-12"></label>
+                <input type="date" asp-for="@Model.OfIdentificationData.FederalLicenseExpirationDate" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control input-rounded" />
+            </div>
+
+           <br />
+            <h4 class="card-title text-center">Identificacion Seguro Social</h4>
+             <hr class="hr" />
+            <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.IMSS" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.OfIdentificationData.IMSS" class="validar form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.BookletNumber" class="text-muted m-b-15 f-s-12"></label>
+                <input type="text" asp-for="@Model.OfIdentificationData.BookletNumber" class="form-control input-rounded" placeholder="">
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.OfIdentificationData.UMF" class="text-muted m-b-15 f-s-12"></label>
+                <select class="form-control input-rounded" asp-for="@Model.OfIdentificationData.UMF" asp-items="@(new SelectList(Model.OfIdentificationData.UMFOp, "Value","Text",Model.OfIdentificationData.UMF))"></select>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+

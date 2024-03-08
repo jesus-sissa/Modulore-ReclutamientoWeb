@@ -1,0 +1,162 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Prospectus>
+@{
+}
+<div class="col-12">
+    <div class="page-header">
+        <div class="page-title">
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Reprecentante Legal</a></li>
+                <li class="breadcrumb-item active">Empleados</li>
+                @*<li class="breadcrumb-item active">Documentos</li>*@
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card col-12">
+        <div class="card-body">
+            <form method="post" class="form-inline" asp-controller="Representative" asp-action="Index">
+                <div class="form-group col-md-4">
+                    <label for="Fecha_Inicio">Fecha Inicio</label>
+                    <input type="date" name="Fecha_Inicio" autocomplete="off" value="@DateTime.Today.AddDays(-14).ToString("yyyy-MM-dd")" id="Fecha_Inicio" class="form-control" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Fecha_Fin">Fecha Fin</label>
+                    <input type="date" name="Fecha_Fin" autocomplete="off" value="@DateTime.Today.ToString("yyyy-MM-dd")" id="Fecha_Fin" class="form-control" />
+                </div>
+                <div class="form-group col-md-4">
+                    <button type="submit" class="btn btn-sissa btn-rounded"><i class="ti-search"></i> Buscar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@if (@Model != null)
+{
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-title">
+                    <h4>Prospectos </h4>
+
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+
+                                    <th>Nombre</th>
+                                    <th>Departamento</th>
+                                    <th>Fecha</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+
+                                        <th>@item.Name</th>
+                                        <th>@item.Department</th>
+                                        <th>@item.Date</th>
+                                        <th class="text-right">
+                                            @if (item.IsValidatedReprecentative)
+                                            {
+                                                <span class="badge badge-success"><i class="ti-check-box"></i> Validado</span>
+                                            }
+                                            
+                                            <a id="@item.Id" href="@Url.Action("Employees","Representative", new{ pto= @item.Id})" class="btn btn-sissa btn-rounded" style="color:#fff">Ver <i class="ti-eye"></i></a>
+                                        </th>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@*<partial name="../Representative/_ModalConfirmByRepresentative.cshtml" />*@
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a[name='validate_representative']").click(function() {
+                $("#ModalValidacionByRepresentative").modal("show");
+                $("#prospectus_repres").val($(this).attr("id"));
+            });
+
+        });
+
+
+
+        $("#btn_validate_prospectus_repres").click(function() {
+            $("#btn_validate_prospectus_repres").attr('disabled', 'disabled');
+            var _password = $("#password_validate_repres").val();
+            var _prosp = $("#prospectus_repres").val();
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Confirm_Validate","Representative")",
+                data: { password: _password, prosp: _prosp },
+
+                success: function(data) {
+                    if (data) {
+                        alert("Prospecto Validado");
+                        window.location.href = "@Url.Action("Index","Representative")"
+                    }
+                    else {
+                        alert("Aun tiene documentos sin firmar")
+                    }
+                    $("#ModalValidacionByRepresentative").modal("hide");
+
+                },
+                error: function(error) {
+                    console.log(error.status)
+                    if (error.status == 403) {
+                        alert("No autorizado para hacer esta accion")
+                    }
+                    if (error.status == 404) {
+                        alert("Accion No Disponible")
+                    }
+                    if (error.status == 500) {
+                        alert("Error de Servidor")
+                    }
+                    //alert("Error al firmar")
+                    //window.location.href ="/cajerosinteligentesQA/Home/Index"
+                },
+                complete: function(xhr, textStatus) {
+                    console.log(xhr.status);
+                }
+            });
+
+            $("#btn_validate_prospectus_repres").attr('disabled', 'disabled');
+
+        });
+
+
+
+
+
+
+    </script>
+}
